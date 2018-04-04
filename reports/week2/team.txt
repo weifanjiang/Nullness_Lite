@@ -4,7 +4,7 @@ Team: Nullness_Lite
 1. Previous Week’s Plans and Goals
 	• Empty
 2. This Week’s Progress
-	• Team/project name--”Nullness_Lite”
+	• Team/project name--"Nullness_Lite"
 	• Done Github setup and Google Drive setup
 	• Make weekly plans and goals
 	• Learned definition of dataflow: an implementation tool for static analysis
