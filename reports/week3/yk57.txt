@@ -4,7 +4,8 @@ Name: Yanmeng Kong(Anny)
 CSEID: yk57
 
 1. Previous Week’s Plans and Goals
-	• Empty
+	• Empty(1st Individual report)
+	
 2. This Week’s Progress
 	• Get familiarize with general process for the project
 		o Project Idea https://courses.cs.washington.edu/courses/cse403/18sp/projects/project-ideas.html#Nullness_bug_detector
