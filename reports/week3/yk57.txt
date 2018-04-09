@@ -1,0 +1,34 @@
+Weekly Individual Status Report - Week 3
+Date: 2018/04/08
+Name: Yanmeng Kong(Anny)
+CSEID: yk57
+
+1. Previous Week’s Plans and Goals
+	• Empty
+2. This Week’s Progress
+	• Get familiarize with general process for the project
+		o Project Idea https://courses.cs.washington.edu/courses/cse403/18sp/projects/project-ideas.html#Nullness_bug_detector
+		o Annotated Project Pitch included under 403 documents folder
+		o Presentation Slides and comments under 403 documents folder 
+		o Nullness Checker Manual: https://checkerframework.org/manual/#nullness-checker
+	• Reading Checker Framework Manual chapter 3 - Nullness Checker
+		o Annotated Project Pitch included under 403 documents folder
+		o Presentation Slides and comments under 403 documents folder 
+	• Going through instructions from 33.3 and finish BUILD on mac
+	• Import checker-framework to Eclipse
+	• Adjust and set next week's plans and goals
+
+	Challenges:
+		* Execution failed for task ':checker-framework:downloadJtreg'.
+			> javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+			This exception occurs when tests are running. I tried several approaches but all fail to work. 	
+		* Even if I built successfully on command-lines, errors for build still occur when I import the project to Eclipse which is wierd.		
+
+3. Next Week’s Plans and Goals
+	• I will solve these problems the following week by comming to office hour and ask TA for help.
+		- test problem
+		- build problem in eclipse
+	• Continue work on the Checker Framework Manual for deeper understanding
+		- Nullness Checker Manual: https://checkerframework.org/manual/#nullness-checker
+	• Start working on reading and understanding source codes in Nullness Checker of Checker Framework 
+		- https://github.com/typetools/checker-framework
