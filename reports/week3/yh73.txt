@@ -1,0 +1,18 @@
+Individual status report – week 3
+Yuqi Huang
+NetID: yh73
+1532317
+
+1.	Previous week’s goal: 
+	•	Familiarize with general process for the project.
+	•	Familiarize with the Nullness Checker Manual
+	•	Read and analyze Nullness Checker of Checker Framework
+2.	This week’s progress:
+	•	Finish the project proposal
+	•	Finish building Nullness Checker on my computer, and haven’t passed all tests yet
+	•	Finish reading Chapter 3 of the manual
+3.	Next week’s goal:
+	•	Reading Chapter 30 and 31
+	•	Familiarize with the source code of Nullness Checker, especially code related to annotation
+	•	Try to pass all tests inside Nullness Checker.
+	•	Think about ways to disable functionality by command line input. Maybe start from Makefile.
