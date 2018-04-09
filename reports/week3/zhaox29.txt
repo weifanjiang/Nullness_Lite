@@ -1,0 +1,20 @@
+Individual Status Report
+Team: Nullness-Lite
+Name: zhaox29
+
+1. Previous Week¡¯s Plans and Goal (4/4 - 4/11)
+	a. Familiarize with general process of the project, read the manual for Nullness Checker, and finish the project proposal
+	b. Set up github repository, set up google drive for documents, and fork from original Checker Framework repo
+	c. Successfully build Checker Framework and make sure it passed all tests
+	d. Starts reading the code and analyzing Nullness Checker 
+2. This Week¡¯s Progress (4/4 - 4/9)
+	a. Finished reviewing previous documents and writing project proposal (evaluation section)
+	b. Finished setting up repo and google drive, and forking from Checker Framework
+	c. Finished the setup of basic issues on the repo¡¯s issue tracker according to the project proposal
+	d. Read the manual upto 3.6 and familiarized with the files in repo, especially annotations in checker/nullness/qual/ and checker/nullness/NullnessAnnotatedTypeFactory.java
+	e. Successfully built Checker Framework source code on Ubuntu but failed the test
+3. Next Week¡¯s Plans and Goals (4/9 - 4/16)
+	a. Continue reading manual and testing Checker Framework
+	b. Continue familiarizing with the repo. Try to understand the how annotations are set up, how they are inferred, and how Nullness Checker work with annotations
+	c. Practice using Nullness Checker on examples
+	d. Familiarize the command-line arguments 
