@@ -8,8 +8,7 @@ Student Number: 1532296
 2. My process this week:
 	- read Checker Framework Manaul, Chapter 3 which is related to Nullness Checker
 	- learn the source code of Nullness Checker, Checker Framework
-	- fork Checker Framework and start building Checker Framework on my local machine (MacOS)
-	- successfully build Checker Framework on my local machine (MacOS)
+	- fork Checker Framework and build Checker Framework on my local machine (MacOS)
 3. My plan for the following week:
 	- config Eclipse
 	- fully understand the source code of Nullness Checker, Checker Framework
