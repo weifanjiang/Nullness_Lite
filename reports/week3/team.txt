@@ -30,3 +30,4 @@ Team: Nullness_Lite
          4. technologies used for development
    1. Solve problems of environment setup in Eclipse(some weird errors)
    2. Continue working on understanding of the source code related to Nullness Checker in the Checker Framework; all member will go through all but have a specific focus on their responsible part.
+   3. Learn the build system of gradle
