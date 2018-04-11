@@ -1,0 +1,32 @@
+﻿Week 3 Team Report
+Team: Nullness_Lite
+
+
+1. Previous Week’s Plans and Goals
+   1. Every member should familiarize with general process for the project (Project Idea/Annotated Project Pitch/Presentation Slides and comments)
+   2. Every member should familiarize with Nullness Checker Manual
+   3. Start reading and analyzing Nullness Checker of Checker Framework
+   4. Optional Reading
+1. This Week’s Progress
+   1. Finished Chapter 3 in Checker Framework Manual
+   2. Setup roles - no PM manager
+      1. Most decision made by discussion
+      2. If we encounter multiple possible approaches, we decide by voting.
+   1. Each behavior of our nullness checker assigned:
+      1. Disabling initialization analysis - chenm32
+      2. Disabling map key analysis - yk57
+      3. Disabling invalidation of dataflow facts - zhaox29
+      4. Assume that boxing of primitives is @Pure -  yh73
+      5. Default inferrence of a type argument - together
+   1. Finished environment setup: successfully BUILD and TEST on Mac or Windows.
+1. Next Week’s Plans and Goals
+   1. Revise proposal according to feedbacks(within 2 days):
+      1. Revise grammar and rewording
+      2. Revise motivation part and its citations
+      3. New addons: 
+         1. evaluation plan 
+         2. architecture plan 
+         3. interface description 
+         4. technologies used for development
+   1. Solve problems of environment setup in Eclipse(some weird errors)
+   2. Continue working on understanding of the source code related to Nullness Checker in the Checker Framework; all member will go through all but have a specific focus on their responsible part.
