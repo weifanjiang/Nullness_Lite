@@ -1,0 +1,36 @@
+Weekly Individual Status Report
+Date: 2018/04/15
+Name: Yanmeng Kong(Anny)
+ID: yk57
+
+1. Previous Week’s Plans and Goals
+	• I will solve these problems the following week by comming to office hour and ask TA for help.
+		- test problem
+		- build problem in eclipse
+	• Continue work on the Checker Framework Manual for deeper understanding
+		- Nullness Checker Manual: https://checkerframework.org/manual/#nullness-checker
+	• Start working on reading and understanding source codes in Nullness Checker of Checker Framework 
+		- https://github.com/typetools/checker-framework
+
+2. This Week’s Progress
+	• Revised proposal according to feedbacks(within 2 days):
+		o Revise grammar and rewording
+		o Revise motivation part and its citations
+		o New addons: 
+			o evaluation plan
+			o architecture plan 
+			o interface description 
+			o technologies used for development
+	• Solve problems of environment setup in Eclipse(some weird errors)
+	• Continue working on understanding of the source code related to Nullness Checker in the Checker Framework; 
+	• go through all but have a specific focus on "Disabling map key analysis".
+
+	Challenges:
+		* Too many source codes and hard to understand and disable one feature		
+
+3. Next Week’s Plans and Goals
+	• I will solve these problems the following week by working together in team to focus on one
+	• Continue work on the Checker Framework Manual for deeper understanding
+		- Nullness Checker Manual: https://checkerframework.org/manual/#nullness-checker
+	• Start working on disabling one feature together
+		- https://github.com/typetools/checker-framework
