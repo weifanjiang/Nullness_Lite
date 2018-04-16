@@ -1,0 +1,18 @@
+Yuqi Huang
+NetID: yh73
+1532317
+
+1.	Previous week°¶s goal:
+        	-Reading Chapter 30 and 31
+É‹		-Familiarize with the source code of Nullness Checker, especially code related to annotation 
+É‹		-Try to pass all tests inside Nullness Checker. 
+É‹		-Think about ways to disable functionality by command line input. Maybe start from Makefile.
+2.	This week°¶s progress:
+É‹		-Revise the architecture and implementation plan with teammates
+É‹		-Basically understand how to use Nullness Checker through command line, and also how to add annotations in the appropriate places
+É‹		-Read a part of source code of Nullness Checker, and also read the build file to understand the hierarchy
+3.	Next week°¶s goal:  
+É‹		-Finish the first part of implementation with teammates(Default inferrence of a type argument)
+É‹		-Start working on my individual part (Assume that boxing of primitives is @Pure)
+É‹		-Test the number of false positive decreased and the processing time (if the above two parts can be done)
+
