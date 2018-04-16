@@ -1,0 +1,24 @@
+﻿Individual Status Report
+Team: Nullness-Lite
+Name: zhaox29
+
+
+* Previous Week’s Plans and Goal (4/9 - 4/16)
+   * Continue reading manual and testing Checker Framework
+   * Continue familiarizing with the repo. Try to understand the how annotations are set up, how they are inferred, and how Nullness Checker work with annotations
+   * Practice using Nullness Checker on examples
+   * Familiarize the command-line arguments 
+* This Week’s Progress
+   * Work specification assigned - No Invalidation of Dataflow
+      * Understood the examples of invalidation of dataflow
+   * Able to use Nullness Checker to test on basic examples
+   * Finished reading manual about Nullness Checker, Map Key Checker, and other parts related to invalidation of dataflow
+   * Finished the Architecture & Implementation Plan and presentation slides for week 4
+   * Familiarized with the repo of Checker Framework, the tests for Nullness Checker is under checker/tests 
+* Next Week’s Plans and Goals (4/16 - 4/23)
+   * Continue familiarizing with the Checker Framework. 
+      * Understand how annotations are set up, how they are inferred, and how Nullness Checker work with annotations
+      * Find the source code related to Invalidation of Dataflow
+      * Understand how command-line arguments are set up, how the Dataflow is influenced by different command-line arguments 
+   * Finished the implementation of the sample feature
+   * Begin implementation of the feature assigned personally
