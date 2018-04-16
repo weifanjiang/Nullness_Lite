@@ -1,0 +1,22 @@
+Individual Report - Week 4
+
+Name: Mengxing Chen
+NetID: chenm32
+Student Number: 1532296
+
+1. My goal from a week ago:
+	- configure Checker Framework on Eclipse
+	- understand the source code of Nullness Checker, Checker Framework
+	- discuss with other team members about implementation plans
+2. My process this week:
+	- configure Checker Framework
+	- distribute roles in team: 
+		my job at the implementation stage is to disable the "initialization analysis" feature of Nullness Checker
+	- read and understand the source code of Nullness Checker, Checker Framework
+	- make architecture and implementation plan with other team members
+	- have trouble fully understanding the source code of Checker Framework
+3. My plan for the following week:
+	- continue reading and understanding the souce code of Checker Framework
+	- start implementation: 
+		team members disable one feature of Nullness Checker together
+		and then I will start focusing on "initialization analysis"
