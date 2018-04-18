@@ -1,0 +1,36 @@
+﻿Week 3 Team Report
+Team: Nullness_Lite
+
+
+* Previous Week’s Plans and Goals
+   * Revise proposal according to feedbacks(within 2 days):
+      * Revise grammar and rewording
+      * Revise motivation part and its citations
+      * New addons: 
+         * evaluation plan 
+         * architecture plan 
+         * interface description 
+         * technologies used for development
+   * Solve problems of environment setup in Eclipse(some weird errors)
+   * Continue working on understanding of the source code related to Nullness Checker in the Checker Framework; all member will go through all but have a specific focus on their responsible part.
+* This Week’s Progress
+   * Finished proposal revision and presentation slides:
+      * New contents: 
+         * Architecture and Implementation Plan
+         * Interface mockup
+         * Implementation Procedure
+      * Contents revised:
+         * We will examine the effectiveness of the five features being disabled separately according to the evaluation plan. Then decide the features included in Nullness_Lite. If time allows, we’ll also examine other possible features to be disabled.
+         * Measurement Table to be more specific
+   * Begin Implementation:
+      * URL of the fork of Checker Framework weeks ago
+      * Branches created:
+         * Nullness_Invalidation_Dataflow_Disabled
+* Next Week’s Plans and Goals
+   * Finish disabling the first feature together by 4/23.
+   * Each member should start implementing the assigned feature in his/her  own branch. Here are some suggestions:
+      * Focus on disabling feature first.
+      * Accumulate the disabled annotations. Better record them in personal status report so we don’t forget.
+      * Accumulate and the specification tests (short test cases). Here are some examples, see nullness related directories.
+      * More refer to the implementation procedure in presentation slides.
+   * Consider more balance comparison between Nullness_Lite and various nullness checkers (such as NullAway, FindBugs, etc.), in aspect of true positives and false positives they produce.
