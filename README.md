@@ -15,7 +15,7 @@ Java developers who wants to avoid NullPointerException (NPE) at runtime, but he
 
 They can run Nullenss_Lite instead to get a fast glimpse on their files and more concise reports, although with fewer true positives, with fewer false positive warnings.
 
-### Compare with other checkers
+### Compare with other nullness bug detectors
 
 |Checkers | Features | True Positives Reported | True Positives Not Reported | False Positives | # of Annotations used | Speed|
 |-|-|-|-|-|-|-|
