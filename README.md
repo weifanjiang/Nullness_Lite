@@ -15,12 +15,10 @@ Java developers who wants to avoid NullPointerException (NPE) at runtime, but he
 
 They can run Nullenss_Lite instead to get a fast glimpse on their files and more concise reports, although with fewer true positives, with fewer false positive warnings.
 
-## Dependency: 
-- Checker Framework: 
-<href>https://checkerframework.org</href>
-
 ## Installation
-For details: <href>https://checkerframework.org/manual/#installation</href>
+### Download from source code
+Since Nullness_Lite depends on Nullness Checker of Checker Framework, users need to follow the instructions of Checker Framework to setup their environments following the [instructions](https://checkerframework.org/manual/#build-source) in Checker Framework manual.
+### Download from distribution
 1. Download the Checker Framework distribution: https://checkerframework.org/checker-framework-2.5.0.zip
 2. Unzip it to create a checker-framework directory.
 3. Configure your IDE, build system, or command shell to include the Checker Framework on the classpath. 
