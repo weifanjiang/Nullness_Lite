@@ -1,6 +1,6 @@
 # Nullness_Lite
-
 Project repo: <href>https://github.com/979216944/checker-framework</href>
+Developer Manual: <href>https://docs.google.com/document/d/1PdAhs2E3Gq6_NSS_xdYXR_6tvGGzHpNYdIC0kB0hDDE/edit</href>
 
 ## Introduction
 Nullness_Lite is a lite type checker based on Nullness Checker of [Checker Framework](https://checkerframework.org/) to detect nullness bugs in java files. It disables the following features of Nullness Checker to trade more desireable traits with soundness.
@@ -17,18 +17,16 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 
 ### Compare with other nullness bug detectors (TODO: fill out the table)
 
-|Checkers | Features | True Positives Reported | True Positives Not Reported | False Positives | # of Annotations used | Speed|
-|-|-|-|-|-|-|-|
-|Nullness_Lite | with no Initialization Checkers | | | | | |
-| | with no Initialization Checkers | | | | | |
-| | with no Map Key Checkers | | | | | |
-| | with no Invalidation of dataflow | | | | | |
-| | assuming boxing of primitive is @Pure | | | | | |
-|NullAway | | | | | | |
-|FindBugs | | | | | | |
-|IntelliJ | | | | | | |
-|Eclipse | | | | | | |
-|Nullness Checker| | | | | | |
+|Checkers | True Positives Reported | True Positives Not Reported | False Positives | # of Annotations used | Speed|
+|-|-|-|-|-|-|
+|Nullness_Lite | | | | | |
+|NullAway | | | | | |
+|FindBugs | | | | | | 
+|IntelliJ | | | | | | 
+|Eclipse | | | | | | 
+|Nullness Checker| | | | | |
+
+A more specific comparison table for developers is included in [Developer Manual](TODO: linkes to be added!!!).
 
 The table above shows the benefits using Nullness Checker: (TODO: evaluate)
 * fewer annotations for users to add
