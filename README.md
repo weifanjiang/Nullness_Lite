@@ -15,7 +15,7 @@ Java developers who wants to avoid NullPointerException (NPE) at runtime, but he
 
 They can run Nullenss_Lite instead to get a fast glimpse on their files and more concise reports, although with fewer true positives, with fewer false positive warnings.
 
-### Compare with other nullness bug detectors
+### Compare with other nullness bug detectors (TODO: fill out the table)
 
 |Checkers | Features | True Positives Reported | True Positives Not Reported | False Positives | # of Annotations used | Speed|
 |-|-|-|-|-|-|-|
@@ -28,8 +28,14 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 |FindBugs | | | | | | |
 |IntelliJ | | | | | | |
 |Eclipse | | | | | | |
+|Nullness Checker| | | | | | |
 
-## Download from distribution
+The table above shows the benefits using Nullness Checker: (TODO: evaluate)
+* fewer annotations for users to add
+* fewer false positive warning
+* more true positives revealed
+
+## Download from distribution (TODO: complete this section)
 1. Download the [Nullness_Lite distribution](\link to be filled!!!!)
 2. Unzip it to create a checker-framework directory.
 3. Configure your IDE, build system, or command shell to include the Checker Framework on the classpath. 
@@ -54,10 +60,14 @@ cd $JSR308/checker-framework
 ./gradlew allTests
 ```
 
-## Compile
-For details: <href>https://checkerframework.org/manual/#running</href>
+## Compile and run Nullness Checker
+Follow the [instructions](https://checkerframework.org/manual/#running) of chapter 2.2 in Checker Framework manual.
 
-To run a checker plugin, run the compiler javac as usual, but pass the -processor plugin_class command-line option. A concrete example (using the Nullness Checker) is:
+Users run Nullness_Lite by passing an extra argument when running Nullness Checker from the command line:
 ```
-javac -processor nullness -ANullnessLite MyFile.java
+javac -processor nullness -ANullnessLite <MyFile.java>
 ```
+Notice that the behavior is undefined if `-ANullnessLite` option is passed to a different checker.
+
+## Analyze the report (TODO: show an example for report analysis)
+
