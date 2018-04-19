@@ -9,6 +9,7 @@ Features being disabled:
 * Initialization Checker
 * Map Key Checker
 * Invalidation of dataflow
+* Boxing of primitives to be not @Pure
 
 ### Who wants to use?
 Java developers who wants to avoid NullPointerException (NPE) at runtime, but hesitate to spend time running full verification tools like Nullness Checker.
