@@ -2,6 +2,8 @@
 
 Project repo: <href>https://github.com/979216944/checker-framework</href>
 
+## Introduction
+Nullness_Lite is a lite type checker based on Nullness Checker of Checker Framework to detect nullness bugs in java files. It disables the following features of Nullness Checker to trade more desireable traits with soundness.
 
 ## Dependency: 
 - Checker Framework: 
