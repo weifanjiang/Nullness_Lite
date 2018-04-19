@@ -17,17 +17,17 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 
 ### Compare with other checkers
 
-Checkers | Features | True Positives Reported | True Positives Not Reported | False Positives | # of Annotations used | Speed
----------|----------|---------------|-------------------|-----------------|-----------------------|--------
-Nullness_Lite | with no Initialization Checkers | | | | | |
- | with no Initialization Checkers | | | | | |
- | with no Map Key Checkers | | | | | |
- | with no Invalidation of dataflow | | | | | |
- | assuming boxing of primitive is @Pure | | | | | |
-NullAway | | | | | | |
-FindBugs | | | | | | |
-IntelliJ | | | | | | |
-Eclipse | | | | | | |
+|Checkers | Features | True Positives Reported | True Positives Not Reported | False Positives | # of Annotations used | Speed|
+|-|-|-|-|-|-|-|
+|Nullness_Lite | with no Initialization Checkers | | | | | |
+| | with no Initialization Checkers | | | | | |
+| | with no Map Key Checkers | | | | | |
+| | with no Invalidation of dataflow | | | | | |
+| | assuming boxing of primitive is @Pure | | | | | |
+|NullAway | | | | | | |
+|FindBugs | | | | | | |
+|IntelliJ | | | | | | |
+|Eclipse | | | | | | |
 
 ## Download from distribution
 1. Download the [Nullness_Lite distribution](\link to be filled!!!!)
