@@ -1,5 +1,6 @@
 # Nullness_Lite
 Project repo: <href>https://github.com/979216944/checker-framework</href>
+
 Developer Manual: <href>https://docs.google.com/document/d/1PdAhs2E3Gq6_NSS_xdYXR_6tvGGzHpNYdIC0kB0hDDE/edit</href>
 
 ## Introduction
@@ -27,7 +28,7 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 |Eclipse | | | | | | 
 |Nullness Checker| | | | | |
 
-A more specific comparison table for developers is included in [Developer Manual](TODO: linkes to be added!!!).
+A more specific comparison table for developers is included [here](TODO: linkes to be added!!!).
 
 The table above shows the benefits using Nullness Checker: (TODO: evaluate)
 * fewer annotations for users to add
