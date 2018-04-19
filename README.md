@@ -36,6 +36,7 @@ cd $JSR308/checker-framework
 
 ## Run
 https://checkerframework.org/manual/#running
+To run a checker plugin, run the compiler javac as usual, but pass the -processor plugin_class command-line option. A concrete example (using the Nullness Checker) is:
 ```
 javac -processor nullness -ANullnessLite MyFile.java
 ```
