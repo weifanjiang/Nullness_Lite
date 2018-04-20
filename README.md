@@ -28,7 +28,7 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 |Eclipse | | | | | | 
 |Nullness Checker| | | | | |
 
-A more specific comparison table for developers is included [here](TODO: linkes to be added!!!).
+A more specific comparison table for developers is included in the section 6 in [week4/report](/reports/week4/report.pdf).
 
 The table above shows the benefits using Nullness Checker: (TODO: evaluate)
 * fewer annotations for users to add
