@@ -1,0 +1,31 @@
+Weekly Individual Status Report
+Date: 2018/04/23
+Name: Yanmeng Kong(Anny)
+ID: yk57
+
+1. Previous Week’s Plans and Goals
+	• Continue work on the Checker Framework Manual for deeper understanding
+		- Nullness Checker Manual: https://checkerframework.org/manual/#nullness-checker
+	• Start working on disabling one feature together
+		- https://github.com/typetools/checker-framework
+
+2. This Week’s Progress
+	• Revised proposal and new user manual in README
+	• Finished disbling map key checker and it passed my simple test
+		-AsuppressedWarnins=keyfor
+		- Test file (local): KeyforExample.java
+	• Still working on boxing of primitives in figuring out how annotated JDK works
+		- make all wrapper classes' valueOf() method pure+ recompile
+		- possible approach: replace @sideEffectFree with @pure
+	• Start working on adding annotations to my cse331 project's .java files.
+
+	Challenges:
+		* Figure out a test case for boxing of primitives
+		* annotate cse331's project files correctly
+
+3. Next Week’s Plans and Goals
+	• Finish implementation of boxing of primitives
+	• Finish add two features to -ANullnessLite option to finish our project's implementation part
+	• Finish annotations on cse331 project
+	• Start working on adding annotations on other projects and test with our finished implementation
+	• Begin evaluating other checkers
