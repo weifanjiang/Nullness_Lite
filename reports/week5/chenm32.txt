@@ -1,0 +1,26 @@
+Individual Report - Week 5
+
+Name: Mengxing Chen
+NetID: chenm32
+Student Number: 1532296
+
+1. My goal from a week ago:	
+	- continue reading and understanding the manual of Checker Framework
+	- start implementation: 
+		team members disable one feature of Nullness Checker together
+		and then I will start focusing on "initialization analysis"
+2. My process this week:
+	- disable MapKey feature of Nullness Checker together with other team members
+	- redistribute the roles in team: 
+		Xinrong and Yanmeng are now responsible for
+	  	disabling features in Nullness Checker,
+	  	and Yuqi and me are now responsible for
+	  	evaluating other tools (starting from NullAway)
+	- build and configure NullAway
+	- look for and then modify test files for evalutaion
+3. My plan for the following week:
+	- work with Yuqi:
+	    modify test files that will be used for evaluating NullAway
+	- read papers to learn about NullAway's functionalities and get statistics about 
+	  Nullaways functionalities:
+		# of false positives and # of annotations added per 100 line and etc.
