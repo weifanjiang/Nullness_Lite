@@ -1,0 +1,29 @@
+﻿Individual Status Report
+Team: Nullness-Lite
+Name: zhaox29
+
+
+* Previous Week’s Plans and Goal (4/16 - 4/23)
+   * Continue familiarizing with the Checker Framework. 
+      * Understand how annotations are set up, how they are inferred, and how Nullness Checker work with annotations
+      * Find the source code related to Invalidation of Dataflow
+      * Understand how command-line arguments are set up, how the Dataflow is influenced by different command-line arguments 
+   * Finished the implementation of the sample feature
+   * Begin implementation of the feature assigned personally
+* This Week’s Progress
+   * Finished disabling Initialization Checker & Invalidation of Dataflow
+      * -AsuppressWarnings=uninitialized
+      * -AassumeSideEffectFree
+      * Override canAlias under NullnessStore.java
+   * Finished adding the command line option -ANullnessLite
+      * In the  branch zhaox29-init-inva
+      * Finished adding features above into -ANullnessLite option
+   * Finished sample test cases distinguish Nullness Checker and Nullness Lite
+      * Local Ubuntu Machine Invalidation.java & Initialization.java
+* Next Week’s Plans and Goals (4/23 - 4/30)
+   * Finished writing the true positives cases in the tests suite
+   * Finding false positives test cases for these features
+   * Collecting annotations for features disabled
+   * Finished the whole implementation by merging the works with Anny
+   * Study CF papers: how professor got his comparaison result? What methodology did he used?
+   * Begin Evaluating other checkers
