@@ -1,0 +1,34 @@
+﻿Week 3 Team Report
+Team: Nullness_Lite
+
+
+* Previous Week’s Plans and Goals
+   * Finish disabling the first feature together by 4/23.
+   * Each member should start implementing the assigned feature in his/her own branch. Here are some suggestions:
+      * Focus on disabling feature first.
+      * Accumulate the disabled annotations. Better record them in personal status report so we don’t forget.
+      * Accumulate and the specification tests (short test cases). Here are some examples, see nullness related directories.
+      * More refer to the implementation procedure in presentation slides.
+   * Consider more balance comparison between Nullness_Lite and various nullness checkers (such as NullAway, FindBugs, etc.), in aspect of true positives and false positives they produce. 
+* This Week’s Progress
+   * Finished the following features:
+      * Assuming all values are initialized
+         * Uses “-AsuppressWarnings=uninitialized” 
+      * Assuming Map.get(key), key is always in Map
+      * Assuming all methods are side-effect-free, and no aliasing is allowed 
+         * Uses “-AassumeSideEffectFree”
+         * Overrides canAlias in NullnessStore.java
+   * Finished implementing the command line option:
+      * See commit https://github.com/979216944/checker-framework/commit/dd17f6d6d0f7ccadb189ef63c8b03288506a488a
+   * Test examples added for Nullness_Lite:
+      * See commit https://github.com/979216944/checker-framework/commit/fbc6087f512451a3471d2a20847497756c564413
+   * Successfully built through Travis CI
+   * Begin the evaluation of other tools
+      * Successfully built FindBugs on local machines and applied it to our initial test files 
+      * Analyzed the results shown by FindBugs
+      * Chose several open-source projects that will be used by our evaluation of the tools
+* Next Week’s Plans and Goals
+   * Finish feature: Assuming boxing of primitives always return same objects
+   * Finish tests added for Nullness_Lite
+   * Choose one open-source program to focus on
+   * Finish the evaluation of FindBugs
