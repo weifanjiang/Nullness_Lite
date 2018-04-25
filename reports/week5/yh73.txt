@@ -1,0 +1,18 @@
+Yuqi Huang
+NetID: yh73
+1532317
+
+1. previous week's goal:  
+	-Finish the first part of implementation with teammates(Default inferrence of a type argument)
+	-Start working on my individual part (Assume that boxing of primitives is @Pure)	
+	-Test the number of false positive decreased and the processing time (if the above two parts can be done)
+
+2. This week's progress:
+	-Switch to the evaluation part. Start reading the guide of NullAway
+	-Successfully installed Nullaway on my laptop, and finished writing some tests which can be used in Nullaway
+	-Currently analyzed the syntax of annotation in other checkers
+
+3. Next week's goal:
+	-install these checkers on my laptop, and analyze the syntax of the test source code in these checkers
+	-work with Mengxing and hopefully write most of test source code for these checkers
+	-discuss with Yanmeng and Xinrong about how to record the time of running tests and differentiate false warnings from true errors
