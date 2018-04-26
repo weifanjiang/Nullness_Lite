@@ -96,6 +96,19 @@ javac -processor nullness -ANullnessLite <MyFile.java>
 ```
 Notice that the behavior is undefined if `-ANullnessLite` option is passed to a different checker.
 
-## Analyze the report (TODO: show an example for report analysis)
+## Analyze the report
+Here is the example code we want to test:
+```java
+import org.checkerframework.checker.nullness.qual.NonNull;
 
+public class MyJavaFile {
+    private @NonNull Object f;
 
+    public MyJavaFile(int x, int y) { }
+    public MyJavaFile(int x) { this.f.toString(); }
+    public MyJavaFile(int x, int y, int z) { m(); }
+    public void m() { this.f.toString(); }
+}
+```
+Run `javac -processor nullness -ANullnessLite MyJavaFile.java` to test it with Nullness_Lite option. Then we get the following report:
+![NullnessLiteReport](images/Report Analysis.PNG)
