@@ -47,20 +47,41 @@ The table above shows the benefits using Nullness Checker: (TODO: evaluate)
 ### Set up environment
 Since Nullness_Lite depends on Nullness Checker of Checker Framework, users need to follow the instructions of Checker Framework to setup their environments following the [instructions](https://checkerframework.org/manual/#build-source) in Checker Framework manual.
 
+Note for CSEHome VM users: please follow the instruction of Ubuntu instead.
+
 ### Obtain source code
 Replace the line for git clone by the following code.
 ```
 git clone https://github.com/979216944/checker-framework checker-framework
 ```
-
 ### Build the Checker Framework
+Before build and test, make sure the latest version of Nullness_Lite is obtained:
+
+```
+cd $JSR308/checker-framework
+git checkout zhaox29-init-inva
+```
+
+To check the version on your computer:
+```
+git branch # which should show zhaox29-init-inva being selected
+```
+
 Following [instructions](https://checkerframework.org/manual/#build-source) of chapter 33.3.3 in Checker Framework manual.
 
 ### Run tests (optional)
-Test that everything works:
+#### Test all files in Checker Framework:
+The process will possibly take long time on local machine, expecially on VM.
+Some jtreg tests may fail for timeout. Those tests do not indicate bugs in Checker Framework or Nullness_Lite.
 ```
 cd $JSR308/checker-framework
 ./gradlew allTests
+```
+#### Test Nullness_Lite:
+This single tests will be fast to test whether Nullness_Lite behave as what we want:
+```
+cd $JSR308/checker-framework
+./gradlew NullnessLiteOptTest
 ```
 
 ## Compile and run Nullness Checker
