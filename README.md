@@ -35,6 +35,7 @@ A more specific comparison table for developers is included in the section 6 in 
 
 The table above shows the benefits using Nullness Checker: (TODO: evaluate)
 * fewer annotations for users to add
+
 * fewer false positive warning
 * more true positives revealed
 
@@ -71,8 +72,9 @@ Following [instructions](https://checkerframework.org/manual/#build-source) of c
 
 ### Run tests (optional)
 #### Test all files in Checker Framework:
-The process will possibly take long time on local machine, expecially on VM.
-Some jtreg tests may fail for timeout. Those tests do not indicate bugs in Checker Framework or Nullness_Lite.
+The process will possibly take long time on local machine, expecially on VM with insufficient memory allocated. (4G is suggested in this case.)
+
+Besides, if Some jtreg tests may fail for timeout, those tests do not indicate bugs in Checker Framework or Nullness_Lite.
 ```
 cd $JSR308/checker-framework
 ./gradlew allTests
