@@ -4,7 +4,7 @@ Project repo: <href>https://github.com/979216944/checker-framework</href>
 Developer Manual: <href>https://docs.google.com/document/d/1PdAhs2E3Gq6_NSS_xdYXR_6tvGGzHpNYdIC0kB0hDDE/edit</href>
 
 ## Introduction
-Nullness_Lite is a lite type checker based on Nullness Checker of [Checker Framework](https://checkerframework.org/) to detect nullness bugs in java files. It disables the following features of Nullness Checker to trade more desireable traits with soundness.
+Nullness_Lite is a lite type checker based on Nullness Checker of [Checker Framework](https://checkerframework.org/) to detect nullness bugs in java files. It disables the following features of Nullness Checker to obtain more desireable traits, by delibrately giving up soundness.
 
 Features being disabled:
 * Initialization Checker
@@ -18,7 +18,7 @@ Features being disabled:
   * assume boxing of primitives @Pure so that BoxedClass.valueOf() always return the same object;
 
 ### Who wants to use?
-Java developers who wants to avoid NullPointerException (NPE) at runtime, but hesitate to spend time running full verification tools like Nullness Checker.
+Java developers who would like to get a trustable static analysis on their source files, but hesitate to spend time running full verification tool such as Nullness Checker.
 
 They can run Nullenss_Lite instead to get a fast glimpse on their files and more concise reports, although with fewer true positives, with fewer false positive warnings.
 
@@ -97,4 +97,5 @@ javac -processor nullness -ANullnessLite <MyFile.java>
 Notice that the behavior is undefined if `-ANullnessLite` option is passed to a different checker.
 
 ## Analyze the report (TODO: show an example for report analysis)
+
 
