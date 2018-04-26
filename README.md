@@ -7,13 +7,15 @@ Developer Manual: <href>https://docs.google.com/document/d/1PdAhs2E3Gq6_NSS_xdYX
 Nullness_Lite is a lite type checker based on Nullness Checker of [Checker Framework](https://checkerframework.org/) to detect nullness bugs in java files. It disables the following features of Nullness Checker to trade more desireable traits with soundness.
 
 Features being disabled:
-* \[Initialization Checker\] suppress value uninitialized warnings;
-* \[Map Key Checker\] suppress warnings considering key is not in Map for calls of Map.get(key);
-* \[Invalidation of dataflow\] 
-assume all methods are @SideEffectFree;
-assume no aliasing;
-* \[Boxing of primitives\] 
-assume boxing of primitives @Pure so that BoxedClass.valueOf() always return the same object;
+* Initialization Checker
+  * suppress value uninitialized warnings;
+* Map Key Checker
+  * suppress warnings considering key is not in Map for calls of Map.get(key);
+* Invalidation of dataflow 
+  * assume all methods are @SideEffectFree;
+  * assume no aliasing;
+* Boxing of primitives 
+  * assume boxing of primitives @Pure so that BoxedClass.valueOf() always return the same object;
 
 ### Who wants to use?
 Java developers who wants to avoid NullPointerException (NPE) at runtime, but hesitate to spend time running full verification tools like Nullness Checker.
@@ -35,7 +37,6 @@ A more specific comparison table for developers is included in the section 6 in 
 
 The table above shows the benefits using Nullness Checker: (TODO: evaluate)
 * fewer annotations for users to add
-
 * fewer false positive warning
 * more true positives revealed
 
