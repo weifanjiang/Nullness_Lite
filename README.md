@@ -88,7 +88,7 @@ For Build, following [instructions](https://checkerframework.org/manual/#build-s
 #### Test all files in Checker Framework:
 The process will possibly take long time on local machine, expecially on VM with insufficient memory allocated. (4G is suggested in this case.)
 
-Besides, if Some jtreg tests may fail for timeout, those tests do not indicate bugs in Checker Framework or Nullness_Lite.
+Besides, if Some jtreg tests fail for timeout, those tests do not indicate bugs in Checker Framework or Nullness_Lite.
 ```
 cd $JSR308/checker-framework
 ./gradlew allTests
