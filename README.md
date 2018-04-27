@@ -10,12 +10,12 @@ Features being disabled:
 * Initialization Checker
   * suppress value uninitialized warnings;
 * Map Key Checker
-  * suppress warnings considering key is not in Map for calls of Map.get(key);
+  * assume all keys are in the map and Map.get(key)returns @NonNull;
 * Invalidation of dataflow 
   * assume all methods are @SideEffectFree;
   * assume no aliasing;
 * Boxing of primitives 
-  * assume boxing of primitives @Pure so that BoxedClass.valueOf() always return the same object;
+  * assume the boxing of primitives is @Pure and BoxedClass.valueOf() always return the same object;
 
 ### Who wants to use?
 Java developers who would like to get a trustable static analysis on their source files, but hesitate to spend time running full verification tool such as Nullness Checker.
