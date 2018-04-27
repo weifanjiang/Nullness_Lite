@@ -40,12 +40,7 @@ The table above shows the benefits using Nullness Checker: (TODO: evaluate)
 * fewer false positive warning
 * more true positives revealed
 
-## Download from distribution (TODO: complete this section)
-1. Download the [Nullness_Lite distribution](\link to be filled!!!!)
-2. Unzip it to create a checker-framework directory.
-3. Configure your IDE, build system, or command shell to include the Checker Framework on the classpath. 
-
-## Download from source code
+## Build from source code
 ### Set up environment
 Since Nullness_Lite depends on Nullness Checker of Checker Framework, users need to follow the instructions of Checker Framework to setup their environments following the [instructions](https://checkerframework.org/manual/#build-source) in Checker Framework manual.
 
