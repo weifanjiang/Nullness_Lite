@@ -1,7 +1,7 @@
 # Nullness_Lite
-Project repo is [here](https://github.com/979216944/checker-framework)
+Repo of the implementation: https://github.com/979216944/checker-framework
 
-Developer Manual is [here](https://github.com/weifanjiang/Nullness_Lite/blob/master/reports/week5/Nullness_Lite--A%20lite%20option%20of%20the%20Nullness%20Checker.pdf)
+Developer Manual: https://github.com/weifanjiang/Nullness_Lite/blob/master/reports/week5/Nullness_Lite--A%20lite%20option%20of%20the%20Nullness%20Checker.pdf
 
 ## Introduction
 Nullness_Lite is a lite option of the Nullness Checker in [the Checker Framework](https://checkerframework.org/) to detect nullness bugs in java source files. It disables the following features of Nullness Checker to obtain more desireable traits. To be specific, the Nullness Checker with Nullness_Lite option enabled will be faster and easier to use by delibrately giving up soundness.
@@ -33,7 +33,7 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 |Eclipse | | | | | | 
 |Nullness Checker| | | | | |
 
-A more specific comparison table for developers is included in the section 6 in [week4/report](/reports/week4/report.pdf).
+A more specific comparison table for developers is included in the section 4 in [week5/report](/reports/week5/Nullness_Lite--A%20lite%20option%20of%20the%20Nullness%20Checker.pdf).
 
 The table above shows the benefits using Nullness Checker: (TODO: evaluate)
 * fewer annotations for users to add
