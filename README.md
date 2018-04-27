@@ -106,9 +106,33 @@ public class MyJavaFile {
 
     public MyJavaFile(int x, int y) { }
     public MyJavaFile(int x) { this.f.toString(); }
-    public MyJavaFile(int x, int y, int z) { m(); }
-    public void m() { this.f.toString(); }
 }
 ```
-Run `javac -processor nullness -ANullnessLite MyJavaFile.java` to test it with Nullness_Lite option. Then we get the following report:
-![NullnessLiteReport](images/Report Analysis.PNG)
+Run `javac -processor nullness -ANullnessLite MyJavaFile.java` to test it with Nullness_Lite option.
+
+Then we get the following report:
+```
+MyJavaFile.java:7: error: [dereference.of.nullable] dereference of possibly-null reference this.f
+    public MyJavaFile(int x) { this.f.toString(); }
+                                   ^
+1 error
+```
+To be specific, the Nullness Checker with Nullness_Lite option enabled reported one error, which is in line 7 of MyJavaFile.java, where we dereference `this.f` in the constructor before initializing it.
+
+An error is either a true positive (indicating a real bug) or a false positive.
+
+Developers can fix the errors by fixing the actual bugs if the errors are true positives.
+
+They can fix the errors of false positives by suppressing these errors. It is not suggested but sometimes developers can also suppress true positives. Back to the example, we can change the source code like the following:
+```
+import org.checkerframework.checker.nullness.qual.NonNull;
+import org.checkerframework.checker.nullness.NullnessUtil;
+
+public class MyJavaFile {
+    private @NonNull Object f;
+
+    public MyJavaFile(int x, int y) { }
+    public MyJavaFile(int x) { NullnessUtil.castNonNull(this.f).toString(); }
+}
+```
+Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with -ANullnessLite option will not issue any error.
