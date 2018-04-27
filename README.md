@@ -149,3 +149,12 @@ public class MyJavaFile {
 }
 ```
 Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with -ANullnessLite option will not issue any error.
+
+## Frequently Asked Questions
+### If I got the following result when running the Checker Framework?
+```
+error: Annotation processor 'nullness' not found
+1 error
+```
+Try `which javac` to see whether your path for javac is in `$JSR308/checker-framework/checker/bin/javac` and change if not.
+You can follow the [instruction](https://checkerframework.org/manual/#build-source) in section 33.3.2 and 33.3.3 to set up path for javac.
