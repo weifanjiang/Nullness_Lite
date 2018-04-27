@@ -117,7 +117,7 @@ MyJavaFile.java:7: error: [dereference.of.nullable] dereference of possibly-null
                                    ^
 1 error
 ```
-To be specific, the Nullness Checker with Nullness_Lite option enabled reported one error, which is in line 7 of MyJavaFile.java, where we dereference `this.f` in the constructor before initializing it.
+To be specific, the Nullness Checker with -ANullnessLite option reported one error, which is in line 7 of MyJavaFile.java, where we dereference `this.f` in the constructor before initializing it.
 
 An error is either a true positive (indicating a real bug) or a false positive.
 
