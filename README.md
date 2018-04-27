@@ -1,12 +1,12 @@
 # Nullness_Lite
-Project repo: <href>https://github.com/979216944/checker-framework</href>
+Project repo is [here](https://github.com/979216944/checker-framework)
 
-Developer Manual: <href>https://docs.google.com/document/d/1PdAhs2E3Gq6_NSS_xdYXR_6tvGGzHpNYdIC0kB0hDDE/edit</href>
+Developer Manual is [here](https://github.com/weifanjiang/Nullness_Lite/blob/master/reports/week5/Nullness_Lite--A%20lite%20option%20of%20the%20Nullness%20Checker.pdf)
 
 ## Introduction
-Nullness_Lite is a lite type checker based on Nullness Checker of [Checker Framework](https://checkerframework.org/) to detect nullness bugs in java files. It disables the following features of Nullness Checker to obtain more desireable traits, by delibrately giving up soundness.
+Nullness_Lite is a lite option of the Nullness Checker in [the Checker Framework](https://checkerframework.org/) to detect nullness bugs in java source files. It disables the following features of Nullness Checker to obtain more desireable traits. To be specific, the Nullness Checker with Nullness_Lite option enabled will be faster and easier to use by delibrately giving up soundness.
 
-Features being disabled:
+Features disabled:
 * Initialization Checker
   * suppress value uninitialized warnings;
 * Map Key Checker
@@ -151,7 +151,7 @@ public class MyJavaFile {
 Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with -ANullnessLite option will not issue any error.
 
 ## Frequently Asked Questions
-### If I got the following result when running the Checker Framework?
+#### 1. If I got the following result when running the Checker Framework?
 ```
 error: Annotation processor 'nullness' not found
 1 error
