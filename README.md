@@ -10,7 +10,7 @@ Features being disabled:
 * Initialization Checker
   * suppress value uninitialized warnings;
 * Map Key Checker
-  * assume all keys are in the map and Map.get(key)returns @NonNull;
+  * assume all keys are in the map and Map.get(key) returns @NonNull;
 * Invalidation of dataflow 
   * assume all methods are @SideEffectFree;
   * assume no aliasing;
@@ -124,7 +124,7 @@ An error is either a true positive (indicating a real bug) or a false positive.
 Developers can fix the errors by fixing the actual bugs if the errors are true positives.
 
 They can fix the errors of false positives by suppressing these errors. It is not suggested but sometimes developers can also suppress true positives. Back to the example, we can change the source code like the following:
-```
+```java
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.checkerframework.checker.nullness.NullnessUtil;
 
