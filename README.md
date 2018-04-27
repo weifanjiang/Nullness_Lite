@@ -47,10 +47,16 @@ Since Nullness_Lite depends on Nullness Checker of Checker Framework, users need
 Note for CSEHome VM users: please follow the instruction of Ubuntu instead.
 
 ### Obtain source code
-Replace the line for git clone by the following code.
+Obtain the latest source code from the version control repository:
+
 ```
+export JSR308=$HOME/jsr308
+mkdir -p $JSR308
+cd $JSR308
 git clone https://github.com/979216944/checker-framework checker-framework
 ```
+You might want to add the `export JSR308=$HOME/jsr308` line to your `.bashrc` file.
+
 ### Build the Checker Framework
 Before build and test, make sure the latest version of Nullness_Lite is obtained:
 
@@ -64,7 +70,19 @@ To check the version on your computer:
 git branch # which should show zhaox29-init-inva being selected
 ```
 
-Following [instructions](https://checkerframework.org/manual/#build-source) of chapter 33.3.3 in Checker Framework manual.
+For Build, following [instructions](https://checkerframework.org/manual/#build-source) of chapter 33.3.3 in Checker Framework manual.
+
+  1. build the Checker Framework dependencies  
+  ```
+  cd $JSR308/checker-framework
+ ./gradlew cloneAndBuildDependencies
+ ```
+ 
+ 2. build the Checker Framework : 
+ ```
+ cd $JSR308/checker-framework
+ ./gradlew assemble
+ ```
 
 ### Run tests (optional)
 #### Test all files in Checker Framework:
