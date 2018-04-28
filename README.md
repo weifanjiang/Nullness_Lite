@@ -1,7 +1,7 @@
 # Nullness_Lite
 Repo of the implementation: https://github.com/979216944/checker-framework
 
-Developer Manual: (To be filled)
+Developer Manual: (Link to the changed developer manual)
 
 ## Introduction
 Nullness_Lite is a lite option of the Nullness Checker in [the Checker Framework](https://checkerframework.org/) to detect nullness bugs in java source files. It disables the following features of Nullness Checker to obtain more desireable traits. To be specific, the Nullness Checker with Nullness_Lite option enabled will be faster and easier to use by delibrately giving up soundness.
