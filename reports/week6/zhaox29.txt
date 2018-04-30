@@ -19,5 +19,5 @@ Name: zhaox29
    * Find false positives test cases for Initialization Checker if not assuming all values initialized
    * Merging works with Anny to give a complete version of NullnessLite
    * Extra command line arguments that distinguish the features of NullnessLite for evaluation
-   * Revise the section of architecture in report
+   * Revise the section of approach in report
    * Join the evaluation team with Anny, to start adding annotations and evaluate Nullness Checker and NullnessLite
