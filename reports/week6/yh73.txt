@@ -1,0 +1,17 @@
+Yuqi Huang
+NetID: yh73
+1532317
+
+1. previous week's goal:
+	-install these checkers on my laptop, and analyze the syntax of the test source code in these checkers
+	-work with Mengxing and hopefully write most of test source code for these checkers
+	-discuss with Yanmeng and Xinrong about how to record the time of running tests and differentiate false warnings from true errors
+
+2. This week's progress:
+	-Finish the NPE analysis of CSE331 file on IntelliJ, findBugs and Eclipse
+	-Working on the NPE analysis of JUnit4 Eclipse, findBugs and IntelliJ
+	-Working on adding annotations to JUnit4 file. Will test it in the complete Nullness Checker soon
+
+3. Next week's goal:
+	-Finish adding annotations to JUnit4, and finish test these files on the complete Nullness Checker and NullnessLite
+	-Look for another project which has 10000 - 50000 lines of Java code. Do the same modification and test on these checkers.
