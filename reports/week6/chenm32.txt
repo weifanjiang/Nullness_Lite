@@ -11,9 +11,11 @@ Student Number: 1532296
 	  Nullaways functionalities:
 		# of false positives and # of annotations added per 100 line and etc.
 2. My process this week:
-	- learn the functionality of NullAway
-	- evaluate FindBugs on CampusMap
+	- learn the functionalities of NullAway
+	- evaluate FindBugs, IntelliJ and Eclipse on CampusMap
 	- choose junit4 as the repository (https://github.com/yh73/junit4) for evaluation
-	- add annotations to junit4 and evalutate Eclipse 
+	- add annotations to junit4 and evalutate Eclipse and IntelliJ on it
 3. My plan for the following week:
-	- evaluate Intellij and FindBugs on junit4
+	- evaluate FindBugs on junit4
+	- revise the report of Nullness_Lite and improve the "related works" part
+	- work with the implementation group to evaluate Nullness Checker
