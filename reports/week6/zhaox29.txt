@@ -1,0 +1,23 @@
+﻿Individual Status Report
+Team: Nullness-Lite
+Name: zhaox29
+
+
+* Previous Week’s Plans and Goal (4/23 - 4/30)
+   * Finished writing the true positives cases in the tests suite
+   * Finding false positives test cases for these features
+   * Collecting annotations for features disabled
+   * Finished the whole implementation by merging the works with Anny
+   * Study CF papers: how professor got his comparaison result? What methodology did he used?
+   * Begin Evaluating other checkers
+* This Week’s Progress
+   * Finished specification tests of true positives for (1) assuming all values initialized and (2) assuming no aliasing and all methods @SideEffectFree
+   * Finished false positives for (2) above
+   * Assigned the pull request to Anny for all changes made in zhaox29-init-inva
+   * Helped Anny with adding “-AsuppressWarnings=keyfor” into KeyForSubChecker when “-ANullnessLite” is passed, and studied the possible change places for boxing of primitives. (She has finished her features being disabled now.)
+* Next Week’s Plans and Goals (4/30 - 5/7)
+   * Find false positives test cases for Initialization Checker if not assuming all values initialized
+   * Merging works with Anny to give a complete version of NullnessLite
+   * Extra command line arguments that distinguish the features of NullnessLite for evaluation
+   * Revise the section of architecture in report
+   * Join the evaluation team with Anny, to start adding annotations and evaluate Nullness Checker and NullnessLite
