@@ -1,0 +1,43 @@
+Weekly Individual Status Report
+Date: 2018/04/29
+Name: Yanmeng Kong(Anny)
+ID: yk57
+
+1. Previous Week’s Plans and Goals
+	• Finish implementation of boxing of primitives
+	• Finish add two features to -ANullnessLite option to finish our project's implementation part
+	• Finish annotations on cse331 project
+	• Start working on adding annotations on other projects and test with our finished implementation
+	• Begin evaluating other checkers
+
+2. This Week’s Progress
+	• Revised proposal and user manual in README
+	• Found the mapkey feature was not implemented correctly last week, and fixed it.
+		- not as simple as just -AsuppressedWarnins=keyfor, need some code changes
+		- edited NullnessTransfer.java to assume Map.get(key) always return nonnull
+	• Added new test cases in Test file (local): KeyforExample.java for test mapkey feature
+	• Finished boxing of primitives 
+		- figured out how annotated JDK works
+			- tried to change the .valueOf methods' annotations in NullnessTransfer and NullnessAnnotatedTypeFactory when method is invocated, but both do not seem to work.
+			- then found an alternative way -- stub file
+		- figured out how .astub files works and added a nullness_lite.astub:
+			- make all wrapper classes' valueOf() method @pure
+			- added Astubs = <path to nullness_lite.astub> to NullnessLite option
+	• Figured out test cases for boxing of primitives with Martin's help
+		- Test file (local): BoxingExample.java for test boxing feature
+	• The NullnessLite option was not added to the Nullness Checker correctly last week, and fixed it
+		- need to call super.init() after to make all options added in the Nullness Checker work
+	• Finished adding two features to -ANullnessLite option
+
+	Challenges:
+		* Realized -AsuppressedWarnins=keyfor does not do the thing I wanted, so I reimplemented the first feature.
+		* Realized NullnessLite option was not implemented correctly and fixed it. 
+		* The boxing of primitives was really hard to understand and implement. It took me over a week to figure out by trying to make changes in NullnessTransfer and NullnessAnnotatedTypeFactory first and then trying to work with stub files. 
+		* Since I found several things were not finished correctly, it took me some time to fix them and I was unable to finish testing cse331's project yet. It still confused me by warning about checkRep() method and I will figure it out the following week.
+
+3. Next Week’s Plans and Goals
+	• Write some unit tests for my two features and add them to /tests folder
+	• Merge my implementation with Alice's
+	• Write more unit tests for NullnessLite option and test its overall correctness
+	• Finish testing Nullness Checker and our NullnessLite option on cse331 project
+	• Do some basic analysis on performance of Nullness Checker and our NullnessLite option on cse331 project and cse332 project if time allows
