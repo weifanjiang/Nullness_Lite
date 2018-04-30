@@ -1,0 +1,19 @@
+Individual Report - Week 6
+
+Name: Mengxing Chen
+NetID: chenm32
+Student Number: 1532296
+
+1. My goal from a week ago:	
+	- work with Yuqi:
+	    modify test files that will be used for evaluating NullAway
+	- read papers to learn about NullAway's functionalities and get statistics about 
+	  Nullaways functionalities:
+		# of false positives and # of annotations added per 100 line and etc.
+2. My process this week:
+	- learn the functionality of NullAway
+	- evaluate FindBugs on CampusMap
+	- choose junit4 as the repository (https://github.com/yh73/junit4) for evaluation
+	- add annotations to junit4 and evalutate Eclipse 
+3. My plan for the following week:
+	- evaluate Intellij and FindBugs on junit4
