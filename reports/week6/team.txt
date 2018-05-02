@@ -5,8 +5,7 @@ Team: NullnessLiteGroup
 * Previous Week's Plans and Goals
    * Finish feature: Assuming boxing of primitives always return same objects
    * Finish tests added for Nullness_Lite
-   * Choose one open-source program to focus on
-   * Finish the evaluation of FindBugs
+   * Choose one open-source program to focus on for evaluation
 * This Week's Progress
    * Revised motivation, related work, approach, and some evaluation parts of the proposal and added some examples to the user manual in README
    * Finished adding four features to -ANullnessLite option and merged our initial four implementations(mapkey, dataflow, aliasing, boxing):
@@ -25,7 +24,7 @@ Team: NullnessLiteGroup
       * Test file (local): BoxingExample.java for test boxing feature
    * Fixed the NullnessLite option 
       * Call super.init() after all options being added to add its options iteratively into sub checker if any.
-   * Chose an open-source Java project, junit4, for evaluation: https://github.com/junit-team/junit4, and built junit4 on local machine
+   * Focused on an open-source Java project, junit4, for evaluation: https://github.com/junit-team/junit4, and built junit4 on local machine
    * Began evaluating Eclipse, IntelliJ and Nullness Checker by using junit4
 * Next Week's Plans and Goals
    * Finish adding annotations for junit4
@@ -33,4 +32,4 @@ Team: NullnessLiteGroup
       * Assigning annotations review by Monday 5/7
    * Decide our rules of adding annotations and make sure it is conforming
    * Do some basic analysis on performance of Nullness Checker and our NullnessLite option on junit4
-   * Finish evaluating Eclipse, IntelliJ and FindBugs
+   * Finish evaluating Eclipse, IntelliJ and FindBugs using junit4
