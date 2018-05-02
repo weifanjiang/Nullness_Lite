@@ -1,0 +1,36 @@
+Week 6 Team Report
+Team: NullnessLiteGroup
+
+
+* Previous Week's Plans and Goals
+   * Finish feature: Assuming boxing of primitives always return same objects
+   * Finish tests added for Nullness_Lite
+   * Choose one open-source program to focus on
+   * Finish the evaluation of FindBugs
+* This Week's Progress
+   * Revised motivation, related work, approach, and some evaluation parts of the proposal and added some examples to the user manual in README
+   * Finished adding four features to -ANullnessLite option and merged our initial four implementations(mapkey, dataflow, aliasing, boxing):
+   * Revised implementations:
+      * SubCheckers have the same options as Nullness Checker
+      * Store & Analysis are revised in KeyForSubChecker so it disallows aliasing
+   * Fixed the Mapkey feature
+      * not as simple as just -AsuppressedWarnins=keyfor, need modifications to NullnessTransfer.java by letting it assume Map.get(key) always return nonnull
+      * Added new test cases in Test file (local): KeyforExample.java for test Mapkey feature
+   * Implemented boxing of primitives 
+      * Figured out how annotated Jdk and .astub files works
+      * Making all wrapper classes' valueOf() method @pure
+      * Using Astubs = <path to nullness_lite.astub> to NullnessLite option
+      * Added test cases for boxing of primitives with Martin's help
+      * Added extra test cases for ensuring it works with its sub checker, MapKey Checker
+      * Test file (local): BoxingExample.java for test boxing feature
+   * Fixed the NullnessLite option 
+      * Call super.init() after all options being added to add its options iteratively into sub checker if any.
+   * Chose an open-source Java project, junit4, for evaluation: https://github.com/junit-team/junit4, and built junit4 on local machine
+   * Began evaluating Eclipse, IntelliJ and Nullness Checker by using junit4
+* Next Week's Plans and Goals
+   * Finish adding annotations for junit4
+      * Adding annotations for different checkers in separate branches
+      * Assigning annotations review by Monday 5/7
+   * Decide our rules of adding annotations and make sure it is conforming
+   * Do some basic analysis on performance of Nullness Checker and our NullnessLite option on junit4
+   * Finish evaluating Eclipse, IntelliJ and FindBugs
