@@ -1,6 +1,8 @@
 # Nullness_Lite
 Repo of the implementation: https://github.com/979216944/checker-framework
 
+Repo of the evaluation: https://github.com/NullnessLiteGroup/junit4
+
 Developer Manual: (Link to the changed developer manual)
 
 ## Introduction
@@ -8,7 +10,7 @@ Nullness_Lite is a lite option of the Nullness Checker in [the Checker Framework
 
 Features disabled:
 * Initialization Checker
-  * suppress value uninitialized warnings;
+  * assume all values (fields & class variables) initialized;
 * Map Key Checker
   * assume all keys are in the map and Map.get(key) returns @NonNull;
 * Invalidation of dataflow 
