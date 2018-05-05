@@ -43,11 +43,11 @@ The table above shows the benefits using Nullness Checker: (TODO: evaluate)
 * more true positives revealed
 
 ## Build from source code
-For Ubuntu users, try the automatic download procedure using the following command.
+Ubuntu users can simply copy-paste the following commands to download the Checker Framework with the Nullness_Lite Option.
 ```
 git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
 cd Nullness_Lite
-./install_Checker_Framework
+./install_Checker_Framework_Ubuntu.sh 
 ```
 ### Set up environment
 Since Nullness_Lite depends on Nullness Checker of Checker Framework, users need to follow the instructions of Checker Framework to setup their environments following the [instructions](https://checkerframework.org/manual/#build-source) in Checker Framework manual.
