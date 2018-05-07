@@ -1,0 +1,17 @@
+Yuqi Huang
+NetID: yh73
+1532317
+
+1. previous week's goal:
+	-Finish adding annotations to JUnit4, and finish test these files on the complete Nullness Checker and NullnessLite
+	-Look for another project which has 10000 - 50000 lines of Java code. Do the same modification and test on these checkers.
+
+2. This week's progress:
+	-Finish distinguishing true positives and false positives found in Junit4 based on Eclipse, FindBugs and IntelliJ with Mengxing
+	-Discuss with Xinrong and Yanmeng about the analysis of errors found by Nullness Checker
+	-Add comments to the "errors" found on in Junit4 based on FindBugs
+
+3. Next week's goal:
+	-Finish Junit4 analysis on Nullness Checker and NullnessLite
+	-Find another open source project and do the same analysis on that project with IDEs we have
+	-Finish the evalution part on the report.
