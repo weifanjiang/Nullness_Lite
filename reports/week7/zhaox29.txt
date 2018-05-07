@@ -1,0 +1,29 @@
+﻿Individual Status Report
+Team: Nullness-Lite
+Name: zhaox29
+
+
+* Previous Week’s Plans and Goal (4/30 - 5/7)
+   * Find false positives test cases for Initialization Checker if not assuming all values initialized
+   * Merging works with Anny to give a complete version of NullnessLite
+   * Extra command line arguments that distinguish the features of NullnessLite for evaluation
+   * Revise the section of architecture in report
+   * Join the evaluation team with Anny, to start adding annotations and evaluate Nullness Checker and NullnessLite
+* This Week’s Progress
+   * Finished @Nullable annotation added with Anny
+   * Analyzed the errors so they are reduced from around 150 to 50
+   * Peer review (see pull requests):
+      * about adding @Nullable assigned to chenm32 & yh73
+      * about adding @SuppressWarnings and analysis comments to yk57
+   * Wrote a “naive” script for users to download the Checker Framework in Ubuntu, which is added to the User Manual
+* Next Week’s Plans and Goals (5/7 - 5/14)
+   * [!!!] A bug was found in NullnessLite, planning to fix the bug with Anny before ⅝
+      * See the issue tracker for more info
+      * *Adding test for the bug
+   * [!!!] -Astubs doesn’t work properly with multiple stub files. Discuss the problem with other group members before 5/8
+      * This problem is crucial for later writing script for evaluation, because write now we are using Intellij for analysis due to easier navigation between files and libraries;
+   * Command line arguments should be more specified for invalidation of dataflow and keyfor features
+   * Seek more evidences from JUnit, and research papers if time allows, to enhance the report, and write about how we determine an error true/false positive
+   * After finishing the bug fix and analysis for the Nullness Checker, record the result of each feature with group members (if other members finished analyzing other checkers)
+      * This work should be relative easier if we finished analyzing with the Nullness Checker
+   * With group members, writing script for users to easily count the @Nullable annotations to use the Nullness Checker properly
