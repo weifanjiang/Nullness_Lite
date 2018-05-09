@@ -1,6 +1,5 @@
-﻿Week 7 Team Report
+﻿Week 7 Team Status Report
 Team: NullnessLiteGroup
-
 
 * Previous Week’s Plans and Goals
    * Finish adding annotations for junit4
