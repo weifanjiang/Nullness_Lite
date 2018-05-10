@@ -1,0 +1,20 @@
+Individual Report - Week 7
+
+Name: Mengxing Chen
+NetID: chenm32
+Student Number: 1532296
+
+1. My goal from a week ago:	
+	- evaluate FindBugs on JUnit4
+	- revise the report of Nullness_Lite and improve the "evaluation" and "related works" parts
+	- work with the Implementation Group to evaluate Nullness Checker
+2. My process this week:
+	- improve the "related works" and "evaluation" parts of the project report
+	- work with Yuqi:
+		- evaluate FindBugs, Eclipse and IntelliJ on JUnit4
+		- classify and write the analysis of each null-related error appeared during the evaluation of Eclipse, IntelliJ and FindBugs
+3. My plan for the following week:
+	- finish evaluating Nullaway on JUnit4
+	- peer review with the Implementation Group (Xinrong and Yanmeng)
+	- continuously revise the project report
+	- revise the user manual by including the data we've got during the evaluation

@@ -1,0 +1,30 @@
+Weekly Individual Status Report
+Date: 2018/05/06
+Name: Yanmeng Kong(Anny)
+ID: yk57
+
+1. Previous Week’s Plans and Goals
+	• Write some unit tests for my two features and add them to /tests folder
+	• Merge my implementation with Alice's
+	• Write more unit tests for NullnessLite option and test its overall correctness
+	• Finish testing Nullness Checker and our NullnessLite option on cse331 project
+	• Do some basic analysis on performance of Nullness Checker and our NullnessLite option on cse331 project and cse332 project if time allows
+
+2. This Week’s Progress
+	• Revised proposal and user manual in README
+		- revised introduction
+		- revised hypothesis part including discussing potential false positives for two features 
+	• Write some unit tests for my two features and add them to /tests folder
+		- added extra false positive tests
+	• Merged my implementation with Alice's
+	• Started to add annotations for the Nullness Checker of the Checker Framework
+		- Reduced 100 warnings from 260+ to 159 by adding annotations
+			- added two stub files for annoating the lib it used---- hamcrest.jar
+			- found some true warnings by analyzing
+
+	Challenges:
+		* It was time costly to analyze each warning manually, but so far it works well.
+
+3. Next Week’s Plans and Goals
+	• Review proposal and user manual
+	• Analyze the remaining warnings manually, figuring out true and false warnings
