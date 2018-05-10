@@ -24,6 +24,7 @@ Java developers who would like to get a trustable static analysis on their sourc
 
 They can run Nullenss_Lite instead to get a fast glimpse on their files and more concise reports, although with fewer true positives, with fewer false positive warnings.
 
+## Evaluation
 ### Compare with other nullness bug detectors (TODO: fill out the table)
 
 |Checkers | True Positives Reported | True Positives Not Reported | False Positives | # of Annotations used | Speed|
@@ -35,12 +36,19 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 |Eclipse | | | | | | 
 |Nullness Checker| | | | | |
 
-A more specific comparison table for developers is included in the section 4 in [week5/report](/reports/week5/Nullness_Lite--A%20lite%20option%20of%20the%20Nullness%20Checker.pdf).
-
+### Analysis for the table above
 The table above shows the benefits using Nullness Checker: (TODO: evaluate)
 * fewer annotations for users to add
 * fewer false positive warning
 * more true positives revealed
+
+### Reproduce the evaluation result
+For ubuntu users, run the following commands in terminal:
+```
+git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
+cd Nullness_Lite
+./eval_script.sh
+```
 
 ## Build from source code
 Ubuntu users can simply copy-paste the following commands to download the Checker Framework with the Nullness_Lite Option.
