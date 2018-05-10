@@ -47,6 +47,7 @@ For ubuntu users, run the following commands in terminal:
 ```
 git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
 cd Nullness_Lite
+chmod +x eval_script.sh
 ./eval_script.sh
 ```
 
