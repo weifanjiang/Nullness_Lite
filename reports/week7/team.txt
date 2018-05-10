@@ -1,14 +1,14 @@
-ÔªøWeek 7 Team Status Report
+?Week 7 Team Status Report
 Team: NullnessLiteGroup
 
-* Previous Week‚Äôs Plans and Goals
+* Previous Weekís Plans and Goals
    * Finish adding annotations for junit4
       * Adding annotations for different checkers in separate branches
       * Assigning annotations review by Monday 5/7
    * Decide our rules of adding annotations and make sure it is conforming
    * Do some basic analysis on performance of Nullness Checker and our NullnessLite option on junit4
    * Finish evaluating Eclipse, IntelliJ and FindBugs
-* This Week‚Äôs Progress
+* This Weekís Progress
    * Revised proposal and user manual in README
       * revised introduction
       *  revised hypothesis part including discussing potential false positives for two features 
@@ -20,12 +20,15 @@ Team: NullnessLiteGroup
          * @Nullable added for detect the nullness bugs correctly
          * added two helper stub files for annotating the lib it used---- hamcrest.jar
          * Analyzing true+false warnings with reasons as comments
-         * Scripts written locally to count @Nullable and @SuppressWarnings(‚Äúnullness‚Äù), wait to be pushed
+         * Scripts written locally to count @Nullable and @SuppressWarnings(ìnullnessî), wait to be pushed
       * Other checkers (wait for filling)
    * Bug found for NullnessLite
       * Tests added to detect the bug
       * Plan decided for fixing the bug
-* Next Week‚Äôs Plans and Goals
+   * Finish error analysis on Junit4 in Eclipse, FindBugs and Intellij. Add comments about true positive and false positive
+     in each fork version
+   * Start working on Nullaway. Looking for another open source project that contains 10 thousand to 50 thousand lines on GitHub 
+* Next Weekís Plans and Goals
    * Review proposal and user manual
    * Analyze the remaining warnings manually, figuring out true and false warnings
    * Found a new project to analyze
