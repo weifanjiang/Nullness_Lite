@@ -201,7 +201,7 @@ Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with
 
 2. Have JDK 1.5.0 or later installed on your computer
 
-3. Extract the directory findbugs-3.0.1, then go to findbugs-3.0.1/lib. Double click on findbugs.
+3. Extract the directory findbugs-3.0.1, then go to findbugs-3.0.1/lib. Double click findbugs.
 
 4 Click File > New Project. Add the project to the first box (Classpath for analysis), and add the class archive files to the second box (Auxillary classpath)
 
