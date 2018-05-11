@@ -168,8 +168,8 @@ public class MyJavaFile {
 Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with -ANullnessLite option will not issue any error.
 
 ## How to Reproduce the Evaluation Results?
-#### Eclipse
-1. download and install Eclipse on your local machine (if you don't have one yet)
+### Eclipse
+1. download and install Eclipse on your local machine (if you don't have one yet).
 
 2. open Eclipse, and create a workspace under directory "WORKSPACE"
 
@@ -191,8 +191,8 @@ Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with
    But since our evaluation focuses only on the source files of junit4, you can ignore these errors.
    Or you can take a look at them if you are interested.
    
-   (We've examined that all the 3 errors are false positives, and have attached our reasoning in comment blocks.
-    If you click on the errors, you will see them.)
+   We've examined that all the 3 errors are false positives, and have attached our reasoning in comment blocks.
+   If you click on the errors, you will see them.
 
 ## Frequently Asked Questions
 #### 1. If I got the following result when running the Checker Framework?
