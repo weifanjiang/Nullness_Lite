@@ -44,8 +44,12 @@ Yet there are some disadvantages using the Nullness Checker:
 * more false positives to deal with
 * more annotations need to be added
 
-We are still working on the Nullness_Lite result..
-Given the feedbacks from the evaluators of the Nullness_Lite, we can expect fewer positives and fewer annotations added..
+We are still working on the Nullness_Lite result.
+
+Given the feedbacks from the evaluators of the Nullness_Lite, we can expect:
+* fewer true positives
+* fewer false positives
+* fewer annotations
 
 ### To reproduce the initial result, please see the instruction in the second last section in this User Manual (scroll down).
 
