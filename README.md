@@ -42,15 +42,6 @@ The table above shows the benefits using Nullness Checker: (TODO: evaluate)
 * fewer false positive warning
 * more true positives revealed
 
-### Reproduce the Evaluation Results
-For ubuntu users, run the following commands in terminal:
-```
-git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
-cd Nullness_Lite
-chmod +x eval_script.sh
-./eval_script.sh
-```
-
 ## Build from Source Code
 Ubuntu users can simply copy-paste the following commands to download the Checker Framework with the Nullness_Lite Option.
 ```
@@ -206,6 +197,14 @@ We've used a functionality of IntelliJ called "Infer Nullity" to automatically a
 3. open IntelliJ, and import junit4 into IntelliJ as a maven project (leave the import settings as default)
 4. to be continued
 
+### The Nullness Checker
+For ubuntu users, run the following commands in terminal:
+```
+git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
+cd Nullness_Lite
+chmod +x eval_script.sh
+./eval_script.sh
+```
 
 ## Frequently Asked Questions
 #### 1. What if I got the following result when running the Checker Framework?
