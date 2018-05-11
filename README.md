@@ -219,8 +219,7 @@ Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with
 3. open IntelliJ, and import junit4 into IntelliJ as a maven project (leave the import settings as default)
 4. to be continued
 
-### Nullness Checker
-### Nullness_Lite & each feature to be tested
+### Nullness Checker, Nullness_Lite & each feature to be tested
 For ubuntu users, run the following commands in terminal:
 ```
 git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
