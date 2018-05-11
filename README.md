@@ -32,8 +32,8 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 |Nullness_Lite | | | | | |
 |NullAway | | | | | |
 |FindBugs |0|64|0|0| | 
-|IntelliJ ||||| | 
-|Eclipse |0|64|0|0| | 
+|IntelliJ |0|64|1|0| | 
+|Eclipse |0|64|3|0| | 
 |Nullness Checker| 64 | 0 | 64 | 467 | 17 s 755 ms (IntelliJ) |
 
 ### Analysis for the Table Above
@@ -208,16 +208,17 @@ Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with
 5. Click Analyze
 
    
-### IntelliJ
+### IntelliJ (wihout "Infer Nullity" before it runs code inspection)
 1. download and install IntelliJ on your local machine (if you don't have one yet)
 2. choose your own workspace, move under it, and git clone our evaluation project junit4 and switch to branch "IntelliJ":
 ```
    $ git clone https://github.com/NullnessLiteGroup/junit4.git
    $ cd junit4
-   $ git checkout intellij
+   $ git checkout intellij1
 ```
 3. open IntelliJ, and import junit4 into IntelliJ as a maven project (leave the import settings as default)
-4. to be continued
+4. Analyze > Inspect Code... > OK
+5. it will show 2 errors later, but you will find that 1 is not related to (possible) NullPointerException, so we can ignore that error. For the error left, we've classified it as a false positive and have left comments in the source code for the client to check.
 
 ### Nullness Checker, Nullness_Lite & each feature to be tested
 For ubuntu users, run the following commands in terminal:
