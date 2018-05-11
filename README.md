@@ -119,7 +119,7 @@ cd $JSR308/checker-framework
 ./gradlew NullnessLiteOptTest
 ```
 
-## Compile and Run Nullness Checker
+## Compile and Run Nullness Checker with the Nullness_Lite option enabled
 Follow the [instructions](https://checkerframework.org/manual/#running) of chapter 2.2 in Checker Framework manual.
 
 Users run Nullness_Lite by passing an extra argument when running Nullness Checker from the command line:
@@ -208,7 +208,7 @@ We've used a functionality of IntelliJ called "Infer Nullity" to automatically a
 3. open IntelliJ, and import junit4 into IntelliJ as a maven project (leave the import settings as default)
 4. to be continued
 
-### The Nullness Checker
+### The Nullness Checker, each feature of the Nullness_Lite & all features together in the final version of the Nullness_Lite
 For ubuntu users, run the following commands in terminal:
 ```
 git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
@@ -216,6 +216,7 @@ cd Nullness_Lite
 chmod +x eval_script.sh
 ./eval_script.sh
 ```
+Currently, the script only shows the result of the Nullness Checker.
 
 ## Frequently Asked Questions
 #### 1. What if I got the following result when running the Checker Framework?
