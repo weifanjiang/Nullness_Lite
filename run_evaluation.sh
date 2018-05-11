@@ -33,6 +33,7 @@ appendResult "1. # of annotations used:"
 appendResult "Name of the Checker|Current Branch|@Nullable"
 
 git checkout $NULLNESS_CHECKER > /dev/null 2>&1
+git checkout fd33c3b > /dev/null 2>&1
 appendResult "The Nullness Checker|$(eval $GET_BRANCH)|$(eval $COUNT_NULLABLE)"
 
 appendResult $SEP
@@ -40,6 +41,7 @@ appendResult "2. Analysis Report:"
 appendResult "Name of the Checker|Current Branch|True Positives|False Positives"
 
 git checkout $NULLNESS_CHECKER > /dev/null 2>&1
+git checkout fd33c3b > /dev/null 2>&1
 appendResult "The Nullness Checker|$(eval $GET_BRANCH)|$(eval $COUNT_TRUE_POS)|$(eval $COUNT_FALSE_POS)"
 
 echo $SEP
