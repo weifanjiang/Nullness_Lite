@@ -27,7 +27,7 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 ## Evaluation
 ### Compare with other nullness bug detectors (TODO: fill out the table)
 
-|Checkers | True Positives Reported | True Positives Not detected | False Positives | Annotations used | Speed|
+|Checkers | True Positives Detected | True Positives Not Detected | False Positives | Annotations Used | Time Consumed |
 |-|-|-|-|-|-|
 |Nullness_Lite | | | | | |
 |NullAway | | | | | |
