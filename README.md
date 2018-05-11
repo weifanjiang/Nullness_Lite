@@ -196,6 +196,18 @@ Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with
    We've examined that all the 3 errors are false positives, and have attached our reasoning in comment blocks.
    If you click on the errors, you will see them.
    
+### FindBugs
+1. Download and install [FindBugs](http://findbugs.sourceforge.net/downloads.html)
+
+2. Have JDK 1.5.0 or later installed on your computer
+
+3. Extract the directory findbugs-3.0.1, then go to findbugs-3.0.1/lib. Double click on findbugs.
+
+4 Click File > New Project. Add the project to the first box (Classpath for analysis), and add the class archive files to the second box (Auxillary classpath)
+
+5. Click Analyze
+
+   
 ### IntelliJ
 1. download and install IntelliJ on your local machine (if you don't have one yet)
 2. choose your own workspace, move under it, and git clone our evaluation project junit4 and switch to branch "IntelliJ":
