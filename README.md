@@ -37,10 +37,14 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 |Nullness Checker| 64 | 0 | 64 | 467 | 17 s 755 ms (IntelliJ) |
 
 ### Analysis for the Table Above
-The table above shows the benefits using Nullness Checker: (TODO: evaluate)
-* fewer annotations for users to add
-* fewer false positive warning
+Revealed by the table above, there are some benefits using the Nullness Checker:
 * more true positives revealed
+
+Yet there are some disadvantages using the Nullness Checker:
+* more false positives to deal with
+* more annotations need to be added
+
+### To reproduce the initial result, please see the instruction in the second last section in this User Manual (scroll down).
 
 ## Build from Source Code
 Ubuntu users can simply copy-paste the following commands to download the Checker Framework with the Nullness_Lite Option.
