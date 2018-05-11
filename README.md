@@ -19,13 +19,13 @@ Features disabled:
 * Boxing of primitives 
   * assume the boxing of primitives is @Pure and BoxedClass.valueOf() always return the same object;
 
-### Who wants to use?
+### Who wants to use Nullness_Lite?
 Java developers who would like to get a trustable static analysis on their source files, but hesitate to spend time running full verification tool such as Nullness Checker.
 
 They can run Nullenss_Lite instead to get a fast glimpse on their files and more concise reports, although with fewer true positives, with fewer false positive warnings.
 
 ## Evaluation
-### Compare with other nullness bug detectors (TODO: fill out the table)
+### Compare with Other Nullness Bug Detectors
 
 |Checkers | True Positives Detected | True Positives Not Detected | False Positives | Annotations Used | Time Consumed |
 |-|-|-|-|-|-|
@@ -36,13 +36,13 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 |Eclipse |0|64|0|0| | 
 |Nullness Checker| 64 | 0 | 64 | 467 | 17 s 755 ms (IntelliJ) |
 
-### Analysis for the table above
+### Analysis for the Table Above
 The table above shows the benefits using Nullness Checker: (TODO: evaluate)
 * fewer annotations for users to add
 * fewer false positive warning
 * more true positives revealed
 
-### Reproduce the evaluation result
+### Reproduce the Evaluation Results
 For ubuntu users, run the following commands in terminal:
 ```
 git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
@@ -51,19 +51,19 @@ chmod +x eval_script.sh
 ./eval_script.sh
 ```
 
-## Build from source code
+## Build from Source Code
 Ubuntu users can simply copy-paste the following commands to download the Checker Framework with the Nullness_Lite Option.
 ```
 git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
 cd Nullness_Lite
 ./install_Checker_Framework_Ubuntu.sh 
 ```
-### Set up environment
+### Set up Environment
 Since Nullness_Lite depends on Nullness Checker of Checker Framework, users need to follow the instructions of Checker Framework to setup their environments following the [instructions](https://checkerframework.org/manual/#build-source) in Checker Framework manual.
 
 Note for Windows users: Plase download VMware and follow the Ubuntu instructions.
 
-### Obtain source code
+### Obtain Source Code
 Obtain the latest source code from the version control repository:
 
 ```
@@ -101,8 +101,8 @@ For Build, following [instructions](https://checkerframework.org/manual/#build-s
  ./gradlew assemble
  ```
 
-### Run tests (optional)
-#### Test all files in Checker Framework:
+### Run Tests (Optional)
+#### Test All Files in Checker Framework:
 The process will possibly take long time on local machine, expecially on VM with insufficient memory allocated. (4G is suggested in this case.)
 
 Besides, if Some jtreg tests fail for timeout, those tests do not indicate bugs in Checker Framework or Nullness_Lite.
@@ -117,7 +117,7 @@ cd $JSR308/checker-framework
 ./gradlew NullnessLiteOptTest
 ```
 
-## Compile and run Nullness Checker
+## Compile and Run Nullness Checker
 Follow the [instructions](https://checkerframework.org/manual/#running) of chapter 2.2 in Checker Framework manual.
 
 Users run Nullness_Lite by passing an extra argument when running Nullness Checker from the command line:
@@ -126,7 +126,7 @@ javac -processor nullness -ANullnessLite <MyFile.java>
 ```
 Notice that the behavior is undefined if `-ANullnessLite` option is passed to a different checker.
 
-## Analyze the report
+## Analyze the Report
 Here is the example code we want to test:
 ```java
 import org.checkerframework.checker.nullness.qual.NonNull;
@@ -208,7 +208,7 @@ We've used a functionality of IntelliJ called "Infer Nullity" to automatically a
 
 
 ## Frequently Asked Questions
-#### 1. If I got the following result when running the Checker Framework?
+#### 1. What if I got the following result when running the Checker Framework?
 ```
 error: Annotation processor 'nullness' not found
 1 error
