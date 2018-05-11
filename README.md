@@ -171,9 +171,9 @@ Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with
 ### Eclipse
 1. download and install Eclipse on your local machine (if you don't have one yet).
 
-2. open Eclipse, and create a workspace under directory "WORKSPACE"
+2. open Eclipse, and create a workspace under directory your_workspace
 
-3. move under the created workspace WORKSPACE, git clone our project and switch to branch "eclipse":
+3. move under the created workspace your_workspace, git clone our project and switch to branch "eclipse":
 ```
    $ git clone https://github.com/NullnessLiteGroup/junit4.git
    $ cd junit4
@@ -182,7 +182,7 @@ Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with
 4. in Eclipse, import junit4 into your workspace:
 ```
    File > Import... > Maven > Existing Maven Projects
-   choose the root directory to be WORKSPACE/junit4
+   choose the root directory to be your_workspace/junit4
    Finish
 ```   
 5. since we've included a .setting directory in branch "eclipse", junit4 will build under our null-related settings 
