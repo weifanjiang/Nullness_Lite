@@ -193,6 +193,19 @@ Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with
    
    We've examined that all the 3 errors are false positives, and have attached our reasoning in comment blocks.
    If you click on the errors, you will see them.
+   
+### IntelliJ
+We've used a functionality of IntelliJ called "Infer Nullity" to automatically add @NotNull/@Nullable annotations in order to do the null-related inspection. After applying "Infer Nullity", it adds 1265 @NotNull/@Nullable annotations in junit4. These annotations should not be counted into our "Number of Annotations Added" attribute, since we are looking for those annotations being added when we analyze the null-related errors (found by null-related inspection) and try to eliminate some of them.
+1. download and install IntelliJ on your local machine (if you don't have one yet)
+2. choose your own workspace, move under it, and git clone our evaluation project junit4 and switch to branch "IntelliJ":
+```
+   $ git clone https://github.com/NullnessLiteGroup/junit4.git
+   $ cd junit4
+   $ git checkout intellij
+```
+3. open IntelliJ, and import junit4 into IntelliJ as a maven project (leave the import settings as default)
+4. to be continued
+
 
 ## Frequently Asked Questions
 #### 1. If I got the following result when running the Checker Framework?
