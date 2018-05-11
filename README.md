@@ -27,13 +27,13 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 ## Evaluation
 ### Compare with other nullness bug detectors (TODO: fill out the table)
 
-|Checkers | True Positives Reported | True Positives Not detected | False Positives | # of Annotations used | Speed|
+|Checkers | True Positives Reported | True Positives Not detected | False Positives | Annotations used | Speed|
 |-|-|-|-|-|-|
 |Nullness_Lite | | | | | |
 |NullAway | | | | | |
-|FindBugs |0|0|0|0| | 
-|IntelliJ |0|0|0|0| | 
-|Eclipse |0|0|0|0| | 
+|FindBugs |0|64|0|0| | 
+|IntelliJ ||||| | 
+|Eclipse |0|64|0|0| | 
 |Nullness Checker| 64 | 0 | 64 | 467 | 17 s 755 ms (IntelliJ) |
 
 ### Analysis for the table above
