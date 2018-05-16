@@ -1,40 +1,40 @@
 Week 8 Team Report
 Team: NullnessLiteGroup
 
--	Previous Week’s Plans and Goals
-  -	Review proposal and user manual
-  -	Analyze the remaining warnings manually, figuring out true and false warnings
-  -	Found a new project to analyze
+- Previous Week’s Plans and Goals
+  - Review proposal and user manual
+  - Analyze the remaining warnings manually, figuring out true and false warnings
+  - Found a new project to analyze
 
--	This Week’s Progress
-  -	Revised proposal and user manual in README
-    -	Revised introduction, related works, hypothesis, experimentation and progress part
-  -	Presentation preparation
-    -	Making slides
-    -	Summarize current progress
-  -	Analyze the remaining 50 warnings manually, figuring out true and false warnings
-    -	the initial analysis shows 64 false warnings and 64 true warnings
-  -	Progress for analyzing NullnessLite
-    -	Reduced 120+ warnings by stub files, adding annotations and analysis
-    -	Additional annotations for reducing false positives despite @Nullable:
+- This Week’s Progress
+  - Revised proposal and user manual in README
+    - Revised introduction, related works, hypothesis, experimentation and progress part
+  - Presentation preparation
+    - Making slides
+    - Summarize current progress
+  - Analyze the remaining 50 warnings manually, figuring out true and false warnings
+    - the initial analysis shows 64 false warnings and 64 true warnings
+  - Progress for analyzing NullnessLite
+    - Reduced 120+ warnings by stub files, adding annotations and analysis
+    - Additional annotations for reducing false positives despite @Nullable:
       -	@UnderInitialization
       -	@UnknownInitialization
-    -	Analysis comments added for annotations in branch annos_nl_all_xz, we plan to compare it with the branch annotate the Nullness Checker for peer review
-  -	Progress for analysing the Nullness Checker:
-    -	Finished the initial result but needs peer review with Nullness_Lite branch to fix the places where we added annotations and did analysis incorrectly
-  -	Bug is fixed in NullnessLite, peer review needed
+    - Analysis comments added for annotations in branch annos_nl_all_xz, we plan to compare it with the branch annotate the Nullness Checker for peer review
+  - Progress for analysing the Nullness Checker:
+    - Finished the initial result but needs peer review with Nullness_Lite branch to fix the places where we added annotations and did analysis incorrectly
+  - Bug is fixed in NullnessLite, peer review needed
   - Finish evaluating Eclipse, FindBugs, and version1 of IntelliJ
   - Evaluate NullAway and version2 of IntelliJ (Infer Nullity) [in progress]
 
-	- Challenges: 
-    -	Some analysis on true/false positives are incorrect for the initial result, so we have to review those analysis to ensure the final results will be correct. Therefore, we adjusted our plan from finding a new project to focusing more on the current one, junit4, since we underestimated the work required for adding annotations and analysis.
+  - Challenges: 
+    - Some analysis on true/false positives are incorrect for the initial result, so we have to review those analysis to ensure the final results will be correct. Therefore, we adjusted our plan from finding a new project to focusing more on the current one, junit4, since we underestimated the work required for adding annotations and analysis.
     - It takes us a while installing NullAway and running JUnit4 on it. 
 
--	Next Week’s Plans and Goals
-  -	Review proposal and user manual
-  -	Fix the incorrect analysis of the Nullness Checker
-  -	Finish the remaining analysis of NullnessLite
-  -	Start the analysis of individual features for NullnessLite if time allows
+- Next Week’s Plans and Goals
+  - Review proposal and user manual
+  - Fix the incorrect analysis of the Nullness Checker
+  - Finish the remaining analysis of NullnessLite
+  - Start the analysis of individual features for NullnessLite if time allows
   - Finish the peer review of the analysis of Eclipse, FindBugs and IntelliJ (version1)
   - Finish evaluating IntelliJ (version2)
   - Continually work on NullAway
