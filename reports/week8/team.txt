@@ -23,12 +23,20 @@ Team: NullnessLiteGroup
   ❏	Progress for analysing the Nullness Checker:
     ❏	Finished the initial result but needs peer review with Nullness_Lite branch to fix the places where we added annotations and did analysis incorrectly
   ❏	Bug is fixed in NullnessLite, peer review needed
+  ❏ Finish evaluating Eclipse, FindBugs, and version1 of IntelliJ
+  ❏ Evaluate NullAway and version2 of IntelliJ (Infer Nullity) [in progress]
 
 	Challenges: 
     ❏	Some analysis on true/false positives are incorrect for the initial result, so we have to review those analysis to ensure the final results will be correct. Therefore, we adjusted our plan from finding a new project to focusing more on the current one, junit4, since we underestimated the work required for adding annotations and analysis.
+    ❏ It takes us a while installing NullAway and running JUnit4 on it. 
 
 ❏	Next Week’s Plans and Goals
   ❏	Review proposal and user manual
   ❏	Fix the incorrect analysis of the Nullness Checker
   ❏	Finish the remaining analysis of NullnessLite
   ❏	Start the analysis of individual features for NullnessLite if time allows
+  ❏ Finish the peer review of the analysis of Eclipse, FindBugs and IntelliJ (version1)
+  ❏ Finish evaluating IntelliJ (version2)
+  ❏ Continually work on NullAway
+  ❏ Revise the script files (or manuals) of reproducing our evaluation results
+
