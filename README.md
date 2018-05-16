@@ -33,6 +33,7 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 |NullAway | | | | | |
 |FindBugs |0|64|0|0| | 
 |IntelliJ |0|64|1|0| | 
+|IntelliJ (Infer Nullity - still in progress) |18| |4|0| | 
 |Eclipse |0|64|3|0| | 
 |Nullness Checker| 64 | 0 | 64 | 467 | 17 s 755 ms (IntelliJ) |
 
