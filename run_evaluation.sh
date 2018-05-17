@@ -9,6 +9,8 @@ GET_BRANCH="git branch | grep \* | sed -r \"s/\*//g\""
 GET_JAVA="find src/main | grep -e \"\.java$\""
 
 COUNT_NULLABLE=$GET_JAVA"| xargs grep -on \"@Nullable\" | wc -l"
+COUNT_NULLABLE=$GET_JAVA"| xargs grep -on \"@UnderInitialization\" | wc -l"
+COUNT_NULLABLE=$GET_JAVA"| xargs grep -on \"@UnknownInitialization\" | wc -l"
 COUNT_TRUE_POS=$GET_JAVA"| xargs grep -on \"TRUE_POSITIVE\" | wc -l"
 COUNT_FALSE_POS=$GET_JAVA"| xargs grep -on \"FALSE_POSITIVE\" | wc -l"
 
