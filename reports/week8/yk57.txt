@@ -1,0 +1,25 @@
+Weekly Individual Status Report
+Date: 2018/05/13
+Name: Yanmeng Kong(Anny)
+ID: yk57
+
+1. Previous Week’s Plans and Goals
+	• Review proposal and user manual
+	• Analyze the remaining warnings manually, figuring out true and false warnings
+
+2. This Week’s Progress
+	• Revised proposal and user manual in README
+		- revised introduction
+		- revised hypothesis part
+	• Analyze the remaining 50 warnings manually, figuring out true and false warnings
+		- the initial analysis shows 64 false warnings and 64 true warnings
+	• Started to analyze NullnessLite
+		- Reduced 120+ warnings by stub files, adding annotations and analysis
+
+	Challenges:
+		* Some analysis was found wrong in the initial analysis, so we have to double check each one to make sure no one was wrong for the final result
+
+3. Next Week’s Plans and Goals
+	• Review proposal and user manual
+	• Fix the incorrect analysis of the Nullness Checker
+	• Finish the remaining analysis of NullnessLite

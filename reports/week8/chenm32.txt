@@ -1,0 +1,27 @@
+Individual Report - Week 8
+
+Name: Mengxing Chen
+NetID: chenm32
+Student Number: 1532296
+
+1. My goal from a week ago:	
+	- finish evaluating Nullaway on JUnit4
+	- peer review with the Implementation Group (Xinrong and Yanmeng)
+	- continuously revise the project report
+	- revise the user manual by including the data we've got during the evaluation
+2. My process this week:
+	- peer review with the Implementation Group (Xinrong and Yanmeng)
+	- improve the "related works" and "evaluation" parts of the project report
+	- revise the plan for evaluating IntelliJ: since it has a functionality called "Infer Nullity"
+	  which automatically infers null-related annotations to a project, we decide to evaluate IntelliJ
+	  in the following two ways: 
+	  1. evaluate on the "no-annotations" version of JUnit4  
+	  2. first use "Infer Nullity" to add annotations to JUnit4, and then evaluate on this "annotations-added" version
+	- work with Yuqi:
+		- evaluate NullAway (half done)
+		- re-evaluate IntelliJ by following our revised plan
+		- classify and write the analysis of each null-related error appeared during the evaluation of Eclipse, IntelliJ and FindBugs
+3. My plan for the following week:
+	- finish evaluating NullAway
+	- improve the manual (script) of reproducing our evaluation result
+	

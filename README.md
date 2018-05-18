@@ -19,42 +19,54 @@ Features disabled:
 * Boxing of primitives 
   * assume the boxing of primitives is @Pure and BoxedClass.valueOf() always return the same object;
 
-### Who wants to use?
+### Who wants to use Nullness_Lite?
 Java developers who would like to get a trustable static analysis on their source files, but hesitate to spend time running full verification tool such as Nullness Checker.
 
 They can run Nullenss_Lite instead to get a fast glimpse on their files and more concise reports, although with fewer true positives, with fewer false positive warnings.
 
-### Compare with other nullness bug detectors (TODO: fill out the table)
+## Evaluation
+### Compare with Other Nullness Bug Detectors
 
-|Checkers | True Positives Reported | True Positives Not Reported | False Positives | # of Annotations used | Speed|
+|Checkers | True Positives Detected | True Positives Not Detected | False Positives | Annotations Used | Time Consumed |
 |-|-|-|-|-|-|
 |Nullness_Lite | | | | | |
 |NullAway | | | | | |
-|FindBugs | | | | | | 
-|IntelliJ | | | | | | 
-|Eclipse | | | | | | 
-|Nullness Checker| | | | | |
+|FindBugs |0|64|0|0| | 
+|IntelliJ |0|64|1|0| | 
+|IntelliJ (Infer Nullity - still in progress) |18| |4|0| | 
+|Eclipse |0|64|3|0| | 
+|Nullness Checker| 64 | 0 | 64 | 467 | 17 s 755 ms (IntelliJ) |
 
-A more specific comparison table for developers is included in the section 4 in [week5/report](/reports/week5/Nullness_Lite--A%20lite%20option%20of%20the%20Nullness%20Checker.pdf).
-
-The table above shows the benefits using Nullness Checker: (TODO: evaluate)
-* fewer annotations for users to add
-* fewer false positive warning
+### Analysis for the Table Above
+Revealed by the table above, there are some benefits using the Nullness Checker:
 * more true positives revealed
 
-## Build from source code
+Yet there are some disadvantages using the Nullness Checker:
+* more false positives to deal with
+* more annotations need to be added
+
+We are still working on the Nullness_Lite result.
+
+Given the feedbacks from the evaluators of the Nullness_Lite, we can expect:
+* fewer true positives
+* fewer false positives
+* fewer annotations
+
+### To reproduce the initial result, please see the instruction in the second last section in this User Manual (scroll down).
+
+## Build from Source Code
 Ubuntu users can simply copy-paste the following commands to download the Checker Framework with the Nullness_Lite Option.
 ```
 git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
 cd Nullness_Lite
 ./install_Checker_Framework_Ubuntu.sh 
 ```
-### Set up environment
+### Set up Environment
 Since Nullness_Lite depends on Nullness Checker of Checker Framework, users need to follow the instructions of Checker Framework to setup their environments following the [instructions](https://checkerframework.org/manual/#build-source) in Checker Framework manual.
 
 Note for Windows users: Plase download VMware and follow the Ubuntu instructions.
 
-### Obtain source code
+### Obtain Source Code
 Obtain the latest source code from the version control repository:
 
 ```
@@ -92,8 +104,8 @@ For Build, following [instructions](https://checkerframework.org/manual/#build-s
  ./gradlew assemble
  ```
 
-### Run tests (optional)
-#### Test all files in Checker Framework:
+### Run Tests (Optional)
+#### Test All Files in Checker Framework:
 The process will possibly take long time on local machine, expecially on VM with insufficient memory allocated. (4G is suggested in this case.)
 
 Besides, if Some jtreg tests fail for timeout, those tests do not indicate bugs in Checker Framework or Nullness_Lite.
@@ -108,7 +120,7 @@ cd $JSR308/checker-framework
 ./gradlew NullnessLiteOptTest
 ```
 
-## Compile and run Nullness Checker
+## Compile and Run Nullness Checker with the Nullness_Lite option enabled
 Follow the [instructions](https://checkerframework.org/manual/#running) of chapter 2.2 in Checker Framework manual.
 
 Users run Nullness_Lite by passing an extra argument when running Nullness Checker from the command line:
@@ -117,7 +129,7 @@ javac -processor nullness -ANullnessLite <MyFile.java>
 ```
 Notice that the behavior is undefined if `-ANullnessLite` option is passed to a different checker.
 
-## Analyze the report
+## Analyze the Report
 Here is the example code we want to test:
 ```java
 import org.checkerframework.checker.nullness.qual.NonNull;
@@ -158,8 +170,69 @@ public class MyJavaFile {
 ```
 Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with -ANullnessLite option will not issue any error.
 
+## How to Reproduce the Evaluation Results?
+### Eclipse
+1. download and install Eclipse on your local machine (if you don't have one yet).
+
+2. open Eclipse, and create a workspace under directory your_workspace
+
+3. move under the created workspace your_workspace, git clone our project and switch to branch "eclipse":
+```
+   $ git clone https://github.com/NullnessLiteGroup/junit4.git
+   $ cd junit4
+   $ git checkout eclipse
+```
+4. in Eclipse, import junit4 into your workspace:
+```
+   File > Import... > Maven > Existing Maven Projects
+   choose the root directory to be your_workspace/junit4
+   Finish
+```   
+5. since we've included a .setting directory in branch "eclipse", junit4 will build under our null-related settings 
+
+6. After Eclipse builds junit4, it will show 3 null-related errors which are all in test files of junit4. 
+   But since our evaluation focuses only on the source files of junit4, you can ignore these errors.
+   Or you can take a look at them if you are interested.
+   
+   We've examined that all the 3 errors are false positives, and have attached our reasoning in comment blocks.
+   If you click on the errors, you will see them.
+   
+### FindBugs
+1. Download and install [FindBugs](http://findbugs.sourceforge.net/downloads.html)
+
+2. Have JDK 1.5.0 or later installed on your computer
+
+3. Extract the directory findbugs-3.0.1, then go to findbugs-3.0.1/lib. Double click findbugs.
+
+4 Click File > New Project. Add the project to the first box (Classpath for analysis), and add the class archive files to the second box (Auxillary classpath)
+
+5. Click Analyze
+
+   
+### IntelliJ (wihout "Infer Nullity" before it runs code inspection)
+1. download and install IntelliJ on your local machine (if you don't have one yet)
+2. choose your own workspace, move under it, and git clone our evaluation project junit4 and switch to branch "IntelliJ":
+```
+   $ git clone https://github.com/NullnessLiteGroup/junit4.git
+   $ cd junit4
+   $ git checkout intellij1
+```
+3. open IntelliJ, and import junit4 into IntelliJ as a maven project (leave the import settings as default)
+4. Analyze > Inspect Code... > OK
+5. it will show 2 errors later, but you will find that 1 is not related to (possible) NullPointerException, so we can ignore that error. For the error left, we've classified it as a false positive and have left comments in the source code for the client to check.
+
+### Nullness Checker, Nullness_Lite & each feature to be tested
+For ubuntu users, run the following commands in terminal:
+```
+git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
+cd Nullness_Lite
+chmod +x run_evaluation.sh
+./run_evaluation.sh
+```
+Currently, the script only shows the result of the Nullness Checker.
+
 ## Frequently Asked Questions
-#### 1. If I got the following result when running the Checker Framework?
+#### 1. What if I got the following result when running the Checker Framework?
 ```
 error: Annotation processor 'nullness' not found
 1 error

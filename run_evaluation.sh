@@ -2,8 +2,8 @@
 #
 # Author(s): XINRONG ZHAO
 
+#----------------------------Variables & Helper Methods
 RESULT=$(pwd)"/result.txt"
-
 SEP="------------------------------"
 GET_BRANCH="git branch | grep \* | sed -r \"s/\* //g\""
 GET_JAVA="find src/main | grep -e \"\.java$\""
