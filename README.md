@@ -209,7 +209,7 @@ Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with
 5. Click Analyze
 
    
-### IntelliJ (wihout "Infer Nullity" before it runs code inspection)
+### IntelliJ (without "Infer Nullity" before it runs code inspection)
 1. download and install IntelliJ on your local machine (if you don't have one yet)
 2. choose your own workspace, move under it, and git clone our evaluation project junit4 and switch to branch "IntelliJ":
 ```
