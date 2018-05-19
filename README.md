@@ -29,13 +29,13 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 
 |Checkers | True Positives Detected | True Positives Not Detected | False Positives | Annotations Used | Time Consumed |
 |-|-|-|-|-|-|
-|Nullness_Lite | | | | | |
+|Nullness_Lite |30| |64|320| |
 |NullAway | | | | | |
 |FindBugs |0|64|0|0| | 
 |IntelliJ |0|64|1|0| | 
 |IntelliJ (Infer Nullity - still in progress) |18| |4|0| | 
 |Eclipse |0|64|3|0| | 
-|Nullness Checker| 64 | 0 | 64 | 467 | 17 s 755 ms (IntelliJ) |
+|Nullness Checker| 63 | 0 | 65 | 467 | |
 
 ### Analysis for the Table Above
 Revealed by the table above, there are some benefits using the Nullness Checker:
