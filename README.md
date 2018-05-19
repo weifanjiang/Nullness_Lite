@@ -35,7 +35,7 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 |IntelliJ |0|64|1|0| | 
 |IntelliJ (Infer Nullity - still in progress) |18| |4|0| | 
 |Eclipse |0|64|3|0| | 
-|Nullness Checker| 63 | 0 | 65 | 467 | |
+|Nullness Checker| 63 | 0 | 65 | 468 | |
 
 ### Analysis for the Table Above
 Revealed by the table above, there are some benefits using the Nullness Checker:
