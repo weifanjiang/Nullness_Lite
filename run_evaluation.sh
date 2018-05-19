@@ -4,7 +4,7 @@
 
 #----------------------------Variables & Helper Methods
 RESULT=$(pwd)"/result.txt"
-SEP="------------------------------"
+SEP="--------------------"
 GET_BRANCH="git branch | grep \* | sed -r \"s/\* //g\""
 GET_JAVA="find src/main | grep -e \"\.java$\""
 
@@ -32,18 +32,24 @@ git clone https://github.com/NullnessLiteGroup/junit4.git junit4
 cd junit4
 
 appendResult $SEP
-appendResult "Experiment Subject #1: Junit4"
+countSubject=1
+appendResult "Experiment Subject #$countSubject:"
+appendResult "JUnit4"
 
 #----------------------------Annotations Added Report
 appendResult $SEP
-appendResult "1. # of annotations used:"
-appendResult "Name of the Checker|Current Branch|@Nullable|@UnderInitialization|@UnknownInitialization"
+appendResult "1. # of annotations:"
+appendResult "Name of the Checker|Current Branch|Total Count|@Nullable|@UnderInitialization|@UnknownInitialization"
 
 count=0
 for i in "${CHECKER_NAME[@]}"
 do
     git checkout ${BRANCH_NAME[$count]} > /dev/null 2>&1
-    appendResult "$i|$(eval $GET_BRANCH)|$(countWord "@Nullable")|$(countWord "@UnderInitialization")|$(countWord "@UnknownInitialization")"
+    countNullable=$(countWord "@Nullable")
+    countUnderInit=$(countWord "@UnderInitialization")
+    countUnknownInit=$(countWord "@UnknownInitialization")
+    total=$(($countNullable + $countUnderInit + $countUnknownInit))
+    appendResult "$i|$(eval $GET_BRANCH)|$total|$countNullable|$countUnderInit|$countUnknownInit"
     count=$(( $count + 1 ))
 done
 
