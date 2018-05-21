@@ -1,0 +1,29 @@
+Weekly Individual Status Report
+Date: 2018/05/20
+Name: Yanmeng Kong(Anny)
+ID: yk57
+
+1. Previous Week’s Plans and Goals
+	• Review proposal and user manual
+	• Fix the incorrect analysis of the Nullness Checker
+	• Finish the remaining analysis of NullnessLite
+
+2. This Week’s Progress
+	• Revised proposal and user manual in README
+		- revised introduction
+		- revised hypothesis part
+	• Fixed some incorrect analysis of the Nullness Checker
+	• Reviewed new added option for NullnessLite to take 4 features individually
+		-ANullnessLite= accept 4 values:
+			init = assume all values initialized
+			inva = no invalidation of dataflow
+			mapk = keys always exist in map
+			boxp = boxedclass.valueOf() is pure
+
+	Challenges:
+		* Analysis is still a challenge for me to ensure the correctness
+
+3. Next Week’s Plans and Goals
+	• Review proposal and user manual
+	• Fix the incorrect analysis of the Nullness Checker
+	• Finish the remaining analysis of NullnessLite
