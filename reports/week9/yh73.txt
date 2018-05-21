@@ -1,0 +1,16 @@
+Yuqi Huang
+NetID: yh73
+1532317
+
+1. Previous week's goal:
+	-Finish evaluating Nullaway
+	-Finish the evaluation parts in the report
+
+2. This week's progress:
+	-Basically finish adding @Nullable (used by Nullaway) to JUnit4
+	-Finish coding review for our own group and the assigned group
+	-revise our final report
+
+3. Next week's plan:
+	-Discuss the evaluation result with Mengxing and do peer review
+	-Fix the incorrect analysis if there are any
