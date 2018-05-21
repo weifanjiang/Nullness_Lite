@@ -1,0 +1,24 @@
+Individual Report - Week 8
+
+Name: Mengxing Chen
+NetID: chenm32
+Student Number: 1532296
+
+1. My goal from a week ago:	
+	- evaluate NullAway
+	- improve the manual (script) of reproducing our evaluation result
+	- revise the user manual by including the data we've got during the evaluation
+2. My process this week:
+	- prepare for the first draft presentation and make slides
+	- revise the user manual by including the data we've got during the evaluation
+	- evaluate IntelliJ by following the revised plan:
+	  since it has a functionality called "Infer Nullity" which automatically 
+	  infers null-related annotations to a project, we decide to evaluate IntelliJ
+	  in the following two ways: 
+	  1. evaluate on the "no-annotations" version of JUnit4  
+	  2. first use "Infer Nullity" to add annotations to JUnit4, and then evaluate on this "annotations-added" version
+	  80% done
+3. My plan for the following week:
+	- finish evaluating IntelliJ
+	- revise the user manual (or script files) for reproducing our evaluating results
+	
