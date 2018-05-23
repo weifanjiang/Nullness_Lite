@@ -11,6 +11,7 @@ This Week’s Progress
   - Revised proposal and user manual in README
   - Revised introduction, related works, hypothesis, experimentation and progress part
   - Reviewed analysis on the NullnessLite
+  - Finished addressing feedbacks from peer review last week
 
 	Challenges: 
     Some analysis on true/false positives might still be incorrect for the second reviewed result, so we have to review those analysis again to ensure the final results will be correct. 
