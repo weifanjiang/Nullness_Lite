@@ -1,0 +1,22 @@
+Week 8 Team Report
+Team: NullnessLiteGroup
+
+Previous Week’s Plans and Goals
+  - Review proposal and user manual
+  - Fix the incorrect analysis of the Nullness Checker
+  - Finish the remaining analysis of NullnessLite
+  - Start the analysis of individual features for NullnessLite if time allows
+
+This Week’s Progress
+  - Revised proposal and user manual in README
+  - Revised introduction, related works, hypothesis, experimentation and progress part
+  - Reviewed analysis on the NullnessLite
+
+	Challenges: 
+    Some analysis on true/false positives might still be incorrect for the second reviewed result, so we have to review those analysis again to ensure the final results will be correct. 
+
+Next Week’s Plans and Goals
+  - Review proposal and user manual
+  - Especially the analysis of results filled in the table
+  - Review the incorrect analysis of the Nullness Checker
+  - Finish the analysis of individual features for NullnessLite if time allows
