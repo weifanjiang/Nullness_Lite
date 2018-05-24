@@ -12,7 +12,7 @@ This Week’s Progress
   - Revised introduction, related works, hypothesis, experimentation and progress part
   - Reviewed analysis on the NullnessLite
   - Finished addressing feedbacks from peer review last week
-
+  - Finished reasoning errors reported by Intellij and Nullaway on JUnit4
 	Challenges: 
     Some analysis on true/false positives might still be incorrect for the second reviewed result, so we have to review those analysis again to ensure the final results will be correct. 
 
@@ -21,3 +21,4 @@ Next Week’s Plans and Goals
   - Especially the analysis of results filled in the table
   - Review the incorrect analysis of the Nullness Checker
   - Finish the analysis of individual features for NullnessLite if time allows
+  - Compare the result come from different verification checkers, and analyze their advantages and disadvantages.
