@@ -8,7 +8,6 @@ Developer Manual: (Link to the changed developer manual)
 ## Introduction
 Nullness_Lite is a lite option of the Nullness Checker in [the Checker Framework](https://checkerframework.org/) to detect nullness bugs in java source files. It disables the following features of Nullness Checker to obtain more desireable traits. To be specific, the Nullness Checker with Nullness_Lite option enabled will be faster and easier to use by delibrately giving up soundness.
 
-
 |Featrue Disabled|Substitute Behavior of the Nullness_Lite option|
 |-|-|
 | Initialization Checker | Assume all values (fields & class variables) initialized |
@@ -20,7 +19,6 @@ Nullness_Lite is a lite option of the Nullness Checker in [the Checker Framework
 Java developers who would like to get a trustable analysis on their source files, but hesitate to spend time running full verification tool such as Nullness Checker. They can run the Nullenss_Lite option instead to get a fast glimpse on their files and more concise reports, although with fewer true positives, with fewer false positive warnings.
 
 ## Evaluation
-### Compare with Other Nullness Bug Detectors
 Please see the week9/report for the evaluation methodology we decided.
 
 The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
@@ -38,14 +36,12 @@ The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
 ### To reproduce the evaluation result, please see the instruction in the section for reproduction in this Manual (scroll down).
 
 ### Analysis for the Table Above
-Note that the Nullness Checker is sound, the true positives revealed by it is super set of any other nullness bug detectors.
-
-From our evaluation result, we can see the Nullness_Lite option reduced 15 false positives and 0 true positives, which is good for JUnit4. But we should be aware that the Nullness_Lite option could ignore some true positives reported by the Nullness Checker in other projects because the Nullness_Lite option, after all, is unsound.
+The reason we put the Nullness Checker in the last row is that we want our users to focus more on the comparison between the Nullness_Lite option and the other nullness bug detectors. Note that the Nullness Checker is a sound type system, the set of true positives it reveals should be the super set of the sets of true positives by any other nullness bug detectors. From our evaluation result, we can see the Nullness_Lite option reports all 24 true positives, which is good for JUnit4. But we should be aware that the Nullness_Lite option could suppress some true positives reported by the Nullness Checker in other projects. After all, the Nullness_Lite option is a unsound nullness bug detector by suppressing features within the Nullness Checker. 
 
 Here is a true/false positive graph for comparing the checkers.
 (GRAPH)
 
-Our evlauation result doesn't imply that one checker is definitely better than others. Users should choose the tool that fit their situtations best. For example, the Nullness Checker is best when users value a good verification over the time consumed. The other bug detectors are good in the reverse situation. The Nullness_Lite option is in the middle ground of the two situations. The Nullness_Lite is good for a project, when it reduces more false positives while keeping some amount of the true positives.
+Our evlauation result doesn't imply that one checker is definitely better than others. Users should choose the tool that fit their situtations best. For example, the Nullness Checker is best when users value a good verification over the time consumed. The other bug detectors are good in the reverse situation. The Nullness_Lite option is in the middle ground of the two situations. Depending on the project, it could potentially reveal more true positives than other nullness bug detectors. But users should be aware that although the Nullness_Lite option can filter out some false positives, the amount of the remaining false positives could still be larger than that of other nullness bug detectors.
 
 ## Build from Source Code
 Ubuntu users can simply copy-paste the following commands to download the Checker Framework with the Nullness_Lite Option.
