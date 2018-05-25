@@ -31,10 +31,10 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 |-|-|-|-|-|-|
 |Nullness_Lite |24|0|76|319| |
 |NullAway | | | | | |
-|FindBugs |0| |0|0| | 
-|IntelliJ |0| |1|0| | 
+|FindBugs |0|24|0|0| | 
+|IntelliJ |0|24|0|0| | 
 |IntelliJ (Infer Nullity - still in progress) |18| |4|0| | 
-|Eclipse |0| |3|0| | 
+|Eclipse |0|24|0|0| | 
 |Nullness Checker|24|0|91|320| |
 
 ### Analysis for the Table Above
