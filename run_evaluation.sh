@@ -12,7 +12,7 @@ declare -a CHECKER_NAME=("Nullness_Lite Option"
 			 # other features fill here
 			 "The Nullness Checker")
 declare -a BRANCH_NAME=("annos_nl_all_xz"
-			"analysis_3_nc_yk_xz")
+			"annos_nc_all_xz")
 
 countWord() {
     eval $GET_JAVA"| xargs grep -on \"$1\" | wc -l"
