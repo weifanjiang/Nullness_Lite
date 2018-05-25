@@ -231,6 +231,13 @@ chmod +x run_evaluation.sh
 ```
 Currently, the script only shows the result of the Nullness Checker.
 
+### Nullaway (using annotations added by IntelliJ's "Infer Nullity")
+Run the following command
+```
+$ git clone -b Nullaway_Intellij https://github.com/NullnessLiteGroup/junit4.git
+$ cd junit4
+$ mvn clean compile -P nullaway
+```
 ## Frequently Asked Questions
 #### 1. What if I got the following result when running the Checker Framework?
 ```
