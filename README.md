@@ -43,7 +43,7 @@ Here is a true/false positive graph for comparing the checkers.
 
 Our evlauation result doesn't imply that one checker is definitely better than others. Users should choose the tool that fit their situtations best. For example, the Nullness Checker is best when users value a good verification over the time consumed. The other bug detectors are good in the reverse situation. The Nullness_Lite option is in the middle ground of the two situations. The Nullness_Lite is good for a project, when it reduces more false positives while keeping some amount of the true positives.
 
-### To reproduce the initial result, please see the instruction in the second last section in this User Manual (scroll down).
+### To reproduce the evaluation result, please see the instruction in the section for reproduction in this Manual (scroll down).
 
 ## Build from Source Code
 Ubuntu users can simply copy-paste the following commands to download the Checker Framework with the Nullness_Lite Option.
@@ -95,7 +95,7 @@ For Build, following [instructions](https://checkerframework.org/manual/#build-s
  ./gradlew assemble
  ```
 
-### Run Tests (Optional)
+### Run Tests
 #### Test All Files in Checker Framework:
 The process will possibly take long time on local machine, expecially on VM with insufficient memory allocated. (4G is suggested in this case.)
 
@@ -112,7 +112,7 @@ cd $JSR308/checker-framework
 ```
 
 ## Compile and Run Nullness Checker with the Nullness_Lite option enabled
-Follow the [instructions](https://checkerframework.org/manual/#running) of chapter 2.2 in Checker Framework manual.
+Follow the [instructions](https://checkerframework.org/manual/#running) in chapter 2.2 in Checker Framework manual.
 
 Users run Nullness_Lite by passing an extra argument when running Nullness Checker from the command line:
 ```
@@ -124,10 +124,8 @@ Notice that the behavior is undefined if `-ANullnessLite` option is passed to a 
 Here is the example code we want to test:
 ```java
 import org.checkerframework.checker.nullness.qual.NonNull;
-
 public class MyJavaFile {
     private @NonNull Object f;
-
     public MyJavaFile(int x, int y) { }
     public MyJavaFile(int x) { this.f.toString(); }
 }
@@ -151,10 +149,8 @@ They can fix the errors of false positives by suppressing these errors. It is no
 ```java
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.checkerframework.checker.nullness.NullnessUtil;
-
 public class MyJavaFile {
     private @NonNull Object f;
-
     public MyJavaFile(int x, int y) { }
     public MyJavaFile(int x) { NullnessUtil.castNonNull(this.f).toString(); }
 }
@@ -162,6 +158,14 @@ public class MyJavaFile {
 Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with -ANullnessLite option will not issue any error.
 
 ## How to Reproduce the Evaluation Results?
+### Nullness Checker, Nullness_Lite & each feature to be tested
+For ubuntu users, run the following commands in terminal:
+```
+git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
+cd Nullness_Lite
+chmod +x run_evaluation.sh
+./run_evaluation.sh
+```
 ### Eclipse
 1. download and install Eclipse on your local machine (if you don't have one yet).
 
@@ -198,7 +202,6 @@ Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with
 4 Click File > New Project. Add the project to the first box (Classpath for analysis), and add the class archive files to the second box (Auxillary classpath)
 
 5. Click Analyze
-
    
 ### IntelliJ (without "Infer Nullity" before it runs code inspection)
 1. download and install IntelliJ on your local machine (if you don't have one yet)
@@ -211,16 +214,6 @@ Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with
 3. open IntelliJ, and import junit4 into IntelliJ as a maven project (leave the import settings as default)
 4. Analyze > Inspect Code... > OK
 5. it will show 2 errors later, but you will find that 1 is not related to (possible) NullPointerException, so we can ignore that error. For the error left, we've classified it as a false positive and have left comments in the source code for the client to check.
-
-### Nullness Checker, Nullness_Lite & each feature to be tested
-For ubuntu users, run the following commands in terminal:
-```
-git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
-cd Nullness_Lite
-chmod +x run_evaluation.sh
-./run_evaluation.sh
-```
-Currently, the script only shows the result of the Nullness Checker.
 
 ### Nullaway (using annotations added by IntelliJ's "Infer Nullity")
 Run the following command
