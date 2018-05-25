@@ -1,7 +1,7 @@
 # Nullness_Lite: An Unsound Option of the Nullness Checker for fewer false positives
-Repo of the implementation: https://github.com/979216944/checker-framework
+See the implementation in https://github.com/979216944/checker-framework
 
-Repo of the evaluation: https://github.com/NullnessLiteGroup/junit4
+See the evaluation in https://github.com/NullnessLiteGroup/junit4
 
 Developer Manual: (Link to the changed developer manual)
 
