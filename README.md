@@ -12,12 +12,12 @@ Features disabled:
 * Initialization Checker
   * assume all values (fields & class variables) initialized;
 * Map Key Checker
-  * assume all keys are in the map and Map.get(key) returns @NonNull;
+  * assume all keys are in the map and `Map.get(key)` returns `@NonNull`;
 * Invalidation of dataflow 
-  * assume all methods are @SideEffectFree;
+  * assume all methods are `@SideEffectFree`;
   * assume no aliasing;
 * Boxing of primitives 
-  * assume the boxing of primitives is @Pure and BoxedClass.valueOf() always return the same object;
+  * assume the boxing of primitives is `@Pure` and `BoxedClass.valueOf()` always return the same object;
 
 ### Who wants to use Nullness_Lite?
 Java developers who would like to get a trustable static analysis on their source files, but hesitate to spend time running full verification tool such as Nullness Checker.
