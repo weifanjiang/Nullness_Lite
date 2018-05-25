@@ -33,6 +33,8 @@ The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
 |Eclipse |0|24|0|0| | 
 |Nullness Checker|24|0|91|320| |
 
+### To reproduce the evaluation result, please see the instruction in the section for reproduction in this Manual (scroll down).
+
 ### Analysis for the Table Above
 Note that the Nullness Checker is sound, the true positives revealed by it is super set of any other nullness bug detectors.
 
@@ -42,8 +44,6 @@ Here is a true/false positive graph for comparing the checkers.
 (GRAPH)
 
 Our evlauation result doesn't imply that one checker is definitely better than others. Users should choose the tool that fit their situtations best. For example, the Nullness Checker is best when users value a good verification over the time consumed. The other bug detectors are good in the reverse situation. The Nullness_Lite option is in the middle ground of the two situations. The Nullness_Lite is good for a project, when it reduces more false positives while keeping some amount of the true positives.
-
-### To reproduce the evaluation result, please see the instruction in the section for reproduction in this Manual (scroll down).
 
 ## Build from Source Code
 Ubuntu users can simply copy-paste the following commands to download the Checker Framework with the Nullness_Lite Option.
