@@ -30,7 +30,7 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 |Checkers | True Positives Detected | True Positives Not Detected | False Positives | Annotations Used | Time Consumed |
 |-|-|-|-|-|-|
 |Nullness_Lite |24|0|76|319| |
-|NullAway | | | | | |
+|NullAway |3 |0 |1 | 1160| |
 |FindBugs |0|24|0|0| | 
 |IntelliJ |0|24|0|0| | 
 |IntelliJ (Infer Nullity - still in progress) |18| |4|0| | 
