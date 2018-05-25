@@ -21,6 +21,8 @@ Java developers who would like to get a trustable analysis on their source files
 
 ## Evaluation
 ### Compare with Other Nullness Bug Detectors
+Please see the week9/report for the evaluation methodology we decided.
+
 The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
 
 |Checkers | True Positives Detected | True Positives Not Detected | False Positives | Annotations Used | Time Consumed |
@@ -139,7 +141,7 @@ MyJavaFile.java:7: error: [dereference.of.nullable] dereference of possibly-null
                                    ^
 1 error
 ```
-To be specific, the Nullness Checker with -ANullnessLite option reported one error, which is in line 7 of MyJavaFile.java, where we dereference `this.f` in the constructor before initializing it.
+To be specific, the Nullness Checker with `-ANullnessLite` option reported one error, which is in line 7 of MyJavaFile.java, where we dereference `this.f` in the constructor before initializing it.
 
 An error is either a true positive (indicating a real bug) or a false positive.
 
@@ -155,7 +157,7 @@ public class MyJavaFile {
     public MyJavaFile(int x) { NullnessUtil.castNonNull(this.f).toString(); }
 }
 ```
-Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with -ANullnessLite option will not issue any error.
+Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with `-ANullnessLite` option will not issue any error.
 
 ## How to Reproduce the Evaluation Results?
 ### Nullness Checker, Nullness_Lite & each feature to be tested
