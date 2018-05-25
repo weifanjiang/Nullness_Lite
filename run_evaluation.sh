@@ -9,9 +9,13 @@ GET_BRANCH="git branch | grep \* | sed -r \"s/\* //g\""
 GET_JAVA="find src/main | grep -e \"\.java$\""
 
 declare -a CHECKER_NAME=("Nullness_Lite Option"
+			 "--Assume fields init"
+			 "--No invalidation dataflow"
 			 # other features fill here
 			 "The Nullness Checker")
 declare -a BRANCH_NAME=("annos_nl_all_xz"
+			"annos_nl_init_xz"
+			"annos_nl_inva_xz"
 			"annos_nc_all_xz")
 
 countWord() {
