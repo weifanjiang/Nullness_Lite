@@ -1,4 +1,4 @@
-# Nullness_Lite
+# Nullness_Lite: An Unsound Option of the Nullness Checker for fewer false positives
 Repo of the implementation: https://github.com/979216944/checker-framework
 
 Repo of the evaluation: https://github.com/NullnessLiteGroup/junit4
@@ -19,10 +19,8 @@ Features disabled:
 * Boxing of primitives 
   * assume the boxing of primitives is `@Pure` and `BoxedClass.valueOf()` always return the same object;
 
-### Who wants to use Nullness_Lite?
-Java developers who would like to get a trustable static analysis on their source files, but hesitate to spend time running full verification tool such as Nullness Checker.
-
-They can run Nullenss_Lite instead to get a fast glimpse on their files and more concise reports, although with fewer true positives, with fewer false positive warnings.
+### Who wants to use Nullness_Lite option?
+Java developers who would like to get a trustable analysis on their source files, but hesitate to spend time running full verification tool such as Nullness Checker. They can run the Nullenss_Lite option instead to get a fast glimpse on their files and more concise reports, although with fewer true positives, with fewer false positive warnings.
 
 ## Evaluation
 ### Compare with Other Nullness Bug Detectors
