@@ -26,7 +26,7 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 
 ## Evaluation
 ### Compare with Other Nullness Bug Detectors
-
+The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
 |Checkers | True Positives Detected | True Positives Not Detected | False Positives | Annotations Used | Time Consumed |
 |-|-|-|-|-|-|
 |Nullness_Lite |24|0|76|319| |
@@ -38,19 +38,14 @@ They can run Nullenss_Lite instead to get a fast glimpse on their files and more
 |Nullness Checker|24|0|91|320| |
 
 ### Analysis for the Table Above
-Revealed by the table above, there are some benefits using the Nullness Checker:
-* more true positives revealed
+Note that the Nullness Checker is sound, the true positives revealed by it is super set of any other nullness bug detectors.
 
-Yet there are some disadvantages using the Nullness Checker:
-* more false positives to deal with
-* more annotations need to be added
+From our evaluation result, we can see the Nullness_Lite option reduced 15 false positives and 0 true positives, which is good for JUnit4. But we should be aware that the Nullness_Lite option could ignore some true positives reported by the Nullness Checker in other projects because the Nullness_Lite option, after all, is unsound.
 
-We are still working on the Nullness_Lite result.
+Here is a true/false positive graph for comparing the checkers.
+(GRAPH)
 
-Given the feedbacks from the evaluators of the Nullness_Lite, we can expect:
-* fewer true positives
-* fewer false positives
-* fewer annotations
+Our evlauation result doesn't imply that one checker is definitely better than others. Users should choose the tool that fit their situtations best. For example, the Nullness Checker is best when users value a good verification over the time consumed. The other bug detectors are good in the reverse situation. The Nullness_Lite option is in the middle ground of the two situations. The Nullness_Lite is good for a project, when it reduces more false positives while keeping some amount of the true positives.
 
 ### To reproduce the initial result, please see the instruction in the second last section in this User Manual (scroll down).
 
