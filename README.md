@@ -8,16 +8,13 @@ Developer Manual: (Link to the changed developer manual)
 ## Introduction
 Nullness_Lite is a lite option of the Nullness Checker in [the Checker Framework](https://checkerframework.org/) to detect nullness bugs in java source files. It disables the following features of Nullness Checker to obtain more desireable traits. To be specific, the Nullness Checker with Nullness_Lite option enabled will be faster and easier to use by delibrately giving up soundness.
 
-Features disabled:
-* Initialization Checker
-  * assume all values (fields & class variables) initialized;
-* Map Key Checker
-  * assume all keys are in the map and `Map.get(key)` returns `@NonNull`;
-* Invalidation of dataflow 
-  * assume all methods are `@SideEffectFree`;
-  * assume no aliasing;
-* Boxing of primitives 
-  * assume the boxing of primitives is `@Pure` and `BoxedClass.valueOf()` always return the same object;
+
+|Featrue Disabled|Substitute Behavior of the Nullness_Lite option|
+|-|-|
+| Initialization Checker | Assume all values (fields & class variables) initialized |
+| Map Key Checker | Assume all keys are in the map and `Map.get(key)` returns `@NonNull` |
+| Invalidation of dataflow | Assume all methods are `@SideEffectFree` and disallow aliasing |
+| Boxing of primitives | Assume the boxing of primitives is `@Pure` and `BoxedClass.valueOf()` always return the same object|
 
 ### Who wants to use Nullness_Lite option?
 Java developers who would like to get a trustable analysis on their source files, but hesitate to spend time running full verification tool such as Nullness Checker. They can run the Nullenss_Lite option instead to get a fast glimpse on their files and more concise reports, although with fewer true positives, with fewer false positive warnings.
@@ -25,6 +22,7 @@ Java developers who would like to get a trustable analysis on their source files
 ## Evaluation
 ### Compare with Other Nullness Bug Detectors
 The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
+
 |Checkers | True Positives Detected | True Positives Not Detected | False Positives | Annotations Used | Time Consumed |
 |-|-|-|-|-|-|
 |Nullness_Lite |24|0|76|319| |
