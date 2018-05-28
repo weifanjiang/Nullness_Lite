@@ -1,0 +1,23 @@
+Individual Report - Week 10
+
+Name: Mengxing Chen
+NetID: chenm32
+Student Number: 1532296
+
+1. My goal from a week ago:	
+	- finish evaluating IntelliJ
+	- revise the user manual (or script files) for reproducing our evaluating results
+	- revise the user manual by including the data we've got during the evaluation
+2. My process this week:
+	- finish evaluating IntelliJ (with annotations added by Infer Nullity):
+		- classify every true/false positive and write comments about the analysis
+		- try to add annotations to eliminate at least some of the errors
+	- peer review with other team members
+	- have a meeting with Alice (Xinrong) Zhao in order to double check that each classification is reasonable
+	- revise the project report and user manual:
+		- add new data  
+		- reason out IntelliJ's results
+3. My plan for the following week:
+	- check that every classification of errors of the intellij2 version is correct
+	- revise the reproduction manual for IntelliJ and Eclipse
+	- reason out the evaluation results
