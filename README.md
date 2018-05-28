@@ -25,18 +25,18 @@ The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
 
 |Checkers | True Positives Detected | True Positives Not Detected | False Positives | Annotations Used | Time Consumed |
 |-|-|-|-|-|-|
-|Nullness_Lite |24|0|76|319| |
+|Nullness_Lite |20|0|80|318| |
 |NullAway |3 |0 |1 | 1160| |
-|FindBugs |0|24|0|0| | 
-|IntelliJ |0|24|0|0| | 
+|FindBugs |0|20|0|0| | 
+|IntelliJ |0|20|0|0| | 
 |IntelliJ (Infer Nullity) |28| |55|1160 (added by Infer Nullity)| | 
-|Eclipse |0|24|0|0| | 
-|Nullness Checker|24|0|91|320| |
+|Eclipse |0|20|0|0| |
+|Nullness Checker|20|0|95|319| |
 
 ### To reproduce the evaluation result, please see the instruction in the section for reproduction in this Manual (scroll down).
 
 ### Analysis for the Table Above
-The reason we put the Nullness Checker in the last row is that we want our users to focus more on the comparison between the Nullness_Lite option and the other nullness bug detectors. Note that the Nullness Checker is a sound type system, the set of true positives it reveals should be the super set of the sets of true positives by any other nullness bug detectors. From our evaluation result, we can see the Nullness_Lite option reports all 24 true positives, which is good for JUnit4. But we should be aware that the Nullness_Lite option could suppress some true positives reported by the Nullness Checker in other projects. After all, the Nullness_Lite option is a unsound nullness bug detector by suppressing features within the Nullness Checker. 
+The reason we put the Nullness Checker in the last row is that we want our users to focus more on the comparison between the Nullness_Lite option and the other nullness bug detectors. Note that the Nullness Checker is a sound type system, the set of true positives it reveals should be the super set of the sets of true positives by any other nullness bug detectors. From our evaluation result, we can see the Nullness_Lite option reports all 23 true positives, which is good for JUnit4. But we should be aware that the Nullness_Lite option could suppress some true positives reported by the Nullness Checker in other projects. After all, the Nullness_Lite option is a unsound nullness bug detector by suppressing features within the Nullness Checker. 
 
 Here is a true/false positive graph for comparing the checkers.
 (GRAPH)
