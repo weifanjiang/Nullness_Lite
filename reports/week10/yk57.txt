@@ -1,0 +1,22 @@
+Weekly Individual Status Report
+Date: 2018/05/28
+Name: Yanmeng Kong(Anny)
+ID: yk57
+
+1. Previous Week’s Plans and Goals
+	• Review proposal and user manual
+	• Fix the incorrect analysis of the Nullness Checker
+	• Finish the remaining analysis of NullnessLite
+
+2. This Week’s Progress
+	• Revised proposal and user manual in README
+		- revised introduction
+		- revised hypothesis part
+	• Fixed most incorrect analysis of the NullnessLite and Nullness Checker
+	• Reimplemented and reviewed boxp option for NullnessLite
+		-ANullnessLite=boxp == boxedclass.valueOf() is pure
+
+3. Next Week’s Plans and Goals
+	• Review proposal and user manual
+	• Fix the incorrect analysis of the Nullness Checker
+	• Finish the remaining report analysis
