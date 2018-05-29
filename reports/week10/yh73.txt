@@ -1,0 +1,15 @@
+Yuqi Huang
+NetID: yh73
+1532317
+
+1. Next week's plan:
+	-Discuss the evaluation result with Mengxing and do peer review
+	-Fix the incorrect analysis if there are any
+
+2. This week's progress:
+	-Revise the user manual and the report
+	-Add two branches for Nullaway(with annotations from Nullness_Lite) and Nullaway(with annotations from Nullness Checker)
+
+3. Next week's goal:
+	-Check the correctness of every warning reported by Nullaway
+	-Finish peer review with Mengxing
