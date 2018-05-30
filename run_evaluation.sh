@@ -8,11 +8,13 @@ SEP="--------------------"
 GET_BRANCH="git branch | grep \* | sed -r \"s/\* //g\""
 GET_JAVA="find src/main | grep -e \"\.java$\""
 
+# add other checkers here
 declare -a CHECKER_NAME=("Nullness_Lite Option"
 			 "--Assume fields init"
 			 "--No invalidation dataflow"
-			 # other features fill here
 			 "The Nullness Checker")
+# add other checkers branch here
+# NOTE: the order should match the order in CHECKER_NAME
 declare -a BRANCH_NAME=("annos_nl_all_xz"
 			"annos_nl_init_xz"
 			"annos_nl_inva_xz"
