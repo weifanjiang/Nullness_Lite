@@ -9,23 +9,29 @@ GET_BRANCH="git branch | grep \* | sed -r \"s/\* //g\""
 GET_JAVA="find src/main | grep -e \"\.java$\""
 
 # add other checkers here
-declare -a CHECKER_NAME=("Nullness_Lite Option"
-			 "--Assume fields init"
-			 "--No invalidation dataflow"
-			 "The Nullness Checker")
+declare -a NC_CHECKER_NAME=("Nullness_Lite Option"
+			    "--Assume fields init"
+			    "--No invalidation dataflow"
+			    "The Nullness Checker")
 # add other checkers branch here
 # NOTE: the order should match the order in CHECKER_NAME
-declare -a BRANCH_NAME=("annos_nl_all_xz"
-			"annos_nl_init_xz"
-			"annos_nl_inva_xz"
-			"annos_nc_all_xz")
+declare -a NC_BRANCH_NAME=("annos_nl_all_xz"
+			   "annos_nl_init_xz"
+			   "annos_nl_inva_xz"
+			   "annos_nc_all_xz")
 
 countWord() {
     eval $GET_JAVA"| xargs grep -on \"$1\" | wc -l"
 }
 
 appendResult () {
-    echo $1 >> $RESULT
+    printf $1 >> $RESULT
+}
+
+printCheckerResult() {
+    arr="$2"
+    appendResult "$1"
+    
 }
 
 #----------------------------Fetch Source Code
@@ -44,8 +50,13 @@ appendResult "JUnit4"
 
 #----------------------------Annotations Added Report
 appendResult $SEP
-appendResult "1. # of annotations:"
-appendResult "Name of the Checker|Current Branch|Total Count|@Nullable|@UnderInitialization|@UnknownInitialization"
+appendResult "1. # of annotations:\n"
+
+declare -a annos=("@Nullable"
+		  "@UnderInitialization"
+		  "@UnknownInitialization")
+
+printCheckerResult "Name of the Checker|Current Branch|Total Count|" $NC_CHECKER_NAME $NC_BRANCH_NAME $annos
 
 count=0
 for i in "${CHECKER_NAME[@]}"
