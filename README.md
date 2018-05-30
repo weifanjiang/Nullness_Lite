@@ -26,7 +26,9 @@ The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
 |Checkers | True Positives Detected | True Positives Not Detected | False Positives | Annotations Used | Time Consumed |
 |-|-|-|-|-|-|
 |Nullness_Lite |20|0|80|318| |
-|NullAway |3 |0 |1 | 1160| |
+|NullAway (Infer Nullity) |3 |17|1 | 1160| |
+|NullAway (Nullness Checker's annotations) |3|17|0|319| |
+|NullAway (NullnessLite's annotations) |3|17|0|318| |
 |FindBugs |0|20|0|0| | 
 |IntelliJ |0|20|0|0| | 
 |IntelliJ (Infer Nullity) |28| |55|1160 (added by Infer Nullity)| | 
