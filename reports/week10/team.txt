@@ -11,10 +11,11 @@ Team: NullnessLiteGroup
 * This Week’s Progress
    * Double checked the Nullness_Lite option analysis
    * Double checked the Nullness Checker analysis
-      * All true positives found by the Nullness Checker are tested through the code example
+      * All true positives found by the Nulls Checker are tested through the code example
    * Finished individual feature analysis of the Nullness_Lite option
    * Double checked the IntelliJ with Infer Nullity analysis
       * Double checked the true positives reported by IntelliJ is the subset of that reported by the Nullness Checker
+   * Finished evaluating NullAway
 * Next Week’s Plans and Goals
    * Revise the final report. Consider the following things to be added to the result:
       * Graph of result and result analysis
@@ -27,4 +28,6 @@ Team: NullnessLiteGroup
          * The true positives reported by the Nullness_Lite option are the same as the Nullness Checker, but the Nullness_Lite is still unsound.
          * We didn’t find any errors suppressed by the feature of aliasing and the feature of boxing of primitives in JUnit4
          * The limitation and validation for choosing JUnit4 instead of JUnit5
-      * Lessons Learned section (?)
+      * Lessons learned  
+         * evaluation is time-consuming
+         * When classifying each error reported by the checkers, we should not only examine the real code but also gain information from the API
