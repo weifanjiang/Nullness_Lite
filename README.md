@@ -220,6 +220,23 @@ $ git clone -b Nullaway_Intellij https://github.com/NullnessLiteGroup/junit4.git
 $ cd junit4
 $ mvn clean compile -P nullaway
 ```
+
+### Nullaway (using annotations required by Nullness Checker)
+Run the following command
+```
+$ git clone -b Nullaway_nc https://github.com/NullnessLiteGroup/junit4.git
+$ cd junit4
+$ mvn clean compile -P nullaway
+```
+
+### Nullaway (using annotations required by NullnessLite)
+Run the following command
+```
+$ git clone -b Nullaway_nl https://github.com/NullnessLiteGroup/junit4.git
+$ cd junit4
+$ mvn clean compile -P nullaway
+```
+
 ## Frequently Asked Questions
 #### 1. What if I got the following result when running the Checker Framework?
 ```
