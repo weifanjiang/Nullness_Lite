@@ -29,9 +29,40 @@ appendResult () {
 }
 
 printCheckerResult() {
-    arr="$2"
-    appendResult "$1"
+    checkers="$2"
+    branches="$3"
+    annos="$4"
     
+    appendResult "$1" # print head
+    for i in "${annos[@]}"
+    do
+        appendResult "$i|"
+    done
+    appendResult "\n"
+    
+    index=0
+    for i in "${checkers[@]}"
+    do
+        git checkout ${branches[$index]} > /dev/null 2>&1
+	
+	total=0
+	annosCount=()
+        for i in "${annos[@]}"
+        do
+	    count=$(countWord "$i")
+            annosCount+=($count)
+	    total=$(( $total + $count ))
+        done
+	
+        appendResult "$i|$(eval $GET_BRANCH)|$total|"
+	for i in "${annosCount[@]}"
+        do
+            appendResult "$i|"
+        done
+        appendResult "\n"
+        
+        index=$(( $index + 1 ))
+    done
 }
 
 #----------------------------Fetch Source Code
@@ -52,23 +83,11 @@ appendResult "JUnit4"
 appendResult $SEP
 appendResult "1. # of annotations:\n"
 
+head="Name of the Checker|Current Branch|Total Count|"
 declare -a annos=("@Nullable"
 		  "@UnderInitialization"
 		  "@UnknownInitialization")
-
-printCheckerResult "Name of the Checker|Current Branch|Total Count|" $NC_CHECKER_NAME $NC_BRANCH_NAME $annos
-
-count=0
-for i in "${CHECKER_NAME[@]}"
-do
-    git checkout ${BRANCH_NAME[$count]} > /dev/null 2>&1
-    countNullable=$(countWord "@Nullable")
-    countUnderInit=$(countWord "@UnderInitialization")
-    countUnknownInit=$(countWord "@UnknownInitialization")
-    total=$(($countNullable + $countUnderInit + $countUnknownInit))
-    appendResult "$i|$(eval $GET_BRANCH)|$total|$countNullable|$countUnderInit|$countUnknownInit"
-    count=$(( $count + 1 ))
-done
+printCheckerResult $head $NC_CHECKER_NAME $NC_BRANCH_NAME $annos
 
 #----------------------------Errors Analysis Report
 appendResult $SEP
