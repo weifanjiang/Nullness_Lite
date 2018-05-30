@@ -3,7 +3,7 @@ See the implementation in https://github.com/979216944/checker-framework
 
 See the evaluation in https://github.com/NullnessLiteGroup/junit4
 
-Developer Manual: (Link to the changed developer manual)
+[comment]: <> (Developer Manual: (Link to the changed developer manual)
 
 ## Introduction
 Nullness_Lite is a lite option of the Nullness Checker in [the Checker Framework](https://checkerframework.org/) to detect nullness bugs in java source files. It disables the following features of Nullness Checker to obtain more desireable traits. To be specific, the Nullness Checker with Nullness_Lite option enabled will be faster and easier to use by delibrately giving up soundness.
@@ -36,7 +36,6 @@ The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
 |Nullness Checker|20|0|95|319| |
 
 ### To reproduce the evaluation result, please see the instruction in the section for reproduction in this Manual (scroll down).
-
 ### Analysis for the Table Above
 The reason we put the Nullness Checker in the last row is that we want our users to focus more on the comparison between the Nullness_Lite option and the other nullness bug detectors. Note that the Nullness Checker is a sound type system, the set of true positives it reveals should be the super set of the sets of true positives by any other nullness bug detectors. From our evaluation result, we can see the Nullness_Lite option reports all 23 true positives, which is good for JUnit4. But we should be aware that the Nullness_Lite option could suppress some true positives reported by the Nullness Checker in other projects. After all, the Nullness_Lite option is a unsound nullness bug detector by suppressing features within the Nullness Checker. 
 
