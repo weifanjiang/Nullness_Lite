@@ -1,0 +1,30 @@
+﻿Week 10 Team Report
+Team: NullnessLiteGroup
+
+
+* Previous Week’s Plans and Goals
+   * Review proposal and user manual
+      * Especially the analysis of results filled in the table
+   * Review the incorrect analysis of the Nullness Checker
+   * Finish the analysis of individual features for NullnessLite
+   * Compare the result come from different verification checkers, and analyze their advantages and disadvantages.
+* This Week’s Progress
+   * Double checked the Nullness_Lite option analysis
+   * Double checked the Nullness Checker analysis
+      * All true positives found by the Nullness Checker are tested through the code example
+   * Finished individual feature analysis of the Nullness_Lite option
+   * Double checked the IntelliJ with Infer Nullity analysis
+      * Double checked the true positives reported by IntelliJ is the subset of that reported by the Nullness Checker
+* Next Week’s Plans and Goals
+   * Revise the final report. Consider the following things to be added to the result:
+      * Graph of result and result analysis
+      * The speciality of NullAway
+         * Putting NullAway under different directory results in different directory
+         * How we decide the result of NullAway
+      * The speciality of IntelliJ with Infer Nullity
+         * Although the Infer Nullity automatically adds much more annotations than we manually added for the Nullness Checker, these annotations are not always correct. We decide to change the minimal annotations that influence the error report.
+      * Acknowledge the limitation of our evaluation
+         * The true positives reported by the Nullness_Lite option are the same as the Nullness Checker, but the Nullness_Lite is still unsound.
+         * We didn’t find any errors suppressed by the feature of aliasing and the feature of boxing of primitives in JUnit4
+         * The limitation and validation for choosing JUnit4 instead of JUnit5
+      * Lessons Learned section (?)
