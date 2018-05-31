@@ -4,39 +4,45 @@
 
 #----------------------------Variables & Helper Methods
 RESULT=$(pwd)"/result.txt"
-SEP="--------------------"
+SEP="===================="
 GET_BRANCH="git branch | grep \* | sed -r \"s/\* //g\""
 GET_JAVA="find src/main | grep -e \"\.java$\""
 
-# add other checkers here
-declare -a NC_CHECKER_NAME=("Nullness_Lite Option"
-			    "--Assume fields init"
-			    "--No invalidation dataflow"
-			    "The Nullness Checker")
-# add other checkers branch here
+# TODO add checkers related to the Nullness Checker here
+NC_CHECKER_NAME=("Nullness_Lite Option"
+		 "  Assume fields init"
+		 "  No invalidation dataflow"
+		 "The Nullness Checker")
+
+# TODO add branches related to the Nullness Checker here
 # NOTE: the order should match the order in CHECKER_NAME
-declare -a NC_BRANCH_NAME=("annos_nl_all_xz"
-			   "annos_nl_init_xz"
-			   "annos_nl_inva_xz"
-			   "annos_nc_all_xz")
+NC_BRANCH_NAME=("annos_nl_all_xz"
+		"annos_nl_init_xz"
+		"annos_nl_inva_xz"
+		"annos_nc_all_xz")
 
 countWord() {
     eval $GET_JAVA"| xargs grep -on \"$1\" | wc -l"
 }
 
 appendResult () {
-    printf $1 >> $RESULT
+    printf "$1" >> $RESULT
 }
 
 printCheckerResult() {
-    checkers="$2"
-    branches="$3"
-    annos="$4"
-    
-    appendResult "$1" # print head
-    for i in "${annos[@]}"
+    arr=("$@")
+    checkers=()
+    branches=()
+
+    if [ "${arr[0]}" = "NC_CHECKER_NAME" ]; then
+        checkers=("${NC_CHECKER_NAME[@]}")
+        branches=("${NC_BRANCH_NAME[@]}")
+    fi
+
+    # header
+    for (( i=1; i<${#arr[@]}; i++))
     do
-        appendResult "$i|"
+        appendResult "|${arr[$i]}"
     done
     appendResult "\n"
     
@@ -45,19 +51,21 @@ printCheckerResult() {
     do
         git checkout ${branches[$index]} > /dev/null 2>&1
 	
+        # compute
 	total=0
 	annosCount=()
-        for i in "${annos[@]}"
+        for (( j=1; j<${#arr[@]}; j++))
         do
-	    count=$(countWord "$i")
-            annosCount+=($count)
+	    count=$(countWord "${arr[$j]}")
+            annosCount=( "${annosCount[@]}" $count)
 	    total=$(( $total + $count ))
         done
 	
+        # result
         appendResult "$i|$(eval $GET_BRANCH)|$total|"
-	for i in "${annosCount[@]}"
+	for j in "${annosCount[@]}"
         do
-            appendResult "$i|"
+            appendResult "|$j"
         done
         appendResult "\n"
         
@@ -74,36 +82,34 @@ rm -rf junit4/
 git clone https://github.com/NullnessLiteGroup/junit4.git junit4
 cd junit4
 
-appendResult $SEP
+appendResult "$SEP"
+appendResult "\n"
 countSubject=1
 appendResult "Experiment Subject #$countSubject:"
+appendResult "\n"
 appendResult "JUnit4"
+appendResult "\n"
 
 #----------------------------Annotations Added Report
-appendResult $SEP
-appendResult "1. # of annotations:\n"
+appendResult "$SEP"
+appendResult "\n"
+appendResult "1. # of annotations:"
+appendResult "\n"
 
-head="Name of the Checker|Current Branch|Total Count|"
-declare -a annos=("@Nullable"
-		  "@UnderInitialization"
-		  "@UnknownInitialization")
-printCheckerResult $head $NC_CHECKER_NAME $NC_BRANCH_NAME $annos
+appendResult "Name of the Checker|Current Branch|Total Count"
+printCheckerResult "NC_CHECKER_NAME" "@Nullable" "@UnderInitialization" "@UnknownInitialization"
 
 #----------------------------Errors Analysis Report
-appendResult $SEP
+appendResult "$SEP"
+appendResult "\n"
 appendResult "2. Analysis Report:"
-appendResult "Name of the Checker|Current Branch|True Positives|False Positives"
+appendResult "\n"
 
-count=0
-for i in "${CHECKER_NAME[@]}"
-do
-    git checkout ${BRANCH_NAME[$count]} > /dev/null 2>&1
-    appendResult "$i|$(eval $GET_BRANCH)|$(countWord "TRUE_POSITIVE")|$(countWord "FALSE_POSITIVE")"
-    count=$(( $count + 1 ))
-done
+appendResult "Name of the Checker|Current Branch|Total Count"
+printCheckerResult "NC_CHECKER_NAME" "TRUE_POSITIVE" "FALSE_POSITIVE"
 
 #----------------------------END
-echo $SEP
+echo "$SEP"
 printf "Finish evaluation with JUnit4! \n"
 cd ../
 rm -rf junit4
