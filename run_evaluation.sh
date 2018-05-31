@@ -40,7 +40,6 @@ ECLIPSE_BRANCH=("eclipse")
 FINDBUGS_BRANCH=("findbugs") 
 
 ANNOS_NAME=("@NotNull"
-	    "@NonNull"
 	    "@Nullable"
 	    "@UnderInitialization"
 	    "@UnknownInitialization")
