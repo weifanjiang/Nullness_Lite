@@ -30,8 +30,8 @@ The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
 |NullAway (Nullness Checker's annotations) |3|17|0|319| 
 |NullAway (NullnessLite's annotations) |3|17|0|318| 
 |FindBugs |0|20|0|0| 
-|IntelliJ |0|20|1|0| 
-|IntelliJ (Infer Nullity) |28| |55|1160 (added by Infer Nullity)| 
+|IntelliJ1 |0|20|1|0| 
+|IntelliJ2 (Infer Nullity) |4| |76|changed: 16| 
 |Eclipse |0|20|3|0|
 |Nullness Checker|20|0|95|319|
 
