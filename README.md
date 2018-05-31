@@ -23,8 +23,8 @@ Please see the week9/report for the evaluation methodology we decided.
 
 The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
 
-|Checkers | True Positives Detected | True Positives Not Detected | False Positives | Annotations Used | Time Consumed |
-|-|-|-|-|-|-|
+|Checkers | True Positives Detected | True Positives Not Detected | False Positives | Annotations Used |
+|-|-|-|-|-|
 |Nullness_Lite |20|0|80|318|
 |NullAway (Infer Nullity) |3 |17|1 | 1160|
 |NullAway (Nullness Checker's annotations) |3|17|0|319| 
