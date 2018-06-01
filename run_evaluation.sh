@@ -137,7 +137,7 @@ for (( i=0; i<${#ANNOS_NAME[@]}; i++))
 do
     head=$head"|${ANNOS_NAME[$i]}"
 done
-appendResult "$head"
+appendResult "$head\n"
 
 printCheckerResult  "NC_CHECKER_NAME" "${ANNOS_NAME[@]}"
 printCheckerResult  "NA_NC_NAME" "${ANNOS_NAME[@]}"
