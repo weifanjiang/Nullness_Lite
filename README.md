@@ -171,9 +171,9 @@ chmod +x run_evaluation.sh
 ### Eclipse
 1. download and install Eclipse on your local machine (if you don't have one yet).
 
-2. open Eclipse, and create a workspace under directory your_workspace
+2. open Eclipse and create a workspace under directory your_workspace
 
-3. move under your_workspace, git clone our project and switch to branch "eclipse":
+3. move under your_workspace and run the following commands:
 ```
    $ git clone https://github.com/NullnessLiteGroup/junit4.git
    $ cd junit4
@@ -189,7 +189,7 @@ chmod +x run_evaluation.sh
 
 5. After Eclipse builds junit4, it will show 3 null-related errors. 
    We've examined that all the 3 errors are false positives, and have attached our reasoning in comment blocks.
-   If you click on the errors, you will see the reasoning.
+   If you click on each error, you will see the reasoning.
    
 ### FindBugs
 1. Download and install [FindBugs](http://findbugs.sourceforge.net/downloads.html)
