@@ -132,12 +132,12 @@ appendResult "\n"
 appendResult "1. # of annotations:"
 appendResult "\n"
 
-appendResult "Name_of_the_Checker|Current_Branch|Total_Count"
+head="Name_of_the_Checker|Current_Branch|Total_Count"
 for (( i=0; i<${#ANNOS_NAME[@]}; i++))
 do
-    appendResult "|${ANNOS_NAME[$i]}"
+    head=$head"|${ANNOS_NAME[$i]}"
 done
-appendResult "\n"
+appendResult "$head"
 
 printCheckerResult  "NC_CHECKER_NAME" "${ANNOS_NAME[@]}"
 printCheckerResult  "NA_NC_NAME" "${ANNOS_NAME[@]}"
