@@ -111,8 +111,10 @@ cd $JSR308/checker-framework
 ./gradlew NullnessLiteOptTest
 ```
 
-## Compile and Run Nullness Checker with the Nullness_Lite option enabled
-Follow the [instructions](https://checkerframework.org/manual/#running) in chapter 2.2 in Checker Framework manual.
+## How to use the Nullness_Lite?
+Please follow the instructions in section "Build from Source Code" to download the Checker Framework first.
+
+To compile the Nullness Checker, please follow the instructions in chapter 2.2 in Checker Framework [manual](https://checkerframework.org/manual/#running).
 
 Users run Nullness_Lite by passing an extra argument when running Nullness Checker from the command line:
 ```
@@ -120,7 +122,7 @@ javac -processor nullness -ANullnessLite <MyFile.java>
 ```
 Notice that the behavior is undefined if `-ANullnessLite` option is passed to a different checker.
 
-## Analyze the Report
+## How to Analyze A Report?
 Here is the example code we want to test:
 ```java
 import org.checkerframework.checker.nullness.qual.NonNull;
