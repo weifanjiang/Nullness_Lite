@@ -181,11 +181,11 @@ chmod +x run_evaluation.sh
 ```
 4. in Eclipse, import junit4 into your workspace:
 ```
-   File > Import... > Maven > Existing Maven Projects
+   choose File > Import... > Maven > Existing Maven Projects from the main menu
    choose the root directory to be your_workspace/junit4
    Finish
 ```   
-since we've included a .setting directory in branch "eclipse", junit4 will build under our null-related settings 
+   since we've included a .setting directory in branch "eclipse", junit4 will build under our null-related settings 
 
 5. After Eclipse builds junit4, it will show 3 null-related errors. 
    We've examined that all the 3 errors are false positives, and have attached our reasoning in comment blocks.
