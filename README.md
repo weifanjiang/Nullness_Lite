@@ -173,7 +173,7 @@ chmod +x run_evaluation.sh
 
 2. open Eclipse, and create a workspace under directory your_workspace
 
-3. move under the created workspace your_workspace, git clone our project and switch to branch "eclipse":
+3. move under your_workspace, git clone our project and switch to branch "eclipse":
 ```
    $ git clone https://github.com/NullnessLiteGroup/junit4.git
    $ cd junit4
@@ -185,14 +185,11 @@ chmod +x run_evaluation.sh
    choose the root directory to be your_workspace/junit4
    Finish
 ```   
-5. since we've included a .setting directory in branch "eclipse", junit4 will build under our null-related settings 
+since we've included a .setting directory in branch "eclipse", junit4 will build under our null-related settings 
 
-6. After Eclipse builds junit4, it will show 3 null-related errors which are all in test files of junit4. 
-   But since our evaluation focuses only on the source files of junit4, you can ignore these errors.
-   Or you can take a look at them if you are interested.
-   
+5. After Eclipse builds junit4, it will show 3 null-related errors. 
    We've examined that all the 3 errors are false positives, and have attached our reasoning in comment blocks.
-   If you click on the errors, you will see them.
+   If you click on the errors, you will see the reasoning.
    
 ### FindBugs
 1. Download and install [FindBugs](http://findbugs.sourceforge.net/downloads.html)
