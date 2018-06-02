@@ -23,7 +23,7 @@ Please see the week9/report for the evaluation methodology we decided.
 
 The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
 
-|Checkers | True Positives Detected | True Positives Not Detected | False Positives | Annotations Used |
+|Checkers | True Positives Detected | True Positives Not Detected | False Positives | Annotations Added |
 |-|-|-|-|-|
 |Nullness_Lite |20|0|80|318|
 |NullAway (Infer Nullity) |3|17|1|1285|
@@ -35,7 +35,7 @@ The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
 |Eclipse |0|20|3|0|
 |Nullness Checker|20|0|95|319|
 
-* Since we are evaluating junit4 based on the annotations added by IntelliJ's Infer Nullity, 16 is the number of annotations we changed rather than added. The number of annotations added by Infer Nullity is 1116. 
+\* Since we are evaluating junit4 based on the annotations added by IntelliJ's Infer Nullity, 16 is the number of annotations we changed rather than added. The number of annotations added by Infer Nullity is 1116. 
 
 ### To reproduce the evaluation result, please see the instruction in the section for reproduction in this Manual (scroll down).
 ### Analysis for the Table Above
