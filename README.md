@@ -242,7 +242,7 @@ chmod +x run_evaluation.sh
    <img src="https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step2.png" width="300" height="220" /><br />
    select Project_Default.xml from junit4 directory <br />
    <img src="https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step3.png" width="300" height="230" /> <br />
-   select "OK" to apply the changes and inspect code
+   select "OK" to apply the changes and inspect code <br />
    
 5. The inspection result will show 80 errors, and we've classified it as a false positive and have left our reasoning in the source code for the client to check. Click on each error from the "Inspection Result", and you will see our reasoning.
 
