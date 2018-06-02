@@ -216,11 +216,10 @@ chmod +x run_evaluation.sh
    uncheck "Include test sources" <br />
    select ... under "Inspection profile" <br />
    <img src="https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step1.png" width="300" height="180" />
-
-      ```Import Profile...```
-![title](https://ibb.co/jZXUfy)
-      ```select Project_Default.xml from junit4 directory```
-![title](https://ibb.co/nfT20y)
+   Import Profile...
+   <img src="https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step2.png" width="300" height="220" />
+   select Project_Default.xml from junit4 directory
+   <img src="https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step3.png" width="300" height="250" />
    
 5. It will show only 1 error, and we've classified it as a false positive and have left our reasoning in the source code for the client to check. Click on the error from the "Inspection Result", and you will see it.
 
