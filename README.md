@@ -250,7 +250,7 @@ chmod +x run_evaluation.sh
    <br />
    <br />select "OK" to apply the changes and inspect code <br />
    
-5. The inspection result will show 80 errors. Click on each error from the "Inspection Result" at the lower left corner, and you will see our reasoning.
+5. The inspection result will show 80 errors. Click on each error shown in the "Inspection Results" at the lower left corner, you will see our reasoning.
 
 ### Nullaway (using annotations added by IntelliJ's "Infer Nullity")
 Run the following command
