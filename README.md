@@ -164,6 +164,7 @@ To reproduce the Evaluation Table, run the following commands from terminal:
 ```
 git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
 cd Nullness_Lite
+
 chmod +x run_evaluation.sh
 ./run_evaluation.sh
 ```
@@ -174,17 +175,21 @@ Or you can run the following commands to test these true positives:
 ```
 git clone https://github.com/NullnessLiteGroup/junit4/ junit4
 cd junit4/eval_test
+
 javac -cp ".:./junit-4.12.jar:../lib/hamcrest-core-1.3.jar" TruePositiveTest.java
 java -cp ".:./junit-4.12.jar:../lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore TruePositiveTest
 ```
 
 ### Nullness Checker, Nullness_Lite & each feature to be tested
-Please follow the instructions for installation first. 
+Please follow the instructions for installation to setup `javac` path correctly. 
 
 To reproduce error reports, run the following commands from terminal:
 ```
+git clone https://github.com/NullnessLiteGroup/junit4/ junit4
 
+find junit4/src/main | grep -e "\.java$" | xargs javac -cp "junit4/lib/hamcrest-all-1.3.jar" -processor nullness -Astubs=stubs -Xmaxerrs 1000
 ```
+Pass `-ANullnessLite` to report errors with the Nullness_Lite option.
 
 ### Eclipse
 1. download and install Eclipse on your local machine if you don't have one yet
