@@ -160,18 +160,28 @@ public class MyJavaFile {
 Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with `-ANullnessLite` option will not issue any error.
 
 ## How to Reproduce the Evaluation Results?
-### Reproduce the Evaluation Table
-Please run the following commands from terminal:
+To reproduce the Evaluation Table, run the following commands from terminal:
 ```
 git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
 cd Nullness_Lite
 chmod +x run_evaluation.sh
 ./run_evaluation.sh
+```
+We provided every true positive with an code example running in JUnit, where each expected output is an NPE.
+The code examples are under branch `annos_nc_all` in folder [eval_test](https://github.com/NullnessLiteGroup/junit4/tree/annos_nc_all/eval_test).
 
+Or you can run the following commands to test these true positives:
+```
+git clone https://github.com/NullnessLiteGroup/junit4/ junit4
+cd junit4/eval_test
+javac -cp ".:./junit-4.12.jar:../lib/hamcrest-core-1.3.jar" TruePositiveTest.java
+java -cp ".:./junit-4.12.jar:../lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore TruePositiveTest
 ```
 
 ### Nullness Checker, Nullness_Lite & each feature to be tested
-Please follow the instructions for installation first. Then run the following commands from terminal:
+Please follow the instructions for installation first. 
+
+To reproduce error reports, run the following commands from terminal:
 ```
 
 ```
