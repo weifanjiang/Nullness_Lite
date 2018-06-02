@@ -41,7 +41,7 @@ The reason we put the Nullness Checker in the last row is that we want our users
 
 Here is a true/false positive graph for comparing the checkers.
 
-![title](https://github.com/weifanjiang/Nullness_Lite/blob/master/images/figure%207.PNG)
+![title](https://github.com/weifanjiang/Nullness_Lite/blob/master/images/figure%207.PNG =100x80)
 
 Our evlauation result doesn't imply that one checker is definitely better than others. Users should choose the tool that fit their situtations best. For example, the Nullness Checker is best when users value a good verification over the time consumed. The other bug detectors are good in the reverse situation. The Nullness_Lite option is in the middle ground of the two situations. Depending on the project, it could potentially reveal more true positives than other nullness bug detectors. But users should be aware that although the Nullness_Lite option can filter out some false positives, the amount of the remaining false positives could still be larger than that of other nullness bug detectors.
 
@@ -210,17 +210,15 @@ chmod +x run_evaluation.sh
    $ cd junit4
    $ git checkout intellij1
 ```
-3. open IntelliJ, import junit4 into IntelliJ as a maven project (leave the import settings as default) (you may need to select jdk for IntelliJ)
-4.    ```
-      choose Analyze > Inspect Code... 
-      uncheck "Include test sources" 
-      select ... under "Inspection profile"
-      ```
-![title](https://ibb.co/hroPDJ)
-      ```Import Profile...```
-![title](https://ibb.co/jZXUfy)
-      ```select Project_Default.xml from junit4 directory```
-![title](https://ibb.co/nfT20y)
+3. open IntelliJ and import junit4 into IntelliJ as a maven project (leave the import settings as default) (you may need to select jdk for IntelliJ)
+4.   
+   choose Analyze > Inspect Code... <br />
+   uncheck "Include test sources" and select ... under "Inspection profile" <br />
+   <img src="https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step1.png" width="300" height="180" /><br />
+   import project settings by clicking on the "gear" icon and then click "Import Profile..." in the image below <br />
+   <img src="https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step2.png" width="300" height="220" /><br />
+   select Project_Default.xml from junit4 directory <br />
+   <img src="https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step3.png" width="300" height="230" /> 
    
 5. It will show only 1 error, and we've classified it as a false positive and have left our reasoning in the source code for the client to check. Click on the error from the "Inspection Result", and you will see it.
 
