@@ -216,7 +216,8 @@ chmod +x run_evaluation.sh
       uncheck "Include test sources" 
       select ... under "Inspection profile"
       ```
-<img src="https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step1.png" width="40%" \>
+ ![step1| 20%](https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step1.png)
+
       ```Import Profile...```
 ![title](https://ibb.co/jZXUfy)
       ```select Project_Default.xml from junit4 directory```
