@@ -169,7 +169,7 @@ chmod +x run_evaluation.sh
 ./run_evaluation.sh
 ```
 ### Eclipse
-1. download and install Eclipse on your local machine (if you don't have one yet).
+1. download and install Eclipse on your local machine if you don't have one yet
 
 2. open Eclipse and create a workspace under directory your_workspace
 
@@ -203,16 +203,30 @@ chmod +x run_evaluation.sh
 5. Click Analyze
    
 ### IntelliJ (without "Infer Nullity" before it runs code inspection)
-1. download and install IntelliJ on your local machine (if you don't have one yet)
-2. choose your own workspace, move under it, and git clone our evaluation project junit4 and switch to branch "IntelliJ":
+1. download and install IntelliJ on your local machine if you don't have one yet
+2. choose a workspace from your machine, move under it, and then run the following commands:
 ```
    $ git clone https://github.com/NullnessLiteGroup/junit4.git
    $ cd junit4
    $ git checkout intellij1
 ```
-3. open IntelliJ, and import junit4 into IntelliJ as a maven project (leave the import settings as default)
-4. Analyze > Inspect Code... > OK
-5. it will show 2 errors later, but you will find that 1 is not related to (possible) NullPointerException, so we can ignore that error. For the error left, we've classified it as a false positive and have left comments in the source code for the client to check.
+3. open IntelliJ, import junit4 into IntelliJ as a maven project (leave the import settings as default) (you may need to select jdk for IntelliJ)
+4. ```
+      choose Analyze > Inspect Code... 
+      uncheck "Include test sources" 
+      select ... under "Inspection profile"
+   ```
+      ![title](https://ibb.co/hroPDJ)
+   ```
+      Import Profile...
+   ```
+      ![title](https://ibb.co/jZXUfy)
+   ```
+      select Project_Default.xml from junit4 directory
+   ```
+      ![title](https://ibb.co/nfT20y)
+   
+5. It will show only 1 error, and we've classified it as a false positive and have left our reasoning in the source code for the client to check. Click on the error from the "Inspection Result", and you will see it.
 
 ### Nullaway (using annotations added by IntelliJ's "Infer Nullity")
 Run the following command
