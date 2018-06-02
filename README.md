@@ -211,20 +211,16 @@ chmod +x run_evaluation.sh
    $ git checkout intellij1
 ```
 3. open IntelliJ, import junit4 into IntelliJ as a maven project (leave the import settings as default) (you may need to select jdk for IntelliJ)
-4. ```
+4.    ```
       choose Analyze > Inspect Code... 
       uncheck "Include test sources" 
       select ... under "Inspection profile"
-   ```
-      ![title](https://ibb.co/hroPDJ)
-   ```
-      Import Profile...
-   ```
-      ![title](https://ibb.co/jZXUfy)
-   ```
-      select Project_Default.xml from junit4 directory
-   ```
-      ![title](https://ibb.co/nfT20y)
+      ```
+![title](https://ibb.co/hroPDJ)
+      ```Import Profile...```
+![title](https://ibb.co/jZXUfy)
+      ```select Project_Default.xml from junit4 directory```
+![title](https://ibb.co/nfT20y)
    
 5. It will show only 1 error, and we've classified it as a false positive and have left our reasoning in the source code for the client to check. Click on the error from the "Inspection Result", and you will see it.
 
