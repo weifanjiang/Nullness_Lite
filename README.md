@@ -47,7 +47,7 @@ Here is a true/false positive graph for comparing the checkers.
 
 Our evlauation result doesn't imply that one checker is definitely better than others. Users should choose the tool that fit their situtations best. For example, the Nullness Checker is best when users value a good verification over the time consumed. The other bug detectors are good in the reverse situation. The Nullness_Lite option is in the middle ground of the two situations. Depending on the project, it could potentially reveal more true positives than other nullness bug detectors. But users should be aware that although the Nullness_Lite option can filter out some false positives, the amount of the remaining false positives could still be larger than that of other nullness bug detectors.
 
-## Build from Source Code
+## (Installation) Build from Source Code
 Ubuntu users can simply copy-paste the following commands to download the Checker Framework with the Nullness_Lite Option.
 ```
 git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
@@ -114,9 +114,7 @@ cd $JSR308/checker-framework
 ```
 
 ## How to use the Nullness_Lite?
-Please follow the instructions in section "Build from Source Code" to download the Checker Framework first.
-
-To compile the Nullness Checker, please follow the instructions in chapter 2.2 in Checker Framework [manual](https://checkerframework.org/manual/#running).
+Please follow the instructions for installation first. To compile the Nullness Checker, please follow the instructions in chapter 2.2 in Checker Framework [manual](https://checkerframework.org/manual/#running).
 
 Users run Nullness_Lite by passing an extra argument when running Nullness Checker from the command line:
 ```
@@ -162,14 +160,22 @@ public class MyJavaFile {
 Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with `-ANullnessLite` option will not issue any error.
 
 ## How to Reproduce the Evaluation Results?
-### Nullness Checker, Nullness_Lite & each feature to be tested
-For ubuntu users, run the following commands in terminal:
+### Reproduce the Evaluation Table
+Please run the following commands from terminal:
 ```
 git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
 cd Nullness_Lite
 chmod +x run_evaluation.sh
 ./run_evaluation.sh
+
 ```
+
+### Nullness Checker, Nullness_Lite & each feature to be tested
+Please follow the instructions for installation first. Then run the following commands from terminal:
+```
+
+```
+
 ### Eclipse
 1. download and install Eclipse on your local machine if you don't have one yet
 
