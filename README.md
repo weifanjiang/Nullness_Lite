@@ -211,12 +211,11 @@ chmod +x run_evaluation.sh
    $ git checkout intellij1
 ```
 3. open IntelliJ, import junit4 into IntelliJ as a maven project (leave the import settings as default) (you may need to select jdk for IntelliJ)
-4.    ```
-      choose Analyze > Inspect Code... 
-      uncheck "Include test sources" 
-      select ... under "Inspection profile"
-      ```
- ![step1| 20%](https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step1.png)
+4.   
+   choose Analyze > Inspect Code... <br />
+   uncheck "Include test sources" <br />
+   select ... under "Inspection profile" <br />
+   <img src="https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step1.png" width="300" height="180" />
 
       ```Import Profile...```
 ![title](https://ibb.co/jZXUfy)
