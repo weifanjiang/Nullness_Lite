@@ -41,7 +41,7 @@ The reason we put the Nullness Checker in the last row is that we want our users
 
 Here is a true/false positive graph for comparing the checkers.
 
-![title](https://github.com/weifanjiang/Nullness_Lite/blob/master/images/figure%207.PNG)
+![title](https://github.com/weifanjiang/Nullness_Lite/blob/master/images/figure%207.PNG =100x80)
 
 Our evlauation result doesn't imply that one checker is definitely better than others. Users should choose the tool that fit their situtations best. For example, the Nullness Checker is best when users value a good verification over the time consumed. The other bug detectors are good in the reverse situation. The Nullness_Lite option is in the middle ground of the two situations. Depending on the project, it could potentially reveal more true positives than other nullness bug detectors. But users should be aware that although the Nullness_Lite option can filter out some false positives, the amount of the remaining false positives could still be larger than that of other nullness bug detectors.
 
