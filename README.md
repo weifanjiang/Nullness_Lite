@@ -137,7 +137,9 @@ The code examples are under branch `annos_nc_all` in folder [eval_test](https://
 Or you can run the following commands to test these true positives:
 ```
 git clone https://github.com/NullnessLiteGroup/junit4/ junit4
-cd junit4/eval_test
+cd junit4
+git checkout annos_nc_all
+cd eval_test
 
 javac -cp ".:./junit-4.12.jar:../lib/hamcrest-core-1.3.jar" TruePositiveTest.java
 java -cp ".:./junit-4.12.jar:../lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore TruePositiveTest
@@ -149,6 +151,10 @@ Please follow the instructions for installation to setup `javac` path correctly.
 To reproduce error reports, run the following commands from terminal:
 ```
 git clone https://github.com/NullnessLiteGroup/junit4/ junit4
+cd junit4
+git checkout annos_nc_all # for the Nullness Checker
+# git checkout annos_nl_all for the Nullness_Lite option
+# or checkout with branches for individual features listed above
 
 find junit4/src/main | grep -e "\.java$" | xargs javac -cp "junit4/lib/hamcrest-all-1.3.jar" -processor nullness -Astubs=stubs -Xmaxerrs 1000
 ```
