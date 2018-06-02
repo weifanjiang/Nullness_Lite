@@ -145,7 +145,7 @@ java -cp ".:./junit-4.12.jar:../lib/hamcrest-core-1.3.jar" org.junit.runner.JUni
 ```
 
 ### Additional Infomation: The Error Report Reproduction
-#### 1) Nullness Checker, Nullness_Lite & individual feature
+#### 1. Nullness Checker, Nullness_Lite & individual feature
 Please follow the instructions for installation to setup `javac` path correctly. 
 
 The list of branches for the Nullnes Chekcer and the Nullness_Lite option: See [Note from NullnessLiteGroup](https://github.com/NullnessLiteGroup/junit4/blob/master/README.md)
@@ -162,7 +162,7 @@ find junit4/src/main | grep -e "\.java$" | xargs javac -cp "junit4/lib/hamcrest-
 ```
 Pass `-ANullnessLite` to report errors with the Nullness_Lite option.
    
-#### 2a) IntelliJ (branch "intellij1")
+#### 2a. IntelliJ (branch "intellij1")
 1. download and install IntelliJ on your local machine if you don't have one yet
 2. choose a workspace from your machine, move under it, and then run the following commands:
 ```
@@ -183,7 +183,7 @@ Pass `-ANullnessLite` to report errors with the Nullness_Lite option.
    
 5. The inspection result will show only 1 error, and we've classified it as a false positive and have left our reasoning in the source code for the client to check. Click on the error from the "Inspection Result", and you will see it.
 
-#### 2b) IntelliJ (branch "intellij2")
+#### 2b. IntelliJ (branch "intellij2")
 (The screenshots above are taken from IntelliJ IDEA 2018.1.2 Community Edition.)
 
 1. download and install IntelliJ on your local machine if you don't have one yet
@@ -210,7 +210,7 @@ Pass `-ANullnessLite` to report errors with the Nullness_Lite option.
    
 5. The inspection result will show 80 errors. Click on each error shown in the "Inspection Results" at the lower left corner, you will see our reasoning.
 
-#### 3a) Nullaway (using annotations added by IntelliJ's "Infer Nullity")
+#### 3a. Nullaway (using annotations added by IntelliJ's "Infer Nullity")
 Run the following command
 ```
 $ git clone -b Nullaway_Intellij https://github.com/NullnessLiteGroup/junit4.git
@@ -218,7 +218,7 @@ $ cd junit4
 $ mvn clean compile -P nullaway
 ```
 
-#### 3b) Nullaway (using annotations required by Nullness Checker)
+#### 3b. Nullaway (using annotations required by Nullness Checker)
 Run the following command
 ```
 $ git clone -b Nullaway_nc https://github.com/NullnessLiteGroup/junit4.git
@@ -226,7 +226,7 @@ $ cd junit4
 $ mvn clean compile -P nullaway
 ```
 
-#### 3c) Nullaway (using annotations required by NullnessLite)
+#### 3c. Nullaway (using annotations required by NullnessLite)
 Run the following command
 ```
 $ git clone -b Nullaway_nl https://github.com/NullnessLiteGroup/junit4.git
@@ -234,7 +234,7 @@ $ cd junit4
 $ mvn clean compile -P nullaway
 ```
 
-#### 4) FindBugs
+#### 4. FindBugs
 1. Download and install [FindBugs](http://findbugs.sourceforge.net/downloads.html)
 
 2. Have JDK 1.5.0 or later installed on your computer
@@ -245,7 +245,7 @@ $ mvn clean compile -P nullaway
 
 5. Click Analyze
 
-#### 5) Eclipse
+#### 5. Eclipse
 1. download and install Eclipse on your local machine if you don't have one yet
 
 2. open Eclipse and create a workspace under directory your_workspace
