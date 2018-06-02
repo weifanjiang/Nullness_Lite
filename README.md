@@ -148,13 +148,15 @@ java -cp ".:./junit-4.12.jar:../lib/hamcrest-core-1.3.jar" org.junit.runner.JUni
 ### Nullness Checker, Nullness_Lite & individual feature
 Please follow the instructions for installation to setup `javac` path correctly. 
 
+The list of branches for the Nullnes Chekcer and the Nullness_Lite option: [See Note from NullnessLiteGroup](https://github.com/NullnessLiteGroup/junit4/blob/master/README.md)
+
 To reproduce error reports, run the following commands from terminal:
 ```
 git clone https://github.com/NullnessLiteGroup/junit4/ junit4
 cd junit4
 git checkout annos_nc_all # for the Nullness Checker
 # git checkout annos_nl_all for the Nullness_Lite option
-# or checkout with branches for individual features listed above
+# or checkout with branches for individual features from the link above
 
 find junit4/src/main | grep -e "\.java$" | xargs javac -cp "junit4/lib/hamcrest-all-1.3.jar" -processor nullness -Astubs=stubs -Xmaxerrs 1000
 ```
