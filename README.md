@@ -47,7 +47,7 @@ Here is a true/false positive graph for comparing the checkers.
 
 Our evlauation result doesn't imply that one checker is definitely better than others. Users should choose the tool that fit their situtations best. For example, the Nullness Checker is best when users value a good verification over the time consumed. The other bug detectors are good in the reverse situation. The Nullness_Lite option is in the middle ground of the two situations. Depending on the project, it could potentially reveal more true positives than other nullness bug detectors. But users should be aware that although the Nullness_Lite option can filter out some false positives, the amount of the remaining false positives could still be larger than that of other nullness bug detectors.
 
-## \[Installation\] Build from Source Code
+## Installation - Build from Source Code
 Ubuntu users can simply copy-paste the following commands to download the Checker Framework with the Nullness_Lite Option.
 ```
 git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
@@ -226,6 +226,40 @@ $ cd junit4
 $ mvn clean compile -P nullaway
 ```
 
+### FindBugs
+1. Download and install [FindBugs](http://findbugs.sourceforge.net/downloads.html)
+
+2. Have JDK 1.5.0 or later installed on your computer
+
+3. Extract the directory findbugs-3.0.1, then go to findbugs-3.0.1/lib. Double click findbugs.
+
+4 Click File > New Project. Add the project to the first box (Classpath for analysis), and add the class archive files to the second box (Auxillary classpath)
+
+5. Click Analyze
+
+### Eclipse
+1. download and install Eclipse on your local machine if you don't have one yet
+
+2. open Eclipse and create a workspace under directory your_workspace
+
+3. move under your_workspace and run the following commands:
+```
+   $ git clone https://github.com/NullnessLiteGroup/junit4.git
+   $ cd junit4
+   $ git checkout eclipse
+```
+4. in Eclipse, import junit4 into your workspace:
+```
+   choose File > Import... > Maven > Existing Maven Projects from the main menu
+   choose the root directory to be your_workspace/junit4
+   Finish
+```   
+   since we've included a .setting directory in branch "eclipse", junit4 will build under our null-related settings 
+
+5. After Eclipse builds junit4, it will show 3 null-related errors. 
+   We've examined that all the 3 errors are false positives, and have attached our reasoning in comment blocks.
+   If you click on each error, you will see the reasoning.
+
 ## How to Analyze A Report?
 Here is the example code we want to test:
 ```java
@@ -262,40 +296,6 @@ public class MyJavaFile {
 }
 ```
 Since we manually cast the field `this.f` to @NonNull, now Nullness Checker with `-ANullnessLite` option will not issue any error.
-
-### FindBugs
-1. Download and install [FindBugs](http://findbugs.sourceforge.net/downloads.html)
-
-2. Have JDK 1.5.0 or later installed on your computer
-
-3. Extract the directory findbugs-3.0.1, then go to findbugs-3.0.1/lib. Double click findbugs.
-
-4 Click File > New Project. Add the project to the first box (Classpath for analysis), and add the class archive files to the second box (Auxillary classpath)
-
-5. Click Analyze
-
-### Eclipse
-1. download and install Eclipse on your local machine if you don't have one yet
-
-2. open Eclipse and create a workspace under directory your_workspace
-
-3. move under your_workspace and run the following commands:
-```
-   $ git clone https://github.com/NullnessLiteGroup/junit4.git
-   $ cd junit4
-   $ git checkout eclipse
-```
-4. in Eclipse, import junit4 into your workspace:
-```
-   choose File > Import... > Maven > Existing Maven Projects from the main menu
-   choose the root directory to be your_workspace/junit4
-   Finish
-```   
-   since we've included a .setting directory in branch "eclipse", junit4 will build under our null-related settings 
-
-5. After Eclipse builds junit4, it will show 3 null-related errors. 
-   We've examined that all the 3 errors are false positives, and have attached our reasoning in comment blocks.
-   If you click on each error, you will see the reasoning.
 
 ## Frequently Asked Questions
 #### 1. What if I got the following result when running the Checker Framework?
