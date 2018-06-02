@@ -238,15 +238,15 @@ chmod +x run_evaluation.sh
    choose Analyze > Inspect Code... <br />
    <br />
    uncheck "Include test sources" and select ... under "Inspection profile" <br />
-   <img src="https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step1.png" width="300" height="180" /><br />
+   <img src="https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step1.png" width="300" height="180" />
    <br />
    import project settings by clicking on the "gear" icon and then click "Import Profile..." in the image below <br />
-   <img src="https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step2.png" width="300" height="220" /><br />
+   <img src="https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step2.png" width="300" height="220" />
    <br />
    select Project_Default.xml from junit4 directory <br />
-   <img src="https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step3.png" width="300" height="230" /><br />
+   <img src="https://github.com/weifanjiang/Nullness_Lite/blob/master/images/intellij_step3.png" width="300" height="230" />
    <br />
-   select "OK" to apply the changes and inspect code <br />
+   <br />select "OK" to apply the changes and inspect code <br />
    
 5. The inspection result will show 80 errors. Click on each error from the "Inspection Result" at the lower left corner, and you will see our reasoning.
 
