@@ -131,7 +131,7 @@ cd Nullness_Lite
 chmod +x run_evaluation.sh
 ./run_evaluation.sh
 ```
-We provided every true positive with an code example running in JUnit, where each expected output is an NPE.
+We provided most true positive with code examples running in JUnit, where the expected output of each test is an NPE.
 
 The code examples are under `eval_test` folder in the branch `annos_nc_all`. Or you can run the following commands to test these true positives:
 ```
