@@ -158,7 +158,7 @@ git checkout annos_nc_all # for the Nullness Checker
 # git checkout annos_nl_all for the Nullness_Lite option
 # or checkout with branches for individual features from the link above
 
-find src/main | grep -e "\.java$" | xargs javac -cp "junit4/lib/hamcrest-all-1.3.jar" -processor nullness -Astubs=stubs -Xmaxerrs 1000
+find src/main | grep -e "\.java$" | xargs javac -cp "lib/hamcrest-all-1.3.jar" -processor nullness -Astubs=stubs -Xmaxerrs 1000
 ```
 Pass `-ANullnessLite` to report errors with the Nullness_Lite option.
    
