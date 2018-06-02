@@ -144,7 +144,7 @@ javac -cp ".:./junit-4.12.jar:../lib/hamcrest-core-1.3.jar" TruePositiveTest.jav
 java -cp ".:./junit-4.12.jar:../lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore TruePositiveTest
 ```
 
-## Additional Infomation: The Error Report Reproduction
+## Additional Infomation for Evaluation: The Error Report Reproduction
 ### Nullness Checker, Nullness_Lite & individual feature
 Please follow the instructions for installation to setup `javac` path correctly. 
 
