@@ -12,8 +12,8 @@ Nullness_Lite is a lite option of the Nullness Checker in [the Checker Framework
 |-|-|
 | Initialization Checker | Assume all values (fields & class variables) initialized |
 | Map Key Checker | Assume all keys are in the map and `Map.get(key)` returns `@NonNull` |
-| Invalidation of dataflow | Assume all methods are `@SideEffectFree` and disallow aliasing |
-| Boxing of primitives | Assume the boxing of primitives is `@Pure` and `BoxedClass.valueOf()` always return the same object|
+| Invalidation of dataflow | Assume no aliasing and all methods are `@SideEffectFree` |
+| Boxing of primitives | Assume the boxing of primitives return the same object  and `BoxedClass.valueOf()` are `@Pure` |
 
 ### Who wants to use Nullness_Lite option?
 Java developers who would like to get a trustable analysis on their source files, but hesitate to spend time running full verification tool such as Nullness Checker. They can run the Nullenss_Lite option instead to get a fast glimpse on their files and more concise reports, although with fewer true positives, with fewer false positive warnings.
