@@ -3,7 +3,9 @@ See the implementation in https://github.com/979216944/checker-framework
 
 See the evaluation in https://github.com/NullnessLiteGroup/junit4
 
-<!---Developer Manual: (Link to the changed developer manual)--->
+<!---
+Developer Manual: (Link to the changed developer manual)
+--->
 
 ## Introduction
 Nullness_Lite is a lite option of the Nullness Checker in [the Checker Framework](https://checkerframework.org/) to detect nullness bugs in java source files. It disables the following features of Nullness Checker to obtain more desireable traits. To be specific, the Nullness Checker with Nullness_Lite option enabled will be faster and easier to use by delibrately giving up soundness.
@@ -25,23 +27,23 @@ The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
 
 |Checkers | True Positives Detected | True Positives Not Detected | False Positives | Annotations Added |
 |-|-|-|-|-|
-|Nullness_Lite |20|0|80|318|
-|Nullness Checker|20|0|95|319|
-|NullAway (Infer Nullity) |3|17|1|1285|
-|NullAway (Nullness Checker's annotations) |3|17|0|319| 
-|NullAway (NullnessLite's annotations) |3|17|0|318| 
-|FindBugs |0|20|0|0| 
-|IntelliJ1 |0|20|1|0| 
-|IntelliJ2 (Infer Nullity) |4|16|76|16*| 
-|Eclipse |0|20|3|0|
+|Nullness_Lite |18|0|86|320|
+|Nullness Checker|18|0|95|323|
+|NullAway (Infer Nullity) |3|15|1|1285|
+|NullAway (Nullness Checker's annotations) |3|15|0|323| 
+|NullAway (NullnessLite's annotations) |3|15|0|320| 
+|FindBugs |0|18|0|0| 
+|IntelliJ1 |0|18|1|0| 
+|IntelliJ2 (Infer Nullity) |3|15|77|15*| 
+|Eclipse |0|18|3|0|
 
-\* Since we are evaluating junit4 based on the annotations added by IntelliJ's Infer Nullity, 16 is the number of annotations we changed rather than added. The number of annotations added by Infer Nullity is 1116. 
+\* Since we are evaluating junit4 based on the annotations added by IntelliJ's Infer Nullity, 15 is the number of annotations we changed rather than added. The number of annotations added by Infer Nullity is 1116. 
 
 ### To reproduce the evaluation result, please see the instruction in the section for reproduction in this Manual (scroll down).
 ### Analysis for the Table Above
 ![title](https://github.com/weifanjiang/Nullness_Lite/blob/master/images/figure%207.PNG)
 
-We chose the Nullness Checker to be our ground truth because it is a sound type system for detecting the nullness bugs. Note the set of true positives the Nullness Checker reveals should be the super set of the sets of true positives by any other nullness bug detectors. Also note JUnit4 is a special case where the Nullness_Lite option reveals all 20 true positives (real bugs) even though it is unsound.
+We chose the Nullness Checker to be our ground truth because it is a sound type system for detecting the nullness bugs. Note the set of true positives the Nullness Checker reveals should be the super set of the sets of true positives by any other nullness bug detectors. Also note JUnit4 is a special case where the Nullness_Lite option reveals all 18 true positives (real bugs) even though it is unsound.
 
 As we can see from the graph, the Nullness_Lite option shows a positive result on JUnit4. It requires fewer annotations and reports fewer false positives than the Nullness Checker. The result supported our goal for the Nullness_Lite to provide a upgrade path to graduate to the Nullness Checker.
 
