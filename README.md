@@ -16,7 +16,7 @@ Nullness_Lite is a lite option of the Nullness Checker in [the Checker Framework
 | Boxing of primitives | Assume the boxing of primitives return the same object  and `BoxedClass.valueOf()` are `@Pure` |
 
 ### Who wants to use Nullness_Lite option?
-Java developers who would like to get a trustable analysis on their source files, but hesitate to spend time running full verification tool such as Nullness Checker. They can run the Nullenss_Lite option instead to get a fast glimpse on their files before upgrade to the Nullness Checker.
+Java developers who would like to get a trustable analysis on their source files, but hesitate to spend time running full verification tool such as Nullness Checker. They can run the Nullenss_Lite option instead to get a fast glimpse on their files before they upgrade to the Nullness Checker.
 
 ## Evaluation
 Please see the week9/report for the evaluation methodology we decided.
@@ -46,6 +46,11 @@ We chose the Nullness Checker to be our ground truth because it is a sound type 
 As we can see from the graph, the Nullness_Lite option shows a positive result on JUnit4. It requires fewer annotations and reports fewer false positives than the Nullness Checker. The result supported our goal for the Nullness_Lite to provide a upgrade path to graduate to the Nullness Checker.
 
 Our evlauation result doesn't imply that one checker is definitely better than others. Users should choose the tool that fit their situtations best.
+
+<!----
+## Installation 1 - 
+One way for installation is to download 
+---->
 
 ## Installation - Build from Source Code
 <!----
