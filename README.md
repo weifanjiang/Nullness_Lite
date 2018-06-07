@@ -3,6 +3,8 @@ See the implementation in https://github.com/979216944/checker-framework
 
 See the evaluation in https://github.com/NullnessLiteGroup/junit4
 
+Refer to `../manual.pdf` and `../manual.html#nullness-lite` for Nullness_Lite User Manual (Section 3.7) as a part of the Checker Framework User Manual.
+
 <!---
 Developer Manual: (Link to the changed developer manual)
 --->
