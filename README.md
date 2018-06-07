@@ -135,7 +135,8 @@ To reproduce the Evaluation Table, run the following commands from terminal:
 git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
 cd Nullness_Lite
 
-chmod +x run_evaluation.sh
+# mac users should replace the run_evaluation.sh to run_evaluation_mac.sh
+chmod +x run_evaluation.sh 
 ./run_evaluation.sh
 ```
 We provided most true positives with code examples running in JUnit, where the expected output of each test is an NPE.
