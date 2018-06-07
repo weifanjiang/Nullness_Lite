@@ -16,7 +16,7 @@ Nullness_Lite is a lite option of the Nullness Checker in [the Checker Framework
 | Boxing of primitives | Assume the boxing of primitives return the same object  and `BoxedClass.valueOf()` are `@Pure` |
 
 ### Who wants to use Nullness_Lite option?
-Java developers who would like to get a trustable analysis on their source files, but hesitate to spend time running full verification tool such as Nullness Checker. They can run the Nullenss_Lite option instead to get a fast glimpse on their files and more concise reports, although with fewer true positives, with fewer false positive warnings.
+Java developers who would like to get a trustable analysis on their source files, but hesitate to spend time running full verification tool such as Nullness Checker. They can run the Nullenss_Lite option instead to get a fast glimpse on their files before upgrade to the Nullness Checker.
 
 ## Evaluation
 Please see the week9/report for the evaluation methodology we decided.
@@ -39,21 +39,23 @@ The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
 
 ### To reproduce the evaluation result, please see the instruction in the section for reproduction in this Manual (scroll down).
 ### Analysis for the Table Above
-The reason we put the Nullness Checker in the last row is that we want our users to focus more on the comparison between the Nullness_Lite option and the other nullness bug detectors. Note that the Nullness Checker is a sound type system, the set of true positives it reveals should be the super set of the sets of true positives by any other nullness bug detectors. From our evaluation result, we can see the Nullness_Lite option reports all 20 true positives, which is good for JUnit4. But we should be aware that the Nullness_Lite option could suppress some true positives reported by the Nullness Checker in other projects. After all, the Nullness_Lite option is a unsound nullness bug detector by suppressing features within the Nullness Checker. 
-
-Here is a true/false positive graph for comparing the checkers.
-
 ![title](https://github.com/weifanjiang/Nullness_Lite/blob/master/images/figure%207.PNG)
 
-Our evlauation result doesn't imply that one checker is definitely better than others. Users should choose the tool that fit their situtations best. For example, the Nullness Checker is best when users value a good verification over the time consumed. The other bug detectors are good in the reverse situation. The Nullness_Lite option is in the middle ground of the two situations. Depending on the project, it could potentially reveal more true positives than other nullness bug detectors. But users should be aware that although the Nullness_Lite option can filter out some false positives, the amount of the remaining false positives could still be larger than that of other nullness bug detectors.
+We chose the Nullness Checker to be our ground truth because it is a sound type system for detecting the nullness bugs. Note the set of true positives the Nullness Checker reveals should be the super set of the sets of true positives by any other nullness bug detectors. Also note JUnit4 is a special case where the Nullness_Lite option reveals all 20 true positives (real bugs) even though it is unsound.
+
+As we can see from the graph, the Nullness_Lite option shows a positive result on JUnit4. It requires fewer annotations and reports fewer false positives than the Nullness Checker. The result supported our goal for the Nullness_Lite to provide a upgrade path to graduate to the Nullness Checker.
+
+Our evlauation result doesn't imply that one checker is definitely better than others. Users should choose the tool that fit their situtations best.
 
 ## Installation - Build from Source Code
+<!----
 Ubuntu users can simply copy-paste the following commands to download the Checker Framework with the Nullness_Lite Option.
 ```
 git clone https://github.com/weifanjiang/Nullness_Lite.git Nullness_Lite
 cd Nullness_Lite
 ./install_Checker_Framework_Ubuntu.sh 
 ```
+---->
 ### Set up Environment
 Since Nullness_Lite depends on Nullness Checker of Checker Framework, users need to follow the instructions of Checker Framework to setup their environments following the [instructions](https://checkerframework.org/manual/#build-source) in Checker Framework manual.
 
