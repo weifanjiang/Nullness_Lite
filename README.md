@@ -29,7 +29,7 @@ The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
 |-|-|-|-|-|
 |Nullness_Lite |18|0|86|320|
 |Nullness Checker|18|0|95|323|
-|NullAway (Infer Nullity) |3|15|1|1160|
+|NullAway (Infer Nullity) |3|15|1|1285|
 |NullAway (Nullness Checker's annotations) |3|15|0|323| 
 |NullAway (NullnessLite's annotations) |3|15|0|320| 
 |IntelliJ1 |0|18|1|0| 
