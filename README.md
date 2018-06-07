@@ -32,9 +32,9 @@ The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
 |NullAway (Infer Nullity) |3|15|1|1160|
 |NullAway (Nullness Checker's annotations) |3|15|0|323| 
 |NullAway (NullnessLite's annotations) |3|15|0|320| 
-|FindBugs |0|18|0|0| 
 |IntelliJ1 |0|18|1|0| 
-|IntelliJ2 (Infer Nullity) |3|15|77|15*| 
+|IntelliJ2 (Infer Nullity) |3|15|77|15*|
+|FindBugs |0|18|0|0| 
 |Eclipse |0|18|3|0|
 
 \* Since we are evaluating junit4 based on the annotations added by IntelliJ's Infer Nullity, 15 is the number of annotations we changed rather than added. The number of annotations added by Infer Nullity is 1116. 
