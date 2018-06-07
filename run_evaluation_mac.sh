@@ -38,6 +38,7 @@ OTHER_BRANCH_NAME=("Nullaway_Intellij"
 		   "eclipse")
 ANNOS_NAME=("@NotNull"
 	    "@Nullable"
+	    "@MonotonicNonNull"
 	    "@UnderInitialization"
 	    "@UnknownInitialization")
 
