@@ -27,11 +27,11 @@ The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
 
 |Checkers | True Positives Detected | True Positives Not Detected | False Positives | Annotations Added |
 |-|-|-|-|-|
-|Nullness_Lite |18|0|86|320|
-|Nullness Checker|18|0|95|323|
+|Nullness_Lite |18|0|86|304|
+|Nullness Checker|18|0|95|307|
 |NullAway (Infer Nullity) |3|15|1|1285|
-|NullAway (Nullness Checker's annotations) |3|15|0|323| 
-|NullAway (NullnessLite's annotations) |3|15|0|320| 
+|NullAway (Nullness Checker's annotations) |3|15|0|307| 
+|NullAway (NullnessLite's annotations) |3|15|0|304| 
 |IntelliJ1 |0|18|1|0| 
 |IntelliJ2 (Infer Nullity) |3|15|77|15*|
 |FindBugs |0|18|0|0| 
