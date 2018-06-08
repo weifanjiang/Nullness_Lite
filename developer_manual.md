@@ -1,5 +1,6 @@
 # The Developer Manual for Nullness_Lite option
-## Features in the Nullness_Lite option different from the Nullness Checker
+The implementation of the Nullness_Lite option includes the 4 features different from the Nullness Checker
+
 1. Assume all values (fields & class variables) initialized
 2. Assume all keys are in the map and `Map.get(key)` returns `@NonNull`
 3. Assume no invalidation of dataflow
@@ -7,7 +8,7 @@
    - 3.2. Assume no aliasing
 4. Assume the boxing of primitives return the same object and `BoxedClass.valueOf()` are `@Pure`
 
-The implementation includes an additional command line argument `ANullnessLite` for the Nullness Checker and 4 values `ANullnessLite` option can accept for testing individual feature.
+and also includes an additional command line argument `ANullnessLite` for the Nullness Checker and 4 values `ANullnessLite` option can accept for testing individual feature.
 
 | Additional Command Line Arguments Allowed | Description |
 |-|-|
