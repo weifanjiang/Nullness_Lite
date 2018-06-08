@@ -19,7 +19,7 @@ and also includes an additional command line argument `ANullnessLite` for the Nu
 |`-ANullnessLite=boxp`| feature 4 is enabled for testing purpose |
 
 ## Files changed in the Nullness Checker
-Source file common path: [checker-framework/checker/src/main/java/org/checkerframework/checker/nullness/](https://github.com/979216944/checker-framework/tree/master/checker/src/main/java/org/checkerframework/checker/nullness)
+Source file common path: https://github.com/979216944/checker-framework/tree/master/checker/src/main/java/org/checkerframework/checker/nullness
 
 |File Name|Changes Description|
 |-|-|
@@ -35,11 +35,11 @@ Source file common path: [checker-framework/checker/src/main/java/org/checkerfra
 See the source files for more details.
 
 ## Files added for testing
-[issue 5](https://github.com/979216944/checker-framework/issues/5)
+issue 5: https://github.com/979216944/checker-framework/issues/5
 
-Test files common path: [checker-framework/checker/src/test/java/tests/](https://github.com/979216944/checker-framework/tree/master/checker/src/test/java)
+Test files common path: https://github.com/979216944/checker-framework/tree/master/checker/src/test/java
 
-Tests folders common path: [checker-framework/checker/tests/](https://github.com/979216944/checker-framework/tree/master/checker/tests)
+Tests folders common path: https://github.com/979216944/checker-framework/tree/master/checker/tests
 
 |File Name| Folder Name | Description |
 |-|-|-|
