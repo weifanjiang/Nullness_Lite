@@ -37,13 +37,13 @@ See the source files for more details.
 ## Files added for testing
 |File Name| Folder Name | Description |
 |-|-|-|
-|NullnessLiteOptTest.java| nullness-liteoption/ |Initialize the spec. test for the Nullness_Lite|
-|NullnessLiteOptInitTest.java| nullness-liteoption-init/ |Initialize the spec. test for feature 1|
-|NullnessLiteOptMapkTest.java| nullness-liteoption-mapk/ |Initialize the spec. test for feature 2|
-|NullnessLiteOptInvaTest.java| nullness-liteoption-inva/ |Initialize the spec. test for feature 3|
-|NullnessLiteOptBoxpTest.java| nullness-liteoption-boxp/ |Initialize the spec. test for feature 4|
-|NullnessLiteComRegTest.java| nullness-liteoption-comreg/ |Initialize the regression test of issue 5|
-|NullnessLiteComRegBoxpTest.java| nullness-liteoption-comreg-boxp/ |Initialize the regression test pf issue 5 for feature 4|
+|NullnessLiteOptTest.java| nullness-liteoption/ |Specification tests for the Nullness_Lite|
+|NullnessLiteOptInitTest.java| nullness-liteoption-init/ |Specification tests for feature 1|
+|NullnessLiteOptMapkTest.java| nullness-liteoption-mapk/ |Specification tests test for feature 2|
+|NullnessLiteOptInvaTest.java| nullness-liteoption-inva/ |Specification tests test for feature 3|
+|NullnessLiteOptBoxpTest.java| nullness-liteoption-boxp/ |Specification tests test for feature 4|
+|NullnessLiteComRegTest.java| nullness-liteoption-comreg/ |Regression tests of issue 5|
+|NullnessLiteComRegBoxpTest.java| nullness-liteoption-comreg-boxp/ |Regression tests of issue 5 for feature 4|
 
 issue 5: https://github.com/979216944/checker-framework/issues/5
 
