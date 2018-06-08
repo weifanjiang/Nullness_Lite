@@ -5,9 +5,7 @@ See the evaluation in https://github.com/NullnessLiteGroup/junit4
 
 Refer to `../manual.pdf` and `../manual.html#nullness-lite` for Nullness_Lite User Manual (Section [3.7](http://htmlpreview.github.io/?https://raw.githubusercontent.com/weifanjiang/Nullness_Lite/master/manual.html#nullness-lite)) as a part of the Checker Framework User Manual.
 
-<!---
-Developer Manual: (Link to the changed developer manual)
---->
+See the developer manual for the Nullness_Lite option [here](https://github.com/weifanjiang/Nullness_Lite/blob/master/developer_manual.md)
 
 ## Introduction
 Nullness_Lite is a lite option of the Nullness Checker in [the Checker Framework](https://checkerframework.org/) to detect nullness bugs in java source files. It disables the following features of Nullness Checker to obtain more desireable traits. To be specific, the Nullness Checker with Nullness_Lite option enabled will be faster and easier to use by delibrately giving up soundness.
