@@ -41,7 +41,7 @@ The project we evaluate on: [JUnit4](https://github.com/junit-team/junit4)
 
 ### To reproduce the evaluation result, please see the instruction in the section for reproduction in this Manual (scroll down).
 ### Analysis for the Table Above
-![title](https://github.com/weifanjiang/Nullness_Lite/blob/master/images/figure%207.PNG)
+![title](https://github.com/weifanjiang/Nullness_Lite/blob/master/images/FPTPEval.PNG)
 
 We chose the Nullness Checker to be our ground truth because it is a sound type system for detecting the nullness bugs. Note the set of true positives the Nullness Checker reveals should be the super set of the sets of true positives by any other nullness bug detectors. Also note JUnit4 is a special case where the Nullness_Lite option reveals all 18 true positives (real bugs) even though it is unsound.
 
