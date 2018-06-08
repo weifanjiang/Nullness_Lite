@@ -30,7 +30,7 @@ Source file common path: https://github.com/979216944/checker-framework/tree/mas
 |NullnessStore.java|Method `canAlias` overrided for feature 3.2|
 |KeyForStore.java|Method `canAlias` overrided for feature 3.2|
 |NullnessTransfer.java|Instance variable `ALL_KEY_EXIST` added as a flag and method `visitMethodInvocation` revised for feature 2|
-|nullness_lite.astub|stub file needed for feature 4|
+|nullness_lite.astub|stub file added for feature 4|
 
 See the source files for more details.
 
