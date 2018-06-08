@@ -19,8 +19,6 @@ and also includes an additional command line argument `ANullnessLite` for the Nu
 |`-ANullnessLite=boxp`| feature 4 is enabled for testing purpose |
 
 ## Files changed in the Nullness Checker
-Source file common path: https://github.com/979216944/checker-framework/tree/master/checker/src/main/java/org/checkerframework/checker/nullness
-
 |File Name|Changes Description|
 |-|-|
 |NullnessChecker.java|`ANullnessLite` option added; `initChecker()` overrided for features 1, 3.1 & 4|
@@ -32,15 +30,11 @@ Source file common path: https://github.com/979216944/checker-framework/tree/mas
 |NullnessTransfer.java|Instance variable `ALL_KEY_EXIST` added as a flag and method `visitMethodInvocation` revised for feature 2|
 |nullness_lite.astub|stub file added for feature 4|
 
+Source file common path: https://github.com/979216944/checker-framework/tree/master/checker/src/main/java/org/checkerframework/checker/nullness
+
 See the source files for more details.
 
 ## Files added for testing
-issue 5: https://github.com/979216944/checker-framework/issues/5
-
-Test files common path: https://github.com/979216944/checker-framework/tree/master/checker/src/test/java
-
-Tests folders common path: https://github.com/979216944/checker-framework/tree/master/checker/tests
-
 |File Name| Folder Name | Description |
 |-|-|-|
 |NullnessLiteOptTest.java| nullness-liteoption/ |Initialize the spec. test for the Nullness_Lite|
@@ -50,6 +44,12 @@ Tests folders common path: https://github.com/979216944/checker-framework/tree/m
 |NullnessLiteOptBoxpTest.java| nullness-liteoption-boxp/ |Initialize the spec. test for feature 4|
 |NullnessLiteComRegTest.java| nullness-liteoption-comreg/ |Initialize the regression test of issue 5|
 |NullnessLiteComRegBoxpTest.java| nullness-liteoption-comreg-boxp/ |Initialize the regression test pf issue 5 for feature 4|
+
+issue 5: https://github.com/979216944/checker-framework/issues/5
+
+Test files common path: https://github.com/979216944/checker-framework/tree/master/checker/src/test/java
+
+Tests folders common path: https://github.com/979216944/checker-framework/tree/master/checker/tests
 
 To run these tests, we can pass the name without extention to `./gradlew` under the root folder of the Checker Framework.
 (e.g. `./gradlew NullnessLiteOptTest`)
